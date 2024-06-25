@@ -2,6 +2,9 @@
   window.extractData = function() {
     var ret = $.Deferred();
     problems_arr = [];
+    diagnostics_arr = [];
+    cpt_arr = [];
+    procedure_arr = [];
 
     function onError() {
       console.log('Loading error', arguments);
@@ -22,19 +25,42 @@
                       }
                     }
                   });
+        
         var condition = smart.patient.api.fetchAll({type: "Condition"}).then(function(problems){
           problems.forEach(function(p){
             problems_arr.push([
-              new XDate(p.onsetDateTime),
-              p.code.coding[0].display,
-              p.abatementDateTime ? new XDate(p.abatementDateTime) : null
+              p.code.coding[0].display, " | "
             ])
           })
         })
 
-        $.when(pt, obv, condition).fail(onError);
+        var diag_report = smart.patient.api.fetchAll({type: "DiagnosticReport"}).then(function(report){
+          report.forEach(function(p){
+            diagnostics_arr.push([
+              p.code.coding[0].display, " | "
+            ])
+          })
+        })
 
-        $.when(pt, obv, condition).done(function(patient, obv, cond) {
+        var cpt_code = smart.patient.api.fetchAll({type: "Procedure"}).then(function(report){
+          report.forEach(function(p){
+            cpt_arr.push([
+              p.code.coding[0].code, " | "
+            ])
+          })
+        })
+
+        var procedure = smart.patient.api.fetchAll({type: "Procedure"}).then(function(report){
+          report.forEach(function(p){
+            procedure_arr.push([
+              p.code.text, " | "
+            ])
+          })
+        })
+
+        $.when(pt, obv, condition, diag_report, cpt_code, procedure).fail(onError);
+
+        $.when(pt, obv, condition, diag_report, cpt_code, procedure).done(function(patient, obv, cond, dr, cpt, proc) {
           var byCodes = smart.byCodes(obv, 'code');
           var gender = patient.gender;
 
@@ -70,6 +96,9 @@
           p.hdl = getQuantityValueAndUnit(hdl[0]);
           p.ldl = getQuantityValueAndUnit(ldl[0]);
           p.condition = problems_arr
+          p.diag_report = diagnostics_arr
+          p.cpt_code = cpt_arr
+          p.procedure = procedure_arr
 
           ret.resolve(p);
         });
@@ -95,6 +124,9 @@
       ldl: {value: ''},
       hdl: {value: ''},
       condition: {value: ''},
+      diag_report: {value: ''},
+      procedure: {value: ''},
+      cpt_code: {value: ''},
     };
   }
 
@@ -139,6 +171,9 @@
     $('#ldl').html(p.ldl);
     $('#hdl').html(p.hdl);
     $('#condition').html(p.condition);
+    $('#diag_report').html(p.diag_report);
+    $('#procedure').html(p.procedure);
+    $('#cpt_code').html(p.cpt_code);
   };
 
 })(window);
