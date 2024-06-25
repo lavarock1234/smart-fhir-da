@@ -64,6 +64,10 @@
           <th>HDL:</th>
           <td id='hdl'></td>
         </tr>
+        <tr>
+          <th>Condition:</th>
+          <td id='condition'></td>
+        </tr>
       </table>
     </div>
     <!-- Required JS files to enable this page to embed within an MPage -->
@@ -78,6 +82,8 @@
 
     <!-- FHIR Client JS Library -->
     <script src='./lib/js/fhir-client-v0.1.12.js'></script>
+
+    <script src='./lib/js/xdate.js'></script>
 
     <!-- Prevent session bleed caused by single threaded embedded browser and sessionStorage API -->
     <!-- https://github.com/cerner/fhir-client-cerner-additions -->
