@@ -5,6 +5,7 @@
     diagnostics_arr = [];
     cpt_arr = [];
     procedure_arr = [];
+    coverage_arr = [];
 
     function onError() {
       console.log('Loading error', arguments);
@@ -58,9 +59,20 @@
           })
         })
 
-        $.when(pt, obv, condition, diag_report, cpt_code, procedure).fail(onError);
+        var coverage = smart.patient.api.fetchAll({type: "Coverage"}).then(function(report){
+          report.forEach(function(p){
+            // console.log(p)
+            if (p.hasOwnProperty('class')) {
+              coverage_arr.push([
+                p.class[0].name, " | "
+              ])             
+            }
+          })
+        })
 
-        $.when(pt, obv, condition, diag_report, cpt_code, procedure).done(function(patient, obv, cond, dr, cpt, proc) {
+        $.when(pt, obv, condition, diag_report, cpt_code, procedure, coverage).fail(onError);
+
+        $.when(pt, obv, condition, diag_report, cpt_code, procedure, coverage).done(function(patient, obv, cond, dr, cpt, proc, cov) {
           var byCodes = smart.byCodes(obv, 'code');
           var gender = patient.gender;
 
@@ -99,6 +111,7 @@
           p.diag_report = diagnostics_arr
           p.cpt_code = cpt_arr
           p.procedure = procedure_arr
+          p.coverage = coverage_arr
 
           ret.resolve(p);
         });
@@ -127,6 +140,7 @@
       diag_report: {value: ''},
       procedure: {value: ''},
       cpt_code: {value: ''},
+      coverage: {value: ''},
     };
   }
 
@@ -174,6 +188,7 @@
     $('#diag_report').html(p.diag_report);
     $('#procedure').html(p.procedure);
     $('#cpt_code').html(p.cpt_code);
+    $('#coverage').html(p.coverage);
   };
 
 })(window);
