@@ -30,6 +30,9 @@
         
         var condition = smart.patient.api.fetchAll({type: "Condition"}).then(function(problems){
           problems.forEach(function(p){
+            if (problems_arr.length < 2) {
+              console.log(p);
+            }
             problems_arr.push([
               p.code.coding[0].display, " | "
             ])
@@ -38,6 +41,9 @@
 
         var diag_report = smart.patient.api.fetchAll({type: "DiagnosticReport"}).then(function(report){
           report.forEach(function(p){
+            if (diagnostics_arr.length < 2) {
+              console.log(p);
+            }
             diagnostics_arr.push([
               p.code.coding[0].display, " | "
             ])
@@ -54,6 +60,9 @@
 
         var procedure = smart.patient.api.fetchAll({type: "Procedure"}).then(function(report){
           report.forEach(function(p){
+            if (procedure_arr.length < 2) {
+              console.log(p);
+            }
             procedure_arr.push([
               p.code.text, " | "
             ])
@@ -62,7 +71,9 @@
 
         var coverage = smart.patient.api.fetchAll({type: "Coverage"}).then(function(report){
           report.forEach(function(p){
-            // console.log(p)
+            if (coverage_arr.length < 2) {
+              console.log(p);
+            }
             if (p.hasOwnProperty('class')) {
               coverage_arr.push([
                 p.class[0].name, " | "
