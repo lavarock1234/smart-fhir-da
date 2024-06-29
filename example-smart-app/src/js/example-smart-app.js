@@ -77,7 +77,7 @@
               console.log(p);
               if (p.hasOwnProperty('claim')) {
                 claim_arr.push([
-                  JSON.stringify(p, null, 2), " | "
+                  JSON.stringify(p, null, 2)
                 ])             
               }
             }
