@@ -6,6 +6,7 @@
     cpt_arr = [];
     procedure_arr = [];
     coverage_arr = [];
+    claim_arr = [];
 
     function onError() {
       console.log('Loading error', arguments);
@@ -70,9 +71,22 @@
           })
         })
 
-        $.when(pt, obv, condition, diag_report, cpt_code, procedure, coverage).fail(onError);
+        var claim = smart.patient.api.fetchAll({type: "ExplanationOfBenefit"}).then(function(report){
+          report.forEach(function(p){
+            if (claim_arr.length < 10) {
+              console.log(p);
+              if (p.hasOwnProperty('claim')) {
+                claim_arr.push([
+                  p.claim.reference, " | "
+                ])             
+              }
+            }
+          })
+        })
 
-        $.when(pt, obv, condition, diag_report, cpt_code, procedure, coverage).done(function(patient, obv, cond, dr, cpt, proc, cov) {
+        $.when(pt, obv, condition, diag_report, cpt_code, procedure, coverage, claim).fail(onError);
+
+        $.when(pt, obv, condition, diag_report, cpt_code, procedure, coverage, claim).done(function(patient, obv, cond, dr, cpt, proc, cov, claim) {
           var byCodes = smart.byCodes(obv, 'code');
           var gender = patient.gender;
 
@@ -112,6 +126,7 @@
           p.cpt_code = cpt_arr
           p.procedure = procedure_arr
           p.coverage = coverage_arr
+          p.claim = claim_arr
 
           ret.resolve(p);
         });
@@ -141,6 +156,7 @@
       procedure: {value: ''},
       cpt_code: {value: ''},
       coverage: {value: ''},
+      claim: {value: ''},
     };
   }
 
@@ -189,6 +205,7 @@
     $('#procedure').html(p.procedure);
     $('#cpt_code').html(p.cpt_code);
     $('#coverage').html(p.coverage);
+    $('#claim').html(p.claim);
   };
 
 })(window);
