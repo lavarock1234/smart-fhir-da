@@ -73,11 +73,11 @@
 
         var claim = smart.patient.api.fetchAll({type: "ExplanationOfBenefit"}).then(function(report){
           report.forEach(function(p){
-            if (claim_arr.length < 10) {
+            if (claim_arr.length < 2) {
               console.log(p);
               if (p.hasOwnProperty('claim')) {
                 claim_arr.push([
-                  p.claim.reference, " | "
+                  JSON.stringify(p, null, 2), " | "
                 ])             
               }
             }
