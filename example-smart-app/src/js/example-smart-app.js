@@ -7,13 +7,46 @@
     procedure_arr = [];
     coverage_arr = [];
     claim_arr = [];
+    icd_arr = [];
+    claimres_arr = [];
+    claims_arr = [];
 
     function onError() {
       console.log('Loading error', arguments);
       ret.reject();
     }
 
+    function unique(arr) {
+        var u = {}, a = [];
+        for(var i = 0, l = arr.length; i < l; ++i){
+            if(!u.hasOwnProperty(arr[i])) {
+                a.push(arr[i]);
+                u[arr[i]] = 1;
+            }
+        }
+        return a;
+    }    
+
     function onReady(smart)  {
+      console.log(smart);
+      // if (smart.hasOwnProperty('api')) {
+      //   var claim = smart.api.fetchAll({type: "Patient"}).then(function(report){
+      //     report.forEach(function(p){
+      //       if (claims_arr.length < 2) {
+      //         console.log(p);
+      //         claims_arr.push([
+      //           JSON.stringify(p, null, 2)
+      //         ])  
+      //       }
+      //     })
+      //   })
+      //   $.when(pt, claim).fail(onError);
+      //   $.when(pt, claim).done(function(claim) {
+      //   })
+      // } else {
+      //   onError();
+      // }
+
       if (smart.hasOwnProperty('patient')) {
         var patient = smart.patient;
         var pt = patient.read();
@@ -82,22 +115,40 @@
           })
         })
 
-        var claim = smart.patient.api.fetchAll({type: "ExplanationOfBenefit"}).then(function(report){
+        var claim = smart.patient.api.fetchAll({type: "Claim"}).then(function(report){
           report.forEach(function(p){
             if (claim_arr.length < 2) {
               console.log(p);
-              if (p.hasOwnProperty('claim')) {
-                claim_arr.push([
-                  JSON.stringify(p, null, 2)
-                ])             
-              }
+              claim_arr.push([
+                JSON.stringify(p, null, 2)
+              ])  
             }
           })
         })
 
-        $.when(pt, obv, condition, diag_report, cpt_code, procedure, coverage, claim).fail(onError);
+        var claimres = smart.patient.api.fetchAll({type: "ClaimResponse"}).then(function(report){
+          report.forEach(function(p){
+            if (claimres_arr.length < 2) {
+              console.log(p);
+              claimres_arr.push([
+                JSON.stringify(p, null, 2)
+              ])  
+            }
+          })
+        })
 
-        $.when(pt, obv, condition, diag_report, cpt_code, procedure, coverage, claim).done(function(patient, obv, cond, dr, cpt, proc, cov, claim) {
+        var icd = smart.patient.api.fetchAll({
+                    type: 'Procedure',
+                    query: {
+                      code: {
+                        $or: ['http://hl7.org/fhir/sid/ex-icd-10-procedures']
+                      }
+                    }
+                  });        
+
+        $.when(pt, obv, condition, diag_report, cpt_code, procedure, coverage, claim, claimres, icd).fail(onError);
+
+        $.when(pt, obv, condition, diag_report, cpt_code, procedure, coverage, claim, claimres, icd).done(function(patient, obv, cond, dr, cpt, proc, cov, claim, claimres, icd) {
           var byCodes = smart.byCodes(obv, 'code');
           var gender = patient.gender;
 
@@ -136,8 +187,10 @@
           p.diag_report = diagnostics_arr
           p.cpt_code = cpt_arr
           p.procedure = procedure_arr
-          p.coverage = coverage_arr
+          p.coverage = unique(coverage_arr)
           p.claim = claim_arr
+          p.icd = icd_arr
+          p.claimres = claimres_arr
 
           ret.resolve(p);
         });
@@ -168,6 +221,8 @@
       cpt_code: {value: ''},
       coverage: {value: ''},
       claim: {value: ''},
+      icd: {value: ''},
+      claimres: {value: ''},
     };
   }
 
@@ -217,6 +272,8 @@
     $('#cpt_code').html(p.cpt_code);
     $('#coverage').html(p.coverage);
     $('#claim').html(p.claim);
+    $('#icd').html(p.icd);
+    $('#claimres').html(p.claimres);
   };
 
 })(window);
