@@ -102,40 +102,40 @@
           })
         })
 
-        var coverage = smart.patient.api.fetchAll({type: "Coverage"}).then(function(report){
-          report.forEach(function(p){
-            if (coverage_arr.length < 2) {
-              console.log(p);
-            }
-            if (p.hasOwnProperty('class')) {
-              coverage_arr.push([
-                p.class[0].name, " | "
-              ])             
-            }
-          })
-        })
+        // var coverage = smart.patient.api.fetchAll({type: "Coverage"}).then(function(report){
+        //   report.forEach(function(p){
+        //     if (coverage_arr.length < 2) {
+        //       console.log(p);
+        //     }
+        //     if (p.hasOwnProperty('class')) {
+        //       coverage_arr.push([
+        //         p.class[0].name, " | "
+        //       ])             
+        //     }
+        //   })
+        // })
 
-        var claim = smart.patient.api.fetchAll({type: "Claim"}).then(function(report){
-          report.forEach(function(p){
-            if (claim_arr.length < 2) {
-              console.log(p);
-              claim_arr.push([
-                JSON.stringify(p, null, 2)
-              ])  
-            }
-          })
-        })
+        // var claim = smart.patient.api.fetchAll({type: "Claim"}).then(function(report){
+        //   report.forEach(function(p){
+        //     if (claim_arr.length < 2) {
+        //       console.log(p);
+        //       claim_arr.push([
+        //         JSON.stringify(p, null, 2)
+        //       ])  
+        //     }
+        //   })
+        // })
 
-        var claimres = smart.patient.api.fetchAll({type: "ClaimResponse"}).then(function(report){
-          report.forEach(function(p){
-            if (claimres_arr.length < 2) {
-              console.log(p);
-              claimres_arr.push([
-                JSON.stringify(p, null, 2)
-              ])  
-            }
-          })
-        })
+        // var claimres = smart.patient.api.fetchAll({type: "ClaimResponse"}).then(function(report){
+        //   report.forEach(function(p){
+        //     if (claimres_arr.length < 2) {
+        //       console.log(p);
+        //       claimres_arr.push([
+        //         JSON.stringify(p, null, 2)
+        //       ])  
+        //     }
+        //   })
+        // })
 
         var icd = smart.patient.api.fetchAll({
                     type: 'Procedure',
@@ -146,9 +146,9 @@
                     }
                   });        
 
-        $.when(pt, obv, condition, diag_report, cpt_code, procedure, coverage, claim, claimres, icd).fail(onError);
+        $.when(pt, obv, condition, diag_report, cpt_code, procedure, icd).fail(onError);
 
-        $.when(pt, obv, condition, diag_report, cpt_code, procedure, coverage, claim, claimres, icd).done(function(patient, obv, cond, dr, cpt, proc, cov, claim, claimres, icd) {
+        $.when(pt, obv, condition, diag_report, cpt_code, procedure, icd).done(function(patient, obv, cond, dr, cpt, proc, icd) {
           var byCodes = smart.byCodes(obv, 'code');
           var gender = patient.gender;
 
