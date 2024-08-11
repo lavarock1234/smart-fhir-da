@@ -1,0 +1,121 @@
+* {
+	margin:0;
+	padding: 0;
+	box-sizing: border-box;
+/*	color: #fff;*/
+}
+
+:root {
+	--blackColor: #24272c;
+	--lemonGreen: #d8d83e;
+	--whiteColor: #ffffff;
+	--lightBlack: #1e1e1e;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+ul {
+	list-style:none;
+}
+
+a {
+	text-decoration: none;
+}
+
+body {
+	font-weight: 400;
+	font-size: 2rem;
+}
+
+section {
+	min-height: 100vh;
+	background: radial-gradient(circle at 18.7% 37.8%, rgb(250, 250, 250) 0%, rgb(255, 234, 238) 90%);
+}
+
+.left-menu {
+	position: fixed;
+	left: 0;
+	width: 30rem;
+	height: 100%;
+	background-color: var(--blackColor)
+}
+
+.left-menu .title {
+	font-size: 6.5rem;
+	font-weight: 600;
+	text-align: center;
+	line-height: 6.5rem;
+	letter-spacing: 0.1rem;
+	color: var(--lemonGreen);
+	background-color: var(--lightBlack);
+}
+
+.left-menu ul {
+	height: 100%;
+	width: 100%;
+}
+
+.left-menu ul li {
+	line-height: 6rem;
+	border-bottom: 0.1rem solid rgb(255, 255, 255, 0.1);
+}
+
+.left-menu ul li a {
+	position: relative;
+	display: block;
+	width: 100%;
+	color: var(--whiteColor);
+	font-size: 1.8rem;
+	text-transform: capitalize;
+	font-weight: 500;
+	padding-left: 4rem;
+	border-left: 0.3rm solid transparent;
+	transition: all .5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.left-menu ul li a:hover {
+	color: var(--lemonGreen);
+	background-color: var(--lightBlack);
+	border-color: var(--lemonGreen);
+}
+
+.left-menu ul ul {
+	height: 0;
+	visibility: hidden;
+	opacity: 0;
+	transition-property: height, visibility, opacity;
+	transition-duration: 0.5s, 0.7s, 0.7s;
+	transition: all .5s cubic-bezier(0.075, 0.82, 0.165, 1);
+	transition-delay: .2s;
+}
+
+.left-menu ul li.active ul {
+	height: 100%;
+	visibility: visible;
+	opacity: 1;
+}
+
+.left-menu ul ul li {
+	line-height: 4.2rem;
+	border-bottom: none;
+}
+
+.left-menu ul ul li a {
+	font-size: 1.6rem;
+	padding-left: 8rem;
+}
+
+.left-menu ul li a i {
+	position: absolute;
+	top: 50%;
+	right: 2rem;
+	transform: translateY(-50%);
+	font-size: 2.2rem;
+	transition: all .5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.left-menu ul li:hover a i {
+	transform: rotate(180deg);
+}

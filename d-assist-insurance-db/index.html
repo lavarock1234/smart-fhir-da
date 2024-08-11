@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge' />
+    <meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href='css/style.css' 
+    <title>[lavarock1234] Example-SMART-App</title>
+
+    <link rel='stylesheet' type='text/css' href='./src/css/example-smart-app.css'>
+    <!--
+      Temporarily disable cerner-smart-embeddable-lib
+      <link rel='stylesheet' type='text/css' href='./lib/css/cerner-smart-embeddable-lib-1.0.0.min.css'>
+    -->
+  </head>
+  <body>
+    <section>
+      <nav class="left-menu">
+        <div class="title">Step 1</div>
+        <ul>
+          <li id="Claudication"><a href="#">Claudication <i class="fa-solid fa-sort-down"></i> </a>
+            <ul>
+              <li><a href="#">Humana MA</a></li>
+              <li><a href="#">Humana</a></li>
+            </ul>
+          </li>
+          <li id="CLTI"><a href="#">CLTI <i class="fa-solid fa-sort-down"></i> </a> 
+            <ul>
+              <li><a href="#">Humana MA</a></li>
+              <li><a href="#">Humana</a></li>
+              <li><a href="#">Anthem</a></li>
+              <li><a href="#">Aetna</a></li>
+            </ul>
+          </li>
+          <li id="Venous"><a href="#">Venous <i class="fa-solid fa-sort-down"></i></a>
+            <ul>
+              <li><a href="#">Humana MA</a></li>
+              <li><a href="#">Humana</a></li>
+              <li><a href="#">Anthem</a></li>
+              <li><a href="#">Aetna</a></li>
+            </ul>
+          </li>
+        </ul> 
+      </nav>
+    </section>
+
+    <script>
+      let ClaudicationBtn = document.querySelector('#Claudication');
+      ClaudicationBtn.addEventListener("click", () => {
+        ClaudicationBtn.classList.toggle('active');
+      });
+      let CLTIBtn = document.querySelector('#CLTI');
+      CLTIBtn.addEventListener("click", () => {
+        CLTIBtn.classList.toggle('active');
+      });
+      let VenousBtn = document.querySelector('#Venous');
+      VenousBtn.addEventListener("click", () => {
+        VenousBtn.classList.toggle('active');
+      });
+    </script>
+  </body>
+</html>
