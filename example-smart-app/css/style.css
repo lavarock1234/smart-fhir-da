@@ -24,6 +24,14 @@ a {
 	text-decoration: none;
 }
 
+p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 3.1em;
+    font-weight: 300;
+    line-height: 1.7em;
+    color: #999;
+}
+
 body {
 	font-weight: 400;
 	font-size: 2rem;
