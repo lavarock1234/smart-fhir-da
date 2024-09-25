@@ -127,3 +127,24 @@ section {
 .left-menu ul li:hover a i {
 	transform: rotate(180deg);
 }
+
+/* Sidebar */
+#sidebar {
+    background-color: #ffffff;
+    width: 25%;
+    height: 100%;
+    padding: 10px;
+    float: left;
+    position: fixed;
+    z-index: 1;
+}
+
+/* Page Content */
+#pageContent {
+    display: block;
+    height: 100%;
+    width: 75%;
+    left: 25%;
+    background-color: #212121;
+    position: absolute;
+}
