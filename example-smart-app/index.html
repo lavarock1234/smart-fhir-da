@@ -68,7 +68,120 @@ ul#panels {
 <div class="container">
   <h3>This is Doc Assist</h3>
   <p>We are going to assist you good</p>
+    <div id='errors'>
+    </div>
+    <div id="loading" class="spinner">
+      <div class="bounce1"></div>
+      <div class="bounce2"></div>
+      <div class="bounce3"></div>
+    </div>
+    <div id='holder' >
+      <h2>Patient</h2>
+
+      <h2>Patient Basic Info</h2>
+      <table>
+        <tr>
+          <th>First Name:</th>
+          <td id='fname'></td>
+        </tr>
+        <tr>
+          <th>Last Name:</th>
+          <td id='lname'></td>
+        </tr>
+        <tr>
+          <th>Gender:</th>
+          <td id='gender'></td>
+        </tr>
+        <tr>
+          <th>Date of Birth:</th>
+          <td id='birthdate'></td>
+        </tr>
+      </table>
+      <h2>Observation Resource</h2>
+      <table>
+        <tr>
+          <th>Height:</th>
+          <td id='height'></td>
+        </tr>
+        <tr>
+          <th>Systolic Blood Pressure:</th>
+          <td id='systolicbp'></td>
+
+        </tr>
+        <tr>
+          <th>Diastolic Blood Pressure:</th>
+          <td id='diastolicbp'></td>
+        </tr>
+        <tr>
+          <th>LDL:</th>
+          <td id='ldl'></td>
+        </tr>
+        <tr>
+          <th>HDL:</th>
+          <td id='hdl'></td>
+        </tr>
+        <tr>
+          <th>Condition:</th>
+          <td id='condition'></td>
+        </tr>
+        <tr>
+          <th>Diagnostic Report:</th>
+          <td id='diag_report'></td>
+        </tr>
+        <tr>
+          <th>Procedure:</th>
+          <td id='procedure'></td>
+        </tr>        
+        <tr>
+          <th>CPT Codes:</th>
+          <td id='cpt_code'></td>
+        </tr>        
+<!--         <tr>
+          <th>Coverages:</th>
+          <td id='coverage'></td>
+        </tr>        
+        <tr>
+          <th>Claims:</th>
+          <td id='claim'></td>
+        </tr>     
+        <tr>
+          <th>ClaimResponses:</th>
+          <td id='claimres'></td>
+        </tr>  -->    
+        <tr>
+          <th>ICD Procedures:</th>
+          <td id='icd'></td>
+        </tr>                
+      </table>
+    </div>
 </div>
+
+    <!-- Application-level javascript-->
+    <script src='./src/js/example-smart-app.js'></script>
+
+    <!-- FHIR Client JS Library -->
+    <script src='./lib/js/fhir-client-v0.1.12.js'></script>
+
+    <script src='./lib/js/xdate.js'></script>
+
+    <!-- Prevent session bleed caused by single threaded embedded browser and sessionStorage API -->
+    <!-- https://github.com/cerner/fhir-client-cerner-additions -->
+    <script src='./lib/js/fhir-client-cerner-additions-1.0.0.js'></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+      extractData().then(
+        //Display Patient Demographics and Observations if extractData was success
+        function(p) {
+          drawVisualization(p);
+        },
+
+        //Display 'Failed to call FHIR Service' if extractData failed
+        function() {
+          $('#loading').hide();
+          $('#errors').html('<p> Failed to call FHIR Service </p>');
+        }
+      );
+    </script>
 
 
 </body>
