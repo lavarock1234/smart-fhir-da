@@ -1,135 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge' />
-    <meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
-    <title>[lavarock1234] Beta</title>
-
-    <link rel='stylesheet' type='text/css' href='./src/css/example-smart-app.css'>
-    <!--
-      Temporarily disable cerner-smart-embeddable-lib
-      <link rel='stylesheet' type='text/css' href='./lib/css/cerner-smart-embeddable-lib-1.0.0.min.css'>
-    -->
-  </head>
-  <body>
-    <div id='errors'>
+<head>
+<title>[lavarock1234] Example-SMART-App</title>
+<meta http-equiv='X-UA-Compatible' content='IE=edge' />
+<meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+<link rel='stylesheet' type='text/css' href='./src/css/example-smart-app.css'>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style>
+#sidebar-wrapper {
+  background:#ccc;
+  height:100vh
+}
+ul#panels {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  margin-left:300px;
+  background:red;
+}
+#sidebar-wrapper .sidebar-nav {
+  position: absolute;
+  top: 0;
+  width: 225px;
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+#sidebar-wrapper .sidebar-nav li {
+  text-indent: 0;
+  line-height: 45px;
+}
+#sidebar-wrapper .sidebar-nav li a {
+  display: block;
+  text-decoration: none;
+  outline:0;
+  color:#fff;
+}
+#sidebar-wrapper .sidebar-nav li a.active {
+  background-color:#85ce36;
+  color:#fff;
+}
+#sidebar-wrapper .sidebar-nav li a:focus, #sidebar-wrapper .sidebar-nav li a:hover {
+  background-color:#2d363f;
+}
+</style>
+</head>
+<body>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Doc Assist</a>
     </div>
-    <div id="loading" class="spinner">
-      <div class="bounce1"></div>
-      <div class="bounce2"></div>
-      <div class="bounce3"></div>
-    </div>
-    <div id='holder' >
-      <h2>Example-SMART-App</h2>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Home</a></li>
+      <li><a href="guidelines.html">Guidelines</a></li>
+      <li><a href="workflow.html">Workflows</a></li>
+      <li><a href="beta.html">Beta</a></li>
+    </ul>
+  </div>
+</nav>
+  
+<div class="container">
+  <h3>This is Doc Assist</h3>
+  <p>We are going to assist you good</p>
+</div>
 
-      <h2>Patient Resource</h2>
-      <table>
-        <tr>
-          <th>First Name:</th>
-          <td id='fname'></td>
-        </tr>
-        <tr>
-          <th>Last Name:</th>
-          <td id='lname'></td>
-        </tr>
-        <tr>
-          <th>Gender:</th>
-          <td id='gender'></td>
-        </tr>
-        <tr>
-          <th>Date of Birth:</th>
-          <td id='birthdate'></td>
-        </tr>
-      </table>
-      <h2>Observation Resource</h2>
-      <table>
-        <tr>
-          <th>Height:</th>
-          <td id='height'></td>
-        </tr>
-        <tr>
-          <th>Systolic Blood Pressure:</th>
-          <td id='systolicbp'></td>
 
-        </tr>
-        <tr>
-          <th>Diastolic Blood Pressure:</th>
-          <td id='diastolicbp'></td>
-        </tr>
-        <tr>
-          <th>LDL:</th>
-          <td id='ldl'></td>
-        </tr>
-        <tr>
-          <th>HDL:</th>
-          <td id='hdl'></td>
-        </tr>
-        <tr>
-          <th>Condition:</th>
-          <td id='condition'></td>
-        </tr>
-        <tr>
-          <th>Diagnostic Report:</th>
-          <td id='diag_report'></td>
-        </tr>
-        <tr>
-          <th>Procedure:</th>
-          <td id='procedure'></td>
-        </tr>        
-        <tr>
-          <th>CPT Codes:</th>
-          <td id='cpt_code'></td>
-        </tr>        
-<!--         <tr>
-          <th>Coverages:</th>
-          <td id='coverage'></td>
-        </tr>        
-        <tr>
-          <th>Claims:</th>
-          <td id='claim'></td>
-        </tr>     
-        <tr>
-          <th>ClaimResponses:</th>
-          <td id='claimres'></td>
-        </tr>  -->    
-        <tr>
-          <th>ICD Procedures:</th>
-          <td id='icd'></td>
-        </tr>                
-      </table>
-    </div>
-    <!-- Required JS files to enable this page to embed within an MPage -->
-    <!--
-      Temporarily disable cerner-smart-embeddable-lib
-      <script src='https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/6.26.0/polyfill.min.js'></script>
-      <script src='./lib/js/cerner-smart-embeddable-lib-1.0.0.min.js'></script>
-    -->
-
-    <!-- Application-level javascript-->
-    <script src='./src/js/example-smart-app.js'></script>
-
-    <!-- FHIR Client JS Library -->
-    <script src='./lib/js/fhir-client-v0.1.12.js'></script>
-
-    <script src='./lib/js/xdate.js'></script>
-
-    <!-- Prevent session bleed caused by single threaded embedded browser and sessionStorage API -->
-    <!-- https://github.com/cerner/fhir-client-cerner-additions -->
-    <script src='./lib/js/fhir-client-cerner-additions-1.0.0.js'></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script>
-      extractData().then(
-        //Display Patient Demographics and Observations if extractData was success
-        function(p) {
-          drawVisualization(p);
-        },
-
-        //Display 'Failed to call FHIR Service' if extractData failed
-        function() {
-          $('#loading').hide();
-          $('#errors').html('<p> Failed to call FHIR Service </p>');
-        }
-      );
-    </script>
-  </body>
+</body>
 </html>
