@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>[lavarock1234] Example-SMART-App</title>
+<meta http-equiv='X-UA-Compatible' content='IE=edge' />
+<meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+<link rel='stylesheet' type='text/css' href='./src/css/example-smart-app.css'>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style>
+#sidebar-wrapper {
+  background:#ccc;
+  height:100vh
+}
+ul#panels {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  margin-left:300px;
+  background:red;
+}
+#sidebar-wrapper .sidebar-nav {
+  position: absolute;
+  top: 0;
+  width: 225px;
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+#sidebar-wrapper .sidebar-nav li {
+  text-indent: 0;
+  line-height: 45px;
+}
+#sidebar-wrapper .sidebar-nav li a {
+  display: block;
+  text-decoration: none;
+  outline:0;
+  color:#fff;
+}
+#sidebar-wrapper .sidebar-nav li a.active {
+  background-color:#85ce36;
+  color:#fff;
+}
+#sidebar-wrapper .sidebar-nav li a:focus, #sidebar-wrapper .sidebar-nav li a:hover {
+  background-color:#2d363f;
+}
+</style>
+</head>
+<body>
+<div id="sidebar-wrapper">
+  <aside id="sidebar">
+    <ul id="sidemenu" class="sidebar-nav">
+      <li> <a href="index.html" class="active"> <span class="sidebar-icon"><i class="fa fa-dashboard"></i></span> <span class="sidebar-title">Back</span> </a> </li>
+      <li> <a class="accordion-toggle collapsed toggle-switch toggle-icon" data-toggle="collapse" href="#submenu-2"> <span class="sidebar-icon"><i class="fa fa-users"></i></span> <span class="sidebar-title">Claudication</span> <i class="fa icon-toggle fa-angle-right" aria-hidden="true"></i> </a>
+        <ul id="submenu-2" class="panel-collapse collapse panel-switch" role="menu">
+          <li><a data-toggle="collapse" href="#tab1" class="abc"><i class="fa fa-caret-right"></i>Humana MA (Page 2)</a></li>
+          <li><a data-toggle="collapse" href="#tab2" class="abc"><i class="fa fa-caret-right"></i>Humana (Page 4)</a></li>
+        </ul>
+      </li>
+      <li> <a class="accordion-toggle collapsed toggle-switch toggle-icon" data-toggle="collapse" href="#submenu-3"> <span class="sidebar-icon"><i class="fa fa-newspaper-o"></i></span> <span class="sidebar-title">CLTI</span> <i class="fa icon-toggle fa-angle-right" aria-hidden="true"></i> </a>
+        <ul id="submenu-3" class="panel-collapse collapse panel-switch" role="menu">
+          <li><a data-toggle="collapse" href="#tab3"><i class="fa fa-caret-right"></i>Humana MA</a></li>
+        </ul>
+      </li>
+      <li> <a class="accordion-toggle collapsed toggle-switch toggle-icon" data-toggle="collapse" href="#submenu-4"> <span class="sidebar-icon"><i class="fa fa-newspaper-o"></i></span> <span class="sidebar-title">Venous</span> <i class="fa icon-toggle fa-angle-right" aria-hidden="true"></i> </a>
+        <ul id="submenu-4" class="panel-collapse collapse panel-switch" role="menu">
+          <li><a href="#"><i class="fa fa-caret-right"></i>Humana MA</a></li>
+          <li><a href="#"><i class="fa fa-caret-right"></i>Humana</a></li>
+        </ul>
+      </li>
+    </ul>
+  </aside>
+  <ul id="panels">
+    <li id="tab1" class="collapse">Aortoiliac and Superficial Femoral arteries ONLY
+
+When all of the following requirements have been met:
+o Inadequate response to three months of optimal guideline-directed medical therapy (GDMT)
+within the past 12 months AND
+-Optimal GDMT includes Class I recommendations for antiplatelet therapy, cilostazol,
+statins, glycemic and hypertension control, exercise program, smoking cessation
+including planning, counseling, or behavior modification and pharmacotherapy if
+needed
+o Impairment of activities of daily living and work AND
+o Individual has undergone a structured exercise program (eg, supervised or home based) AND
+o Presence of anatomically suitable lesion for intervention with documentation of any of the
+following:
+-Lesion greater than 70% stenosis on angiography (eg, CTA, invasive angiography,
+MRA) OR
+-Lesion 50% to 70% stenosis on angiography (eg, CTA, invasive angiography, MRA);
+AND Resting or provoked intravascular translesional (pre- to post-stenosis) pressure
+gradient measurement greater than or equal to 10 mmHg; OR
+- LE Duplex doppler with peak systolic velocity (PSV) greater than 300 cm/s or PSV ratio
+greater than 4.0</li>
+    <li id="tab2" class="collapse">• Inadequate response to three consecutive months of conservative therapy within
+the past 12 months with ALL of the following:
+o Individual has undergone supervised exercise therapy (for information
+regarding coverage determination/limitations, please refer to Peripheral
+Artery Disease of the Lower Extremities Angiography, Screening and Exercise
+Rehabilitation Medical Coverage Policy; AND
+o Pharmacological therapy (eg, antiplatelet medication, cilostazol) if medically
+appropriate and not contraindicated; AND
+o Verified smoking cessation counseling; AND
+
+• Positive exercise ABI AND
+
+• Absence of other conditions that limit ability to ambulate/exercise (eg, angina,
+chronic obstructive pulmonary disease, heart failure, orthopedic limitations); AND
+
+• Noninvasive imaging (computed tomography [CTA], duplex ultrasound or
+magnetic resonance angiography [MRA]) confirmation of anatomic location and
+stenosis severity of 70% or greater</li>
+    <li id="tab3" class="collapse">• Noninvasive imaging (CTA, duplex ultrasound or MRA) confirmation of anatomic
+
+Page 5
+location and stenosis severity of 70% or greater;
+
+AND one of the following:
+• Ankle-brachial index of 0.40 or less; OR
+• Toe pressure less than 30mmHG (TBI testing);
+
+AND one of the following:
+• Gangrene; OR
+• Ischemic rest pain; OR
+• Nonhealing wound or ulcer from ischemia</li>
+  </ul>
+</div>
+<script>
+$(document).ready(function(){ 
+$('#panels li').on('show.bs.collapse', function () {
+    $('#panels li.in').collapse('hide');
+});
+});
+</script>
+</body>
+</html>
