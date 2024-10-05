@@ -5,6 +5,7 @@
     "start": "http-server -p 9090 -c-1"
   },
   "dependencies": {
+    "ckeditor4": "^4.25.0",
     "fhirclient": "0.1.12",
     "http-server": "^0.10.0"
   }
