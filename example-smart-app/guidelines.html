@@ -94,7 +94,66 @@ MRA) OR
 AND Resting or provoked intravascular translesional (pre- to post-stenosis) pressure
 gradient measurement greater than or equal to 10 mmHg; OR
 - LE Duplex doppler with peak systolic velocity (PSV) greater than 300 cm/s or PSV ratio
-greater than 4.0</li>
+greater than 4.0
+
+<br>
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#checklistClaudification">
+  Checklist
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="checklistClaudification" tabindex="-1" role="dialog" aria-labelledby="checklistClaudificationLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="checklistClaudificationLabel">Claudification Humana NA Checklist</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+          <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+          <label for="vehicle1"> I have a bike</label><br>
+          <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+          <label for="vehicle2"> I have a car</label><br>
+          <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+          <label for="vehicle3"> I have a boat</label><br> 
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#notesClaudification">
+  Document
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="notesClaudification" tabindex="-1" role="dialog" aria-labelledby="notesClaudificationLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="notesClaudificationLabel">Claudification Humana NA Notes</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+        <label for="notes">Notes:</label>
+        <textarea id="notes" name="notes"></textarea>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+</li>
     <li id="tab2" class="collapse">• Inadequate response to three consecutive months of conservative therapy within
 the past 12 months with ALL of the following:
 o Individual has undergone supervised exercise therapy (for information
