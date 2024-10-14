@@ -75,7 +75,21 @@ ul#panels {
     </ul>
   </aside>
   <ul id="panels">
-    <li id="tab1" class="collapse">Aortoiliac and Superficial Femoral arteries ONLY
+
+    <li id="tab1" class="collapse">
+
+<p> 
+  <a class="btn btn-primary" data-toggle="collapse" href="#ClaudificationHumanMAFirstVisit" role="button" aria-expanded="false" aria-controls="collapseExample">
+    First Visit
+  </a> 
+  <a class="btn btn-primary" data-toggle="collapse" href="#ClaudificationHumanMASecondVisit" role="button" aria-expanded="false" aria-controls="collapseExample">
+    Second Visit
+  </a> 
+</p>
+
+<li id="ClaudificationHumanMAFirstVisit" class="collapse">
+
+Aortoiliac and Superficial Femoral arteries ONLY
 
 When all of the following requirements have been met:
 o Inadequate response to three months of optimal guideline-directed medical therapy (GDMT)
@@ -99,16 +113,16 @@ greater than 4.0
 <br>
 
 <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#checklistClaudification">
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#checklistClaudificationFirstVisit">
   Checklist
 </button>
 
 <!-- Modal -->
-<div class="modal fade" id="checklistClaudification" tabindex="-1" role="dialog" aria-labelledby="checklistClaudificationLabel" aria-hidden="true">
+<div class="modal fade" id="checklistClaudificationFirstVisit" tabindex="-1" role="dialog" aria-labelledby="checklistClaudificationFirstVisitLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="checklistClaudificationLabel">Claudification Humana NA Checklist</h5>
+        <h5 class="modal-title" id="checklistClaudificationFirstVisitLabel">Claudification Humana NA FirstVisit Checklist</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -129,16 +143,16 @@ greater than 4.0
   </div>
 </div>
 
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#notesClaudification">
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#notesClaudificationFirstVisit">
   Document
 </button>
 
 <!-- Modal -->
-<div class="modal fade" id="notesClaudification" tabindex="-1" role="dialog" aria-labelledby="notesClaudificationLabel" aria-hidden="true">
+<div class="modal fade" id="notesClaudificationFirstVisit" tabindex="-1" role="dialog" aria-labelledby="notesClaudificationFirstVisitLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="notesClaudificationLabel">Claudification Humana NA Notes</h5>
+        <h5 class="modal-title" id="notesClaudificationFirstVisitLabel">Claudification Humana NA FirstVisit Notes</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -153,7 +167,73 @@ greater than 4.0
   </div>
 </div>
 
+
 </li>
+
+<li id="ClaudificationHumanMASecondVisit" class="collapse">
+Claudification Humana MA second visit text goes here
+
+<br>
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#checklistClaudificationSecondVisit">
+  Checklist
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="checklistClaudificationSecondVisit" tabindex="-1" role="dialog" aria-labelledby="checklistClaudificationSecondVisitLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="checklistClaudificationSecondVisitLabel">Claudification Humana NA SecondVisit Checklist</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+          <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+          <label for="vehicle1"> I have a bike</label><br>
+          <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+          <label for="vehicle2"> I have a car</label><br>
+          <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+          <label for="vehicle3"> I have a boat</label><br> 
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#notesClaudificationSecondVisit">
+  Document
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="notesClaudificationSecondVisit" tabindex="-1" role="dialog" aria-labelledby="notesClaudificationSecondVisitLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="notesClaudificationSecondVisitLabel">Claudification Humana NA SecondVisit Notes</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+        <label for="notes">Notes:</label>
+        <textarea id="notes" name="notes"></textarea>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</li>
+</li>
+
     <li id="tab2" class="collapse">• Inadequate response to three consecutive months of conservative therapy within
 the past 12 months with ALL of the following:
 o Individual has undergone supervised exercise therapy (for information
