@@ -8,8 +8,8 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
 <link rel='stylesheet' type='text/css' href='./src/css/example-smart-app.css'>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 <style>
 #sidebar-wrapper {
   background:#ccc;
@@ -78,17 +78,17 @@ ul#panels {
 
     <li id="tab1" class="collapse">
 
-<p> 
-  <a class="btn btn-primary" data-toggle="collapse" href="#ClaudificationHumanMAFirstVisit" role="button" aria-expanded="false" aria-controls="collapseExample">
-    First Visit
-  </a> 
-  <a class="btn btn-primary" data-toggle="collapse" href="#ClaudificationHumanMASecondVisit" role="button" aria-expanded="false" aria-controls="collapseExample">
-    Second Visit
-  </a> 
-</p>
+<div class="container">
+  <h2>Claudification (Humana MA)</h2>
+  <ul class="nav nav-tabs">
+    <li class="active"><a data-toggle="tab" href="#home">First Visit</a></li>
+    <li><a data-toggle="tab" href="#menu1">Second Visit</a></li>
+  </ul>
 
-<li id="ClaudificationHumanMAFirstVisit" class="collapse">
+  <div class="tab-content">
+    <div id="home" class="tab-pane fade in active">
 
+<p>
 Aortoiliac and Superficial Femoral arteries ONLY
 
 When all of the following requirements have been met:
@@ -110,6 +110,7 @@ gradient measurement greater than or equal to 10 mmHg; OR
 - LE Duplex doppler with peak systolic velocity (PSV) greater than 300 cm/s or PSV ratio
 greater than 4.0
 
+</p>
 <br>
 
 <!-- Button trigger modal -->
@@ -168,9 +169,9 @@ greater than 4.0
 </div>
 
 
-</li>
+    </div>
+    <div id="menu1" class="tab-pane fade">
 
-<li id="ClaudificationHumanMASecondVisit" class="collapse">
 Claudification Humana MA second visit text goes here
 
 <br>
@@ -231,7 +232,10 @@ Claudification Humana MA second visit text goes here
 </div>
 
 
-</li>
+    </div>
+  </div>
+</div>
+
 </li>
 
     <li id="tab2" class="collapse">• Inadequate response to three consecutive months of conservative therapy within
