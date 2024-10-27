@@ -1,293 +1,327 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<title>[lavarock1234] Example-SMART-App</title>
-<meta http-equiv='X-UA-Compatible' content='IE=edge' />
-<meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
-<link rel='stylesheet' type='text/css' href='./src/css/example-smart-app.css'>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-<style>
-#sidebar-wrapper {
-  background:#c9d6cd;
-  height:100vh
-}
-ul#panels {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  margin-left:300px;
-  background:white;
-}
-#sidebar-wrapper .sidebar-nav {
-  position: absolute;
-  top: 0;
-  width: 225px;
-  font-size: 14px;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-#sidebar-wrapper .sidebar-nav li {
-  text-indent: 0;
-  line-height: 45px;
-}
-#sidebar-wrapper .sidebar-nav li a {
-  display: block;
-  text-decoration: none;
-  outline:0;
-  color:black;
-}
-#sidebar-wrapper .sidebar-nav li a.active {
-  background-color:#85ce36;
-  color:black;
-}
-#sidebar-wrapper .sidebar-nav li a:focus, #sidebar-wrapper .sidebar-nav li a:hover {
-  background-color:#c9d6cd;
-}
-</style>
+  <title>[lavarock1234] Example-SMART-App</title>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge' />
+  <meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+  <link rel='stylesheet' type='text/css' href='./src/css/example-smart-app.css'>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+    #sidebar-wrapper {
+      background: #c9d6cd;
+      height: 100vh
+    }
+
+    ul#panels {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      margin-left: 300px;
+      background: white;
+    }
+
+    #sidebar-wrapper .sidebar-nav {
+      position: absolute;
+      top: 0;
+      width: 225px;
+      font-size: 14px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    #sidebar-wrapper .sidebar-nav li {
+      text-indent: 0;
+      line-height: 45px;
+    }
+
+    #sidebar-wrapper .sidebar-nav li a {
+      display: block;
+      text-decoration: none;
+      outline: 0;
+      color: black;
+    }
+
+    #sidebar-wrapper .sidebar-nav li a.active {
+      background-color: #85ce36;
+      color: black;
+    }
+
+    #sidebar-wrapper .sidebar-nav li a:focus,
+    #sidebar-wrapper .sidebar-nav li a:hover {
+      background-color: #c9d6cd;
+    }
+  </style>
 </head>
+
 <body>
-<div id="sidebar-wrapper">
-  <aside id="sidebar">
-    <ul id="sidemenu" class="sidebar-nav">
-      <li> <a href="index.html" class="active"> <span class="sidebar-icon"><i class="fa fa-dashboard"></i></span> <span class="sidebar-title">Back</span> </a> </li>
-      <li> <a class="accordion-toggle collapsed toggle-switch toggle-icon" data-toggle="collapse" href="#submenu-2"> <span class="sidebar-icon"><i class="fa fa-users"></i></span> <span class="sidebar-title">Claudication</span> <i class="fa icon-toggle fa-angle-right" aria-hidden="true"></i> </a>
-        <ul id="submenu-2" class="panel-collapse collapse panel-switch" role="menu">
-          <li><a data-toggle="collapse" href="#tab1" class="abc"><i class="fa fa-caret-right"></i>Humana MA (Page 2)</a></li>
-          <li><a data-toggle="collapse" href="#tab2" class="abc"><i class="fa fa-caret-right"></i>Humana (Page 4)</a></li>
-        </ul>
+  <div id="sidebar-wrapper">
+    <aside id="sidebar">
+      <ul id="sidemenu" class="sidebar-nav">
+        <li> <a href="index.html" class="active"> <span class="sidebar-icon"><i class="fa fa-dashboard"></i></span>
+            <span class="sidebar-title">Back</span> </a> </li>
+        <li> <a class="accordion-toggle collapsed toggle-switch toggle-icon" data-toggle="collapse" href="#submenu-2">
+            <span class="sidebar-icon"><i class="fa fa-users"></i></span> <span
+              class="sidebar-title">Claudication</span> <i class="fa icon-toggle fa-angle-right" aria-hidden="true"></i>
+          </a>
+          <ul id="submenu-2" class="panel-collapse collapse panel-switch" role="menu">
+            <li><a data-toggle="collapse" href="#tab1" class="abc"><i class="fa fa-caret-right"></i>Humana MA (Page
+                2)</a></li>
+            <li><a data-toggle="collapse" href="#tab2" class="abc"><i class="fa fa-caret-right"></i>Humana (Page 4)</a>
+            </li>
+          </ul>
+        </li>
+        <li> <a class="accordion-toggle collapsed toggle-switch toggle-icon" data-toggle="collapse" href="#submenu-3">
+            <span class="sidebar-icon"><i class="fa fa-newspaper-o"></i></span> <span class="sidebar-title">CLTI</span>
+            <i class="fa icon-toggle fa-angle-right" aria-hidden="true"></i> </a>
+          <ul id="submenu-3" class="panel-collapse collapse panel-switch" role="menu">
+            <li><a data-toggle="collapse" href="#tab3"><i class="fa fa-caret-right"></i>Humana MA</a></li>
+          </ul>
+        </li>
+        <li> <a class="accordion-toggle collapsed toggle-switch toggle-icon" data-toggle="collapse" href="#submenu-4">
+            <span class="sidebar-icon"><i class="fa fa-newspaper-o"></i></span> <span
+              class="sidebar-title">Venous</span> <i class="fa icon-toggle fa-angle-right" aria-hidden="true"></i> </a>
+          <ul id="submenu-4" class="panel-collapse collapse panel-switch" role="menu">
+            <li><a href="#"><i class="fa fa-caret-right"></i>Humana MA</a></li>
+            <li><a href="#"><i class="fa fa-caret-right"></i>Humana</a></li>
+          </ul>
+        </li>
+      </ul>
+    </aside>
+    <ul id="panels">
+
+      <li id="tab1" class="collapse">
+
+        <div class="container">
+          <h2>Claudication (Humana)</h2>
+          <ul class="nav nav-tabs">
+            <li class="active"><a data-toggle="tab" href="#home">First Visit</a></li>
+            <li><a data-toggle="tab" href="#menu1">Second Visit</a></li>
+          </ul>
+
+          <div class="tab-content">
+            <div id="home" class="tab-pane fade in active">
+
+              <p>
+                CONSERVATIVE MEDICAL MANAGEMENT
+              <ol>
+                <li>Lifestyle Limiting Claudication – impairment of activities of daily living and work. </li>
+                <li>Inadequate Response to Conservative Medical Therapy – 3 consecutive months’ worth within the past 12
+                  months. </li>
+                <li>Smoking Cessation/Counseling</li>
+                <li>Pharmacological Therapy</li>
+                <li>Supervised Exercise Therapy</li>
+              </ol>
+              Must state that the patient does not have any other conditions that limit ability to ambulate/exercise.
+              <br>
+
+              EXERCISE ABI
+              <br>
+
+              Positive Exercise ABI that is 30% decrease from baseline (ex: .80 baseline ABI and .50 ABI after walking
+              to the
+              IMAGING
+
+              <ol>
+                <li>Duplex OR</li>
+                <li>CTA OR</li>
+                <li>MRA</li>
+              </ol>
+              **All noting stenosis of >70% and location with length of stenosis/occlusion
+              <br>
+              ***Can Only Treat Aortoiliac
+
+              </p>
+              <br>
+
+              <!-- Button trigger modal -->
+              <button type="button" class="btn btn-primary" data-toggle="modal"
+                data-target="#checklistClaudificationFirstVisit">
+                Checklist
+              </button>
+
+              <!-- Modal -->
+              <div class="modal fade" id="checklistClaudificationFirstVisit" tabindex="-1" role="dialog"
+                aria-labelledby="checklistClaudificationFirstVisitLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="checklistClaudificationFirstVisitLabel">Initial Visit Checklist for
+                        Claudication (Humana)</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <input type="checkbox" id="vehicle1" name="vehicle1" value="ADL">
+                      <label for="vehicle1"> Impairment of activities of daily living</label><br>
+                      <input type="checkbox" id="vehicle2" name="vehicle2" value="work">
+                      <label for="vehicle2"> Unable to work</label><br>
+                      <input type="checkbox" id="vehicle3" name="vehicle3" value="smoke">
+                      <label for="vehicle3"> Counseled on smoking cessation</label><br>
+                      <input type="checkbox" id="vehicle4" name="vehicle4" value="meds">
+                      <label for="vehicle4"> Pharmacological therapy</label><br>
+                      <input type="checkbox" id="vehicle5" name="vehicle5" value="exercise">
+                      <label for="vehicle5"> Exercise therapy</label><br>
+                      <input type="checkbox" id="vehicle6" name="vehicle6" value="ABI">
+                      <label for="vehicle6"> Exercise ABI and duplex</label><br>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary">Copy</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <button type="button" class="btn btn-primary" data-toggle="modal"
+                data-target="#notesClaudificationFirstVisit">
+                Document
+              </button>
+
+              <!-- Modal -->
+              <div class="modal fade" id="notesClaudificationFirstVisit" tabindex="-1" role="dialog"
+                aria-labelledby="notesClaudificationFirstVisitLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="notesClaudificationFirstVisitLabel">Claudification Humana NA
+                        FirstVisit Notes</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <label for="notes">Notes:</label>
+                    <textarea id="notes" name="notes"></textarea>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+            </div>
+            <div id="menu1" class="tab-pane fade">
+
+              Claudification Humana MA second visit text goes here
+
+              <br>
+
+              <!-- Button trigger modal -->
+              <button type="button" class="btn btn-primary" data-toggle="modal"
+                data-target="#checklistClaudificationSecondVisit">
+                Checklist
+              </button>
+
+              <!-- Modal -->
+              <div class="modal fade" id="checklistClaudificationSecondVisit" tabindex="-1" role="dialog"
+                aria-labelledby="checklistClaudificationSecondVisitLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="checklistClaudificationSecondVisitLabel">Claudification Humana NA
+                        SecondVisit Checklist</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+                      <label for="vehicle1"> I have a bike</label><br>
+                      <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+                      <label for="vehicle2"> I have a car</label><br>
+                      <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+                      <label for="vehicle3"> I have a boat</label><br>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <button type="button" class="btn btn-primary" data-toggle="modal"
+                data-target="#notesClaudificationSecondVisit">
+                Document
+              </button>
+
+              <!-- Modal -->
+              <div class="modal fade" id="notesClaudificationSecondVisit" tabindex="-1" role="dialog"
+                aria-labelledby="notesClaudificationSecondVisitLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="notesClaudificationSecondVisitLabel">Claudification Humana NA
+                        SecondVisit Notes</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <label for="notes">Notes:</label>
+                    <textarea id="notes" name="notes"></textarea>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+        </div>
+
       </li>
-      <li> <a class="accordion-toggle collapsed toggle-switch toggle-icon" data-toggle="collapse" href="#submenu-3"> <span class="sidebar-icon"><i class="fa fa-newspaper-o"></i></span> <span class="sidebar-title">CLTI</span> <i class="fa icon-toggle fa-angle-right" aria-hidden="true"></i> </a>
-        <ul id="submenu-3" class="panel-collapse collapse panel-switch" role="menu">
-          <li><a data-toggle="collapse" href="#tab3"><i class="fa fa-caret-right"></i>Humana MA</a></li>
-        </ul>
-      </li>
-      <li> <a class="accordion-toggle collapsed toggle-switch toggle-icon" data-toggle="collapse" href="#submenu-4"> <span class="sidebar-icon"><i class="fa fa-newspaper-o"></i></span> <span class="sidebar-title">Venous</span> <i class="fa icon-toggle fa-angle-right" aria-hidden="true"></i> </a>
-        <ul id="submenu-4" class="panel-collapse collapse panel-switch" role="menu">
-          <li><a href="#"><i class="fa fa-caret-right"></i>Humana MA</a></li>
-          <li><a href="#"><i class="fa fa-caret-right"></i>Humana</a></li>
-        </ul>
-      </li>
+
+      <li id="tab2" class="collapse">• Inadequate response to three consecutive months of conservative therapy within
+        the past 12 months with ALL of the following:
+        o Individual has undergone supervised exercise therapy (for information
+        regarding coverage determination/limitations, please refer to Peripheral
+        Artery Disease of the Lower Extremities Angiography, Screening and Exercise
+        Rehabilitation Medical Coverage Policy; AND
+        o Pharmacological therapy (eg, antiplatelet medication, cilostazol) if medically
+        appropriate and not contraindicated; AND
+        o Verified smoking cessation counseling; AND
+
+        • Positive exercise ABI AND
+
+        • Absence of other conditions that limit ability to ambulate/exercise (eg, angina,
+        chronic obstructive pulmonary disease, heart failure, orthopedic limitations); AND
+
+        • Noninvasive imaging (computed tomography [CTA], duplex ultrasound or
+        magnetic resonance angiography [MRA]) confirmation of anatomic location and
+        stenosis severity of 70% or greater</li>
+      <li id="tab3" class="collapse">• Noninvasive imaging (CTA, duplex ultrasound or MRA) confirmation of anatomic
+
+        Page 5
+        location and stenosis severity of 70% or greater;
+
+        AND one of the following:
+        • Ankle-brachial index of 0.40 or less; OR
+        • Toe pressure less than 30mmHG (TBI testing);
+
+        AND one of the following:
+        • Gangrene; OR
+        • Ischemic rest pain; OR
+        • Nonhealing wound or ulcer from ischemia</li>
     </ul>
-  </aside>
-  <ul id="panels">
-
-    <li id="tab1" class="collapse">
-
-<div class="container">
-  <h2>Claudication (Humana)</h2>
-  <ul class="nav nav-tabs">
-    <li class="active"><a data-toggle="tab" href="#home">First Visit</a></li>
-    <li><a data-toggle="tab" href="#menu1">Second Visit</a></li>
-  </ul>
-
-  <div class="tab-content">
-    <div id="home" class="tab-pane fade in active">
-
-<p>
-CONSERVATIVE MEDICAL MANAGEMENT
-<ol>
-<li>Lifestyle Limiting Claudication – impairment of activities of daily living and work. </li>
-<li>Inadequate Response to Conservative Medical Therapy – 3 consecutive months’ worth within the past 12 months.  </li>
-<li>Smoking Cessation/Counseling</li>
-<li>Pharmacological Therapy</li>
-<li>Supervised Exercise Therapy</li>
-</ol>
-Must state that the patient does not have any other conditions that limit ability to ambulate/exercise.
-<br>
-
-EXERCISE ABI
-<br>
-
-Positive Exercise ABI that is 30% decrease from baseline (ex: .80 baseline ABI and .50 ABI after walking to the 
-IMAGING
-
-<ol>
-<li>Duplex OR</li>
-<li>CTA OR</li>
-<li>MRA</li>
-</ol>
-**All noting stenosis of >70% and location with length of stenosis/occlusion 
-<br>
-***Can Only Treat Aortoiliac
-
-</p>
-<br>
-
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#checklistClaudificationFirstVisit">
-  Checklist
-</button>
-
-<!-- Modal -->
-<div class="modal fade" id="checklistClaudificationFirstVisit" tabindex="-1" role="dialog" aria-labelledby="checklistClaudificationFirstVisitLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="checklistClaudificationFirstVisitLabel">Initial Visit Checklist for Claudication (Humana)</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-          <input type="checkbox" id="vehicle1" name="vehicle1" value="ADL">
-          <label for="vehicle1"> Impairment of activities of daily living</label><br>
-          <input type="checkbox" id="vehicle2" name="vehicle2" value="work">
-          <label for="vehicle2"> Unable to work</label><br>
-          <input type="checkbox" id="vehicle3" name="vehicle3" value="smoke">
-          <label for="vehicle3"> Counseled on smoking cessation</label><br>
-          <input type="checkbox" id="vehicle4" name="vehicle4" value="meds">
-          <label for="vehicle4"> Pharmacological therapy</label><br>
-          <input type="checkbox" id="vehicle5" name="vehicle5" value="exercise">
-          <label for="vehicle5"> Exercise therapy</label><br>
-          <input type="checkbox" id="vehicle6" name="vehicle6" value="ABI">
-          <label for="vehicle6"> Exercise ABI and duplex</label><br>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Copy</button>
-      </div>
-    </div>
   </div>
-</div>
-
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#notesClaudificationFirstVisit">
-  Document
-</button>
-
-<!-- Modal -->
-<div class="modal fade" id="notesClaudificationFirstVisit" tabindex="-1" role="dialog" aria-labelledby="notesClaudificationFirstVisitLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="notesClaudificationFirstVisitLabel">Claudification Humana NA FirstVisit Notes</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-        <label for="notes">Notes:</label>
-        <textarea id="notes" name="notes"></textarea>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-    </div>
-    <div id="menu1" class="tab-pane fade">
-
-Claudification Humana MA second visit text goes here
-
-<br>
-
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#checklistClaudificationSecondVisit">
-  Checklist
-</button>
-
-<!-- Modal -->
-<div class="modal fade" id="checklistClaudificationSecondVisit" tabindex="-1" role="dialog" aria-labelledby="checklistClaudificationSecondVisitLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="checklistClaudificationSecondVisitLabel">Claudification Humana NA SecondVisit Checklist</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-          <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
-          <label for="vehicle1"> I have a bike</label><br>
-          <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
-          <label for="vehicle2"> I have a car</label><br>
-          <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
-          <label for="vehicle3"> I have a boat</label><br> 
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#notesClaudificationSecondVisit">
-  Document
-</button>
-
-<!-- Modal -->
-<div class="modal fade" id="notesClaudificationSecondVisit" tabindex="-1" role="dialog" aria-labelledby="notesClaudificationSecondVisitLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="notesClaudificationSecondVisitLabel">Claudification Humana NA SecondVisit Notes</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-        <label for="notes">Notes:</label>
-        <textarea id="notes" name="notes"></textarea>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-    </div>
-  </div>
-</div>
-
-</li>
-
-    <li id="tab2" class="collapse">• Inadequate response to three consecutive months of conservative therapy within
-the past 12 months with ALL of the following:
-o Individual has undergone supervised exercise therapy (for information
-regarding coverage determination/limitations, please refer to Peripheral
-Artery Disease of the Lower Extremities Angiography, Screening and Exercise
-Rehabilitation Medical Coverage Policy; AND
-o Pharmacological therapy (eg, antiplatelet medication, cilostazol) if medically
-appropriate and not contraindicated; AND
-o Verified smoking cessation counseling; AND
-
-• Positive exercise ABI AND
-
-• Absence of other conditions that limit ability to ambulate/exercise (eg, angina,
-chronic obstructive pulmonary disease, heart failure, orthopedic limitations); AND
-
-• Noninvasive imaging (computed tomography [CTA], duplex ultrasound or
-magnetic resonance angiography [MRA]) confirmation of anatomic location and
-stenosis severity of 70% or greater</li>
-    <li id="tab3" class="collapse">• Noninvasive imaging (CTA, duplex ultrasound or MRA) confirmation of anatomic
-
-Page 5
-location and stenosis severity of 70% or greater;
-
-AND one of the following:
-• Ankle-brachial index of 0.40 or less; OR
-• Toe pressure less than 30mmHG (TBI testing);
-
-AND one of the following:
-• Gangrene; OR
-• Ischemic rest pain; OR
-• Nonhealing wound or ulcer from ischemia</li>
-  </ul>
-</div>
-<script>
-$(document).ready(function(){ 
-$('#panels li').on('show.bs.collapse', function () {
-    $('#panels li.in').collapse('hide');
-});
-});
-</script>
+  <script>
+    $(document).ready(function () {
+      $('#panels li').on('show.bs.collapse', function () {
+        $('#panels li.in').collapse('hide');
+      });
+    });
+  </script>
 </body>
+
 </html>
