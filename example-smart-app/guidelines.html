@@ -178,7 +178,7 @@
                     </div>
                     <div class="modal-footer">
                       <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                      <button type="button" class="btn btn-primary">Copy</button>
+                      <button type="button" class="btn btn-primary" onclick="copyClaudificationFirstVisit();">Copy</button>
                     </div>
                   </div>
                 </div>
@@ -340,6 +340,14 @@
       }      
       document.getElementById("textareaClaudificationFirstVisit").value = checkboxesChecked.join("\n");
       console.log(document.getElementById("textareaClaudificationFirstVisit").value);
+    }
+
+    function copyClaudificationFirstVisit() {
+      var copyText = document.getElementById("textareaClaudificationFirstVisit");
+      copyText.select();
+      copyText.setSelectionRange(0, 99999)
+      document.execCommand("copy");
+      alert("Copied the text: \n\n" + copyText.value + "\n\nto clipboard!");
     }
 
   </script>
