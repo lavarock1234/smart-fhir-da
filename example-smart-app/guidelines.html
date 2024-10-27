@@ -158,18 +158,23 @@
                       </button>
                     </div>
                     <div class="modal-body">
-                      <input type="checkbox" id="vehicle1" name="vehicle1" value="ADL">
+                      <input type="checkbox" id="vehicle1" name="ClaudificationFirstVisit" onClick="checkbox();" value="Impairment of activities of daily living">
                       <label for="vehicle1"> Impairment of activities of daily living</label><br>
-                      <input type="checkbox" id="vehicle2" name="vehicle2" value="work">
+                      <input type="checkbox" id="vehicle2" name="ClaudificationFirstVisit" onClick="checkbox();" value="Unable to work">
                       <label for="vehicle2"> Unable to work</label><br>
-                      <input type="checkbox" id="vehicle3" name="vehicle3" value="smoke">
+                      <input type="checkbox" id="vehicle3" name="ClaudificationFirstVisit" onClick="checkbox();" value="Counseled on smoking cessation">
                       <label for="vehicle3"> Counseled on smoking cessation</label><br>
-                      <input type="checkbox" id="vehicle4" name="vehicle4" value="meds">
+                      <input type="checkbox" id="vehicle4" name="ClaudificationFirstVisit" onClick="checkbox();" value="Pharmacological therapy">
                       <label for="vehicle4"> Pharmacological therapy</label><br>
-                      <input type="checkbox" id="vehicle5" name="vehicle5" value="exercise">
+                      <input type="checkbox" id="vehicle5" name="ClaudificationFirstVisit" onClick="checkbox();" value="Exercise therapy">
                       <label for="vehicle5"> Exercise therapy</label><br>
-                      <input type="checkbox" id="vehicle6" name="vehicle6" value="ABI">
-                      <label for="vehicle6"> Exercise ABI and duplex</label><br>
+                      <input type="checkbox" id="vehicle6" name="ClaudificationFirstVisit" onClick="checkbox();" value="Exercise ABI and duplex">
+                      <label for="vehicle6"> Exercise ABI and duplex</label>
+
+                      <br>
+
+                      <textarea id="textareaClaudificationFirstVisit" name="ClaudificationFirstVisitTextarea" rows="12" cols="50"></textarea>
+
                     </div>
                     <div class="modal-footer">
                       <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -321,6 +326,22 @@
         $('#panels li.in').collapse('hide');
       });
     });
+
+    function checkbox() {
+      var checkboxes = document.getElementsByName('ClaudificationFirstVisit');
+      var checkboxesChecked = [];
+      // loop over them all
+      for (var i = 0; i < checkboxes.length; i++) {
+        // And stick the checked ones onto an array...
+        if (checkboxes[i].checked) {
+          checkboxesChecked.push(checkboxes[i].value);
+          console.log(checkboxes[i].value);
+        }
+      }      
+      document.getElementById("textareaClaudificationFirstVisit").value = checkboxesChecked.join("\n");
+      console.log(document.getElementById("textareaClaudificationFirstVisit").value);
+    }
+
   </script>
 </body>
 
