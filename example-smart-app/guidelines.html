@@ -13,7 +13,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <style>
     #sidebar-wrapper {
-      background: #c9d6cd;
+      background: white;
       height: 100vh
     }
 
@@ -48,7 +48,7 @@
     }
 
     #sidebar-wrapper .sidebar-nav li a.active {
-      background-color: #85ce36;
+      background-color: #c9d6cd;
       color: black;
     }
 
@@ -158,27 +158,35 @@
                       </button>
                     </div>
                     <div class="modal-body">
-                      <input type="checkbox" id="vehicle1" name="ClaudificationFirstVisit" onClick="checkbox();" value="The patient has lifestyle limiting claudication with impairment of activities of daily living. ">
+                      <input type="checkbox" id="vehicle1" name="ClaudificationFirstVisit" onClick="checkbox();"
+                        value="The patient has lifestyle limiting claudication with impairment of activities of daily living. ">
                       <label for="vehicle1"> Impairment of activities of daily living</label><br>
-                      <input type="checkbox" id="vehicle2" name="ClaudificationFirstVisit" onClick="checkbox();" value=" They are unable to work.">
+                      <input type="checkbox" id="vehicle2" name="ClaudificationFirstVisit" onClick="checkbox();"
+                        value=" They are unable to work.">
                       <label for="vehicle2"> Unable to work</label><br>
-                      <input type="checkbox" id="vehicle3" name="ClaudificationFirstVisit" onClick="checkbox();" value=" They have been counseled on smoking cessation.">
+                      <input type="checkbox" id="vehicle3" name="ClaudificationFirstVisit" onClick="checkbox();"
+                        value=" They have been counseled on smoking cessation.">
                       <label for="vehicle3"> Counseled on smoking cessation</label><br>
-                      <input type="checkbox" id="vehicle4" name="ClaudificationFirstVisit" onClick="checkbox();" value=" They have been counseled on pharmacological therapy including antiplatelets.">
+                      <input type="checkbox" id="vehicle4" name="ClaudificationFirstVisit" onClick="checkbox();"
+                        value=" They have been counseled on pharmacological therapy including antiplatelets.">
                       <label for="vehicle4"> Pharmacological therapy</label><br>
-                      <input type="checkbox" id="vehicle5" name="ClaudificationFirstVisit" onClick="checkbox();" value=" They have been counseled on a walking regimen (at least 30 minutes, 3 times a week).">
+                      <input type="checkbox" id="vehicle5" name="ClaudificationFirstVisit" onClick="checkbox();"
+                        value=" They have been counseled on a walking regimen (at least 30 minutes, 3 times a week).">
                       <label for="vehicle5"> Exercise therapy</label><br>
-                      <input type="checkbox" id="vehicle6" name="ClaudificationFirstVisit" onClick="checkbox();" value=" They will come back to the office with an exercise ABI and arterial duplex.">
+                      <input type="checkbox" id="vehicle6" name="ClaudificationFirstVisit" onClick="checkbox();"
+                        value=" They will come back to the office with an exercise ABI and arterial duplex.">
                       <label for="vehicle6"> Exercise ABI and duplex</label>
 
                       <br>
 
-                      <textarea id="textareaClaudificationFirstVisit" name="ClaudificationFirstVisitTextarea" rows="12" cols="50"></textarea>
+                      <textarea id="textareaClaudificationFirstVisit" name="ClaudificationFirstVisitTextarea" rows="12"
+                        cols="50"></textarea>
 
                     </div>
                     <div class="modal-footer">
                       <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                      <button type="button" class="btn btn-primary" onclick="copyClaudificationFirstVisit();">Copy</button>
+                      <button type="button" class="btn btn-primary" data-dismiss="modal"
+                        onclick="copyClaudificationFirstVisit();">Copy and Close</button>
                     </div>
                   </div>
                 </div>
@@ -192,7 +200,7 @@
               <!-- Modal -->
               <div class="modal fade" id="notesClaudificationFirstVisit" tabindex="-1" role="dialog"
                 aria-labelledby="notesClaudificationFirstVisitLabel" aria-hidden="true">
-                <div class="modal-dialog" role="document">
+                <div class="modal-dialog" role="document" >
                   <div class="modal-content">
                     <div class="modal-header">
                       <h5 class="modal-title" id="notesClaudificationFirstVisitLabel">Claudification Humana NA
@@ -201,11 +209,13 @@
                         <span aria-hidden="true">&times;</span>
                       </button>
                     </div>
-                    <label for="notes">Notes:</label>
-                    <textarea id="notes" name="notes"></textarea>
+                    <label for="textareaClaudificationFirstVisitDocument">Notes:</label>
+                    <textarea id="textareaClaudificationFirstVisitDocument"
+                      name="ClaudificationFirstVisitTextareaDocument" rows="12" cols="50"></textarea>
                     <div class="modal-footer">
                       <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                      <button type="button" class="btn btn-primary">Save changes</button>
+                      <button type="button" class="btn btn-primary" data-dismiss="modal"
+                        onclick="copyClaudificationFirstVisitDocument();">Copy and Close</button>
                     </div>
                   </div>
                 </div>
@@ -337,7 +347,7 @@
           checkboxesChecked.push(checkboxes[i].value);
           console.log(checkboxes[i].value);
         }
-      }      
+      }
       document.getElementById("textareaClaudificationFirstVisit").value = checkboxesChecked.join("\n");
       console.log(document.getElementById("textareaClaudificationFirstVisit").value);
     }
@@ -349,6 +359,15 @@
       document.execCommand("copy");
       alert("Copied the text: \n\n" + copyText.value + "\n\nto clipboard!");
     }
+
+    function copyClaudificationFirstVisitDocument() {
+      var copyText = document.getElementById("textareaClaudificationFirstVisitDocument");
+      copyText.select();
+      copyText.setSelectionRange(0, 99999)
+      document.execCommand("copy");
+      alert("Copied the text: \n\n" + copyText.value + "\n\nto clipboard!");
+    }
+
 
   </script>
 </body>
