@@ -1,22 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<title>[lavarock1234] Example-SMART-App</title>
-<meta http-equiv='X-UA-Compatible' content='IE=edge' />
-<meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
-<link rel='stylesheet' type='text/css' href='./src/css/example-smart-app.css'>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <title>[lavarock1234] Example-SMART-App</title>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge' />
+  <meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+  <link rel='stylesheet' type='text/css' href='./src/css/example-smart-app.css'>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+    #sidebar-wrapper {
+      background: white;
+      height: 100vh
+    }
+
+    ul#panels {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      margin-left: 300px;
+      background: white;
+    }
+
+    #sidebar-wrapper .sidebar-nav {
+      position: absolute;
+      top: 0;
+      width: 225px;
+      font-size: 14px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    #sidebar-wrapper .sidebar-nav li {
+      text-indent: 0;
+      line-height: 45px;
+    }
+
+    #sidebar-wrapper .sidebar-nav li a {
+      display: block;
+      text-decoration: none;
+      outline: 0;
+      color: black;
+    }
+
+    #sidebar-wrapper .sidebar-nav li a.active {
+      background-color: white;
+      color: black;
+    }
+
+    #sidebar-wrapper .sidebar-nav li a:focus,
+    #sidebar-wrapper .sidebar-nav li a:hover {
+      background-color: white;
+    }
+  </style>
 </head>
+
 <body>
+  <div id="sidebar-wrapper">
+    <aside id="sidebar">
+      <ul id="sidemenu" class="sidebar-nav">
+        <li> <a href="index.html" class="active"> <span class="sidebar-icon"><i class="fa fa-dashboard"></i></span>
+            <span class="sidebar-title">Back</span> </a> </li>
+        <li> <a class="accordion-toggle collapsed toggle-switch toggle-icon" data-toggle="collapse" href="#tab1">
+            <span class="sidebar-icon"><i class="fa fa-newspaper-o"></i></span> <span
+              class="sidebar-title">Venous</span> <i class="fa icon-toggle fa-angle-right" aria-hidden="true"></i> </a>
+        </li>
+      </ul>
+    </aside>
+    <ul id="panels">
 
-<div class="container">
-  <h3>This is Workflow part of app</h3>
-  <p>In construction</p>
-</div>
+      <li id="tab1" class="collapse">
+        <div class="container">
+          <h2>Venous Workflow</h2>
+          <ul class="nav nav-tabs">
+            <li class="active"><a data-toggle="tab" href="#home">First Visit</a></li>
+            <li><a data-toggle="tab" href="#menu1">Second Visit</a></li>
+          </ul>
 
+          <div class="tab-content">
+            <div id="home" class="tab-pane fade in active">
+              <img src="workflow_images/venous_workflow.jpg" alt="venous_workflow" style="width:1000px;height:612px;">
+
+            </div>
+            <div id="menu1" class="tab-pane fade">
+              Venous second visit workflow goes here
+            </div>
+          </div>
+        </div>
+
+      </li>
+    </ul>
+  </div>
 </body>
+
 </html>
