@@ -14,8 +14,14 @@
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
+    :root {
+      --foregroundColor: #24272c;
+      --lemonGreen: #d8d83e;
+      --backgroundColor: #ffffff;
+    }
+
     #sidebar-wrapper {
-      background: white;
+      background: var(--backgroundColor);
       height: 100vh
     }
 
@@ -24,7 +30,7 @@
       margin: 0;
       padding: 0;
       margin-left: 300px;
-      background: white;
+      background: var(--backgroundColor);
     }
 
     #sidebar-wrapper .sidebar-nav {
@@ -46,17 +52,17 @@
       display: block;
       text-decoration: none;
       outline: 0;
-      color: black;
+      color: var(--foregroundColor);
     }
 
     #sidebar-wrapper .sidebar-nav li a.active {
-      background-color: white;
-      color: black;
+      background-color: var(--backgroundColor);;
+      color: var(--foregroundColor);
     }
 
     #sidebar-wrapper .sidebar-nav li a:focus,
     #sidebar-wrapper .sidebar-nav li a:hover {
-      background-color: white;
+      background-color: var(--backgroundColor);;
     }
 
     .sidebar-nav {
@@ -66,6 +72,24 @@
       left: 0;
       width: 30rem;
       height: 100%;
+      background-color: var(--backgroundColor);;
+    }
+    .sidebar-nav li {
+      font-size: 2rem;
+      font-weight: 600;
+      padding: 1.5rem 1.5rem;
+      text-align: left;
+      list-style: none;
+      border-bottom: 0.1rem solid rgb(0 0 0 / 10%);
+    }
+
+    .sidebar-nav li a {
+      position: relative;
+      display: block;
+      width: 100%;
+      color: var(--backgroundColor);
+      font-size: 1.8rem;
+      text-transform: capitalize;
     }
   </style>
 </head>
@@ -81,9 +105,8 @@
               class="sidebar-title">Claudication</span> <i class="fa icon-toggle fa-angle-right" aria-hidden="true"></i>
           </a>
           <ul id="submenu-2" class="panel-collapse collapse panel-switch" role="menu">
-            <li><a data-toggle="collapse" href="#tab1" class="abc"><i class="fa fa-caret-right"></i>Humana MA (Page
-                2)</a></li>
-            <li><a data-toggle="collapse" href="#tab2" class="abc"><i class="fa fa-caret-right"></i>Humana (Page 4)</a>
+            <li><a data-toggle="collapse" href="#tab1" class="abc"><i class="fa fa-caret-right"></i>Humana MA</a></li>
+            <li><a data-toggle="collapse" href="#tab2" class="abc"><i class="fa fa-caret-right"></i>Humana</a>
             </li>
           </ul>
         </li>
