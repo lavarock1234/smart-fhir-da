@@ -150,98 +150,44 @@
         <div class="container">
           <h2>Claudication (Humana)</h2>
           <ul class="nav nav-tabs">
-            <li class="active"><a data-toggle="tab" href="#home">First Visit</a></li>
-            <li><a data-toggle="tab" href="#menu1">Second Visit</a></li>
+            <li class="active"><a data-toggle="tab" href="#home">Initial Visit</a></li>
+            <li><a data-toggle="tab" href="#menu1">Pre-procedure Checklist</a></li>
           </ul>
 
           <div class="tab-content">
             <div id="home" class="tab-pane fade in active">
 
-              <p>
-                CONSERVATIVE MEDICAL MANAGEMENT
+              <p> 
+                <i>Aortoiliac and Superficial Femoral arteries ONLY</i> 
+                <br><br>
+                When all of the following requirements have been met:
               <ol>
-                <li>Lifestyle Limiting Claudication – impairment of activities of daily living and work. </li>
-                <li>Inadequate Response to Conservative Medical Therapy – 3 consecutive months’ worth within the past 12
-                  months. </li>
-                <li>Smoking Cessation/Counseling</li>
-                <li>Pharmacological Therapy</li>
-                <li>Supervised Exercise Therapy</li>
+                <li>Inadequate response to three months of optimal guideline-directed medical therapy (GDMT)
+                  within the past 12 months <b>AND</b> </li>
+                  <ul>
+                    <li>Optimal GDMT includes Class I recommendations for antiplatelet therapy, cilostazol,
+                      statins, glycemic and hypertension control, exercise program, smoking cessation
+                      including planning, counseling, or behavior modification and pharmacotherapy if
+                      needed</li>
+                  </ul>                  
+                <li>Impairment of activities of daily living and work <b>AND</b> </li>
+                <li>Individual has undergone a structured exercise program (eg, supervised or home based) <b>AND</b> </li>
+                <li>Presence of anatomically suitable lesion for intervention with documentation of any of the
+                  following:</li>
+                  <ul>
+                    <li>Lesion greater than 70% stenosis on angiography (eg, CTA, invasive angiography,
+                      MRA) <b>OR</b> </li>
+                    <li>Lesion 50% to 70% stenosis on angiography (eg, CTA, invasive angiography, MRA);
+                      AND Resting or provoked intravascular translesional (pre- to post-stenosis) pressure
+                      gradient measurement greater than or equal to 10 mmHg; <b>OR</b> </li>
+                    <li>LE Duplex doppler with peak systolic velocity (PSV) greater than 300 cm/s or PSV ratio
+                      greater than 4.0</li>
+                  </ul>
               </ol>
-              Must state that the patient does not have any other conditions that limit ability to ambulate/exercise.
-              <br>
-
-              EXERCISE ABI
-              <br>
-
-              Positive Exercise ABI that is 30% decrease from baseline (ex: .80 baseline ABI and .50 ABI after walking
-              to the
-              IMAGING
-
-              <ol>
-                <li>Duplex OR</li>
-                <li>CTA OR</li>
-                <li>MRA</li>
-              </ol>
-              **All noting stenosis of >70% and location with length of stenosis/occlusion
-              <br>
-              ***Can Only Treat Aortoiliac
-
               </p>
               <br>
 
               <!-- Button trigger modal -->
-              <button type="button" class="btn btn-primary" data-toggle="modal"
-                data-target="#checklistClaudificationFirstVisit">
-                Checklist
-              </button>
-
-              <!-- Modal -->
-              <div class="modal fade" id="checklistClaudificationFirstVisit" tabindex="-1" role="dialog"
-                aria-labelledby="checklistClaudificationFirstVisitLabel" aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h5 class="modal-title" id="checklistClaudificationFirstVisitLabel">Initial Visit Checklist for
-                        Claudication (Humana)</h5>
-                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                      </button>
-                    </div>
-                    <div class="modal-body">
-                      <input type="checkbox" id="vehicle1" name="ClaudificationFirstVisit" onClick="checkbox();"
-                        value="The patient has lifestyle limiting claudication with impairment of activities of daily living. ">
-                      <label for="vehicle1"> Impairment of activities of daily living</label><br>
-                      <input type="checkbox" id="vehicle2" name="ClaudificationFirstVisit" onClick="checkbox();"
-                        value=" They are unable to work.">
-                      <label for="vehicle2"> Unable to work</label><br>
-                      <input type="checkbox" id="vehicle3" name="ClaudificationFirstVisit" onClick="checkbox();"
-                        value=" They have been counseled on smoking cessation.">
-                      <label for="vehicle3"> Counseled on smoking cessation</label><br>
-                      <input type="checkbox" id="vehicle4" name="ClaudificationFirstVisit" onClick="checkbox();"
-                        value=" They have been counseled on pharmacological therapy including antiplatelets.">
-                      <label for="vehicle4"> Pharmacological therapy</label><br>
-                      <input type="checkbox" id="vehicle5" name="ClaudificationFirstVisit" onClick="checkbox();"
-                        value=" They have been counseled on a walking regimen (at least 30 minutes, 3 times a week).">
-                      <label for="vehicle5"> Exercise therapy</label><br>
-                      <input type="checkbox" id="vehicle6" name="ClaudificationFirstVisit" onClick="checkbox();"
-                        value=" They will come back to the office with an exercise ABI and arterial duplex.">
-                      <label for="vehicle6"> Exercise ABI and duplex</label>
-
-                      <br>
-
-                      <textarea id="textareaClaudificationFirstVisit" name="ClaudificationFirstVisitTextarea" rows="12"
-                        cols="50"></textarea>
-
-                    </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                      <button type="button" class="btn btn-primary" data-dismiss="modal"
-                        onclick="copyClaudificationFirstVisit();">Copy and Close</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
               <button type="button" class="btn btn-primary" data-toggle="modal"
                 data-target="#notesClaudificationFirstVisit">
                 Document
@@ -277,44 +223,26 @@ The patient has lifestyle limiting claudication with impairment of activities of
             </div>
             <div id="menu1" class="tab-pane fade">
 
-              Claudification Humana MA second visit text goes here
+            <input type="checkbox" id="vehicle1" name="ClaudicationHumanaMAPreChecklist" onClick="checkboxClaudicationHumanaMAPreChecklist();"
+              value="Failure of 3 months of conservative therapy (medical therapy and structured walking regimen)">
+            <label for="vehicle1"> Failure of 3 months of conservative therapy (medical therapy and structured walking regimen)</label><br>
+            <input type="checkbox" id="vehicle2" name="ClaudicationHumanaMAPreChecklist" onClick="checkboxClaudicationHumanaMAPreChecklist();"
+              value="Duplex with PSV > 400 in the femoropopliteal segment">
+            <label for="vehicle2"> Duplex with PSV > 400 in the femoropopliteal segment</label><br>
+            <input type="checkbox" id="vehicle3" name="ClaudicationHumanaMAPreChecklist" onClick="checkboxClaudicationHumanaMAPreChecklist();"
+              value="CTA showing greater than 70% stenosis in the iliac artery">
+            <label for="vehicle3"> CTA showing greater than 70% stenosis in the iliac artery </label><br>
+            <input type="checkbox" id="vehicle4" name="ClaudicationHumanaMAPreChecklist" onClick="checkboxClaudicationHumanaMAPreChecklist();"
+              value="CTA showing greater than 70% stenosis in the femoropopliteal segment">
+            <label for="vehicle4"> CTA showing greater than 70% stenosis in the femoropopliteal segment </label><br>
+            <br>
+
+            <textarea id="textareaClaudicationHumanaMAPreTextarea" name="ClaudicationHumanaMAPreTextarea" rows="12"
+              cols="50"></textarea>
 
               <br>
 
               <!-- Button trigger modal -->
-              <button type="button" class="btn btn-primary" data-toggle="modal"
-                data-target="#checklistClaudificationSecondVisit">
-                Checklist
-              </button>
-
-              <!-- Modal -->
-              <div class="modal fade" id="checklistClaudificationSecondVisit" tabindex="-1" role="dialog"
-                aria-labelledby="checklistClaudificationSecondVisitLabel" aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h5 class="modal-title" id="checklistClaudificationSecondVisitLabel">Claudification Humana NA
-                        SecondVisit Checklist</h5>
-                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                      </button>
-                    </div>
-                    <div class="modal-body">
-                      <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
-                      <label for="vehicle1"> I have a bike</label><br>
-                      <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
-                      <label for="vehicle2"> I have a car</label><br>
-                      <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
-                      <label for="vehicle3"> I have a boat</label><br>
-                    </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                      <button type="button" class="btn btn-primary">Save changes</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
               <button type="button" class="btn btn-primary" data-toggle="modal"
                 data-target="#notesClaudificationSecondVisit">
                 Document
@@ -402,6 +330,21 @@ The patient has lifestyle limiting claudication with impairment of activities of
       }
       document.getElementById("textareaClaudificationFirstVisit").value = checkboxesChecked.join("");
       console.log(document.getElementById("textareaClaudificationFirstVisit").value);
+    }
+
+    function checkboxClaudicationHumanaMAPreChecklist() {
+      var checkboxes = document.getElementsByName('ClaudicationHumanaMAPreChecklist');
+      var checkboxesChecked = [];
+      // loop over them all
+      for (var i = 0; i < checkboxes.length; i++) {
+        // And stick the checked ones onto an array...
+        if (checkboxes[i].checked) {
+          checkboxesChecked.push(checkboxes[i].value);
+          console.log(checkboxes[i].value);
+        }
+      }
+      document.getElementById("textareaClaudicationHumanaMAPreTextarea").value = checkboxesChecked.join("\n");
+      console.log(document.getElementById("textareaClaudicationHumanaMAPreTextarea").value);
     }
 
     function copyClaudificationFirstVisit() {
