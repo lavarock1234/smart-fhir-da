@@ -160,6 +160,32 @@
               <p> 
                 <i>Aortoiliac and Superficial Femoral arteries ONLY</i> 
                 <br><br>
+
+                <input type="checkbox" id="vehicle1" name="ClaudificationFirstVisit" onClick="ClaudificationFirstVisitChecklist();"
+                value="The patient has lifestyle limiting claudication with impairment of activities of daily living. ">
+                <label for="vehicle1"> Impairment of activities of daily living</label><br>
+                <input type="checkbox" id="vehicle2" name="ClaudificationFirstVisit" onClick="ClaudificationFirstVisitChecklist();"
+                  value=" They are unable to work.">
+                <label for="vehicle2"> Unable to work</label><br>
+                <input type="checkbox" id="vehicle3" name="ClaudificationFirstVisit" onClick="ClaudificationFirstVisitChecklist();"
+                  value=" They have been counseled on smoking cessation.">
+                <label for="vehicle3"> Counseled on smoking cessation</label><br>
+                <input type="checkbox" id="vehicle4" name="ClaudificationFirstVisit" onClick="ClaudificationFirstVisitChecklist();"
+                  value=" They have been counseled on pharmacological therapy including antiplatelets.">
+                <label for="vehicle4"> Pharmacological therapy</label><br>
+                <input type="checkbox" id="vehicle5" name="ClaudificationFirstVisit" onClick="ClaudificationFirstVisitChecklist();"
+                  value=" They have been counseled on a walking regimen (at least 30 minutes, 3 times a week).">
+                <label for="vehicle5"> Exercise therapy</label><br>
+                <input type="checkbox" id="vehicle6" name="ClaudificationFirstVisit" onClick="ClaudificationFirstVisitChecklist();"
+                  value=" They will come back to the office with an exercise ABI and arterial duplex.">
+                <label for="vehicle6"> Exercise ABI and duplex</label>
+                <br>
+                <textarea id="textareaClaudificationFirstVisit" name="ClaudificationFirstVisitTextarea" rows="12"
+                  cols="50"></textarea>
+                <br>
+                <button type="button" class="btn btn-primary" data-toggle="modal" onclick="copyClaudificationFirstVisit();">Copy</button>                
+                <br>
+
                 When all of the following requirements have been met:
               <ol>
                 <li>Inadequate response to three months of optimal guideline-directed medical therapy (GDMT)
@@ -317,7 +343,7 @@ The patient has lifestyle limiting claudication with impairment of activities of
       });
     });
 
-    function checkbox() {
+    function ClaudificationFirstVisitChecklist() {
       var checkboxes = document.getElementsByName('ClaudificationFirstVisit');
       var checkboxesChecked = [];
       // loop over them all
