@@ -180,6 +180,10 @@
                   value=" They will come back to the office with an exercise ABI and arterial duplex.">
                 <label for="vehicle6"> Exercise ABI and duplex</label>
                 <br>
+                <input type="checkbox" id="alloftheabove" name="ClaudificationFirstVisitAll" onClick="ClaudificationFirstVisitChecklistAllAbove();">
+                <label for="alloftheabove"> All of the above</label>
+
+                <br>
                 <textarea id="textareaClaudificationFirstVisit" name="ClaudificationFirstVisitTextarea" rows="12"
                   cols="50"></textarea>
                 <br>
@@ -236,52 +240,25 @@
             <div id="menu1" class="tab-pane fade">
 
             <input type="checkbox" id="vehicle1" name="ClaudicationHumanaMAPreChecklist" onClick="checkboxClaudicationHumanaMAPreChecklist();"
-              value="Failure of 3 months of conservative therapy (medical therapy and structured walking regimen)">
+              value="Failure of 3 months of conservative therapy (medical therapy and structured walking regimen). ">
             <label for="vehicle1"> Failure of 3 months of conservative therapy (medical therapy and structured walking regimen)</label><br>
             <input type="checkbox" id="vehicle2" name="ClaudicationHumanaMAPreChecklist" onClick="checkboxClaudicationHumanaMAPreChecklist();"
-              value="Duplex with PSV > 400 in the femoropopliteal segment">
+              value="Duplex with PSV > 400 in the femoropopliteal segment. ">
             <label for="vehicle2"> Duplex with PSV > 400 in the femoropopliteal segment</label><br>
             <input type="checkbox" id="vehicle3" name="ClaudicationHumanaMAPreChecklist" onClick="checkboxClaudicationHumanaMAPreChecklist();"
-              value="CTA showing greater than 70% stenosis in the iliac artery">
+              value="CTA showing greater than 70% stenosis in the iliac artery. ">
             <label for="vehicle3"> CTA showing greater than 70% stenosis in the iliac artery </label><br>
             <input type="checkbox" id="vehicle4" name="ClaudicationHumanaMAPreChecklist" onClick="checkboxClaudicationHumanaMAPreChecklist();"
-              value="CTA showing greater than 70% stenosis in the femoropopliteal segment">
+              value="CTA showing greater than 70% stenosis in the femoropopliteal segment. ">
             <label for="vehicle4"> CTA showing greater than 70% stenosis in the femoropopliteal segment </label><br>
             <br>
 
-            <textarea id="textareaClaudicationHumanaMAPreTextarea" name="ClaudicationHumanaMAPreTextarea" rows="12"
+            <textarea id="textareaClaudificationPreChecklist" name="textareaClaudificationPreChecklist" rows="12"
               cols="50"></textarea>
 
               <br>
 
-              <!-- Button trigger modal -->
-              <button type="button" class="btn btn-primary" data-toggle="modal"
-                data-target="#notesClaudificationSecondVisit">
-                Document
-              </button>
-
-              <!-- Modal -->
-              <div class="modal fade" id="notesClaudificationSecondVisit" tabindex="-1" role="dialog"
-                aria-labelledby="notesClaudificationSecondVisitLabel" aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h5 class="modal-title" id="notesClaudificationSecondVisitLabel">Claudification Humana NA
-                        SecondVisit Notes</h5>
-                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                      </button>
-                    </div>
-                    <label for="notes">Notes:</label>
-                    <textarea id="notes" name="notes"></textarea>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                      <button type="button" class="btn btn-primary">Save changes</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
+              <button type="button" class="btn btn-primary" data-toggle="modal" onclick="copyClaudificationPreChecklist();">Copy</button>  
 
             </div>
           </div>
@@ -344,6 +321,16 @@
       console.log(document.getElementById("textareaClaudificationFirstVisit").value);
     }
 
+    function ClaudificationFirstVisitChecklistAllAbove() {
+      var checkboxes = document.getElementsByName('ClaudificationFirstVisit');
+      var checked = document.getElementsByName('ClaudificationFirstVisitAll')[0].checked
+      // loop over them all
+      for (var i = 0; i < checkboxes.length; i++) {
+        checkboxes[i].checked = checked
+        ClaudificationFirstVisitChecklist()
+      }
+    }    
+
     function checkboxClaudicationHumanaMAPreChecklist() {
       var checkboxes = document.getElementsByName('ClaudicationHumanaMAPreChecklist');
       var checkboxesChecked = [];
@@ -355,8 +342,8 @@
           console.log(checkboxes[i].value);
         }
       }
-      document.getElementById("textareaClaudicationHumanaMAPreTextarea").value = checkboxesChecked.join("\n");
-      console.log(document.getElementById("textareaClaudicationHumanaMAPreTextarea").value);
+      document.getElementById("textareaClaudificationPreChecklist").value = checkboxesChecked.join("");
+      console.log(document.getElementById("textareaClaudificationPreChecklist").value);
     }
 
     function copyClaudificationFirstVisit() {
@@ -367,14 +354,13 @@
       alert("Copied the text: \n\n" + copyText.value + "\n\nto clipboard!");
     }
 
-    function copyClaudificationFirstVisitDocument() {
-      var copyText = document.getElementById("textareaClaudificationFirstVisitDocument");
+    function copyClaudificationPreChecklist() {
+      var copyText = document.getElementById("textareaClaudificationPreChecklist");
       copyText.select();
       copyText.setSelectionRange(0, 99999)
       document.execCommand("copy");
       alert("Copied the text: \n\n" + copyText.value + "\n\nto clipboard!");
     }
-
 
   </script>
 </body>
