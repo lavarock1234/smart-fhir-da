@@ -156,33 +156,33 @@
                 <i>Aortoiliac and Superficial Femoral arteries ONLY</i> 
                 <br><br>
 
-                <input type="checkbox" id="vehicle1" name="Claudication1FirstVisit" onClick="ClaudicationFirstVisitChecklist(1);"
+                <input type="checkbox" id="vehicle1" name="Claudication1FirstVisit" onClick="FirstVisitChecklist('Claudication', 1);"
                 value="The patient has lifestyle limiting claudication with impairment of activities of daily living. ">
                 <label for="vehicle1"> Impairment of activities of daily living</label><br>
-                <input type="checkbox" id="vehicle2" name="Claudication1FirstVisit" onClick="ClaudicationFirstVisitChecklist(1);"
+                <input type="checkbox" id="vehicle2" name="Claudication1FirstVisit" onClick="FirstVisitChecklist('Claudication', 1);"
                   value=" They are unable to work.">
                 <label for="vehicle2"> Unable to work</label><br>
-                <input type="checkbox" id="vehicle3" name="Claudication1FirstVisit" onClick="ClaudicationFirstVisitChecklist(1);"
+                <input type="checkbox" id="vehicle3" name="Claudication1FirstVisit" onClick="FirstVisitChecklist('Claudication', 1);"
                   value=" They have been counseled on smoking cessation.">
                 <label for="vehicle3"> Counseled on smoking cessation</label><br>
-                <input type="checkbox" id="vehicle4" name="Claudication1FirstVisit" onClick="ClaudicationFirstVisitChecklist(1);"
+                <input type="checkbox" id="vehicle4" name="Claudication1FirstVisit" onClick="FirstVisitChecklist('Claudication', 1);"
                   value=" They have been counseled on pharmacological therapy including antiplatelets.">
                 <label for="vehicle4"> Pharmacological therapy</label><br>
-                <input type="checkbox" id="vehicle5" name="Claudication1FirstVisit" onClick="ClaudicationFirstVisitChecklist(1);"
+                <input type="checkbox" id="vehicle5" name="Claudication1FirstVisit" onClick="FirstVisitChecklist('Claudication', 1);"
                   value=" They have been counseled on a walking regimen (at least 30 minutes, 3 times a week).">
                 <label for="vehicle5"> Exercise therapy</label><br>
-                <input type="checkbox" id="vehicle6" name="Claudication1FirstVisit" onClick="ClaudicationFirstVisitChecklist(1);"
+                <input type="checkbox" id="vehicle6" name="Claudication1FirstVisit" onClick="FirstVisitChecklist('Claudication', 1);"
                   value=" They will come back to the office with an exercise ABI and arterial duplex.">
                 <label for="vehicle6"> Exercise ABI and duplex</label>
                 <br>
-                <input type="checkbox" id="alloftheabove" name="Claudication1FirstVisitAll" onClick="ClaudicationFirstVisitChecklistAllAbove(1);">
+                <input type="checkbox" id="alloftheabove" name="Claudication1FirstVisitAll" onClick="FirstVisitChecklistAllAbove('Claudication', 1);">
                 <label for="alloftheabove"> All of the above</label>
 
                 <br>
                 <textarea id="textareaClaudication1FirstVisit" name="Claudication1FirstVisitTextarea" rows="12"
                   cols="50"></textarea>
                 <br>
-                <button type="button" class="btn btn-primary" data-toggle="modal" onclick="copyClaudicationFirstVisit(1);">Copy</button>                
+                <button type="button" class="btn btn-primary" data-toggle="modal" onclick="copyFirstVisit('Claudication', 1);">Copy</button>                
                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#notesClaudication1FirstVisit">Guidelines</button>
                 <br>
               </p>
@@ -233,23 +233,23 @@
             </div>
             <div id="menu1" class="tab-pane fade">
 
-            <input type="checkbox" id="vehicle1" name="Claudication1PreChecklist" onClick="checkboxClaudicationPreChecklist(1);"
+            <input type="checkbox" id="vehicle1" name="Claudication1PreChecklist" onClick="checkboxPreChecklist('Claudication', 1);"
               value="Failure of 3 months of conservative therapy (medical therapy and structured walking regimen). ">
             <label for="vehicle1"> Failure of 3 months of conservative therapy (medical therapy and structured walking regimen)</label><br>
-            <input type="checkbox" id="vehicle2" name="Claudication1PreChecklist" onClick="checkboxClaudicationPreChecklist(1);"
+            <input type="checkbox" id="vehicle2" name="Claudication1PreChecklist" onClick="checkboxPreChecklist('Claudication', 1);"
               value="Duplex with PSV > 400 in the femoropopliteal segment. ">
             <label for="vehicle2"> Duplex with PSV > 400 in the femoropopliteal segment</label><br>
-            <input type="checkbox" id="vehicle3" name="Claudication1PreChecklist" onClick="checkboxClaudicationPreChecklist(1);"
+            <input type="checkbox" id="vehicle3" name="Claudication1PreChecklist" onClick="checkboxPreChecklist('Claudication', 1);"
               value="CTA showing greater than 70% stenosis in the iliac artery. ">
             <label for="vehicle3"> CTA showing greater than 70% stenosis in the iliac artery </label><br>
-            <input type="checkbox" id="vehicle4" name="Claudication1PreChecklist" onClick="checkboxClaudicationPreChecklist(1);"
+            <input type="checkbox" id="vehicle4" name="Claudication1PreChecklist" onClick="checkboxPreChecklist('Claudication', 1);"
               value="CTA showing greater than 70% stenosis in the femoropopliteal segment. ">
             <label for="vehicle4"> CTA showing greater than 70% stenosis in the femoropopliteal segment </label><br>
             <br>
             <textarea id="textareaClaudication1PreChecklist" name="textareaClaudication1PreChecklist" rows="12"
               cols="50"></textarea>
               <br>
-              <button type="button" class="btn btn-primary" data-toggle="modal" onclick="copyClaudicationPreChecklist(1);">Copy</button>  
+              <button type="button" class="btn btn-primary" data-toggle="modal" onclick="copyPreChecklist('Claudication', 1);">Copy</button>  
             </div>
           </div>
         </div>
@@ -265,8 +265,8 @@
       });
     });
 
-    function ClaudicationFirstVisitChecklist(ind) {
-      var checkboxes = document.getElementsByName("Claudication" + ind + "FirstVisit");
+    function FirstVisitChecklist(type, ind) {
+      var checkboxes = document.getElementsByName(type + ind + "FirstVisit");
       var checkboxesChecked = [];
       // loop over them all
       for (var i = 0; i < checkboxes.length; i++) {
@@ -276,22 +276,22 @@
           console.log(checkboxes[i].value);
         }
       }
-      document.getElementById("textareaClaudication" + ind + "FirstVisit").value = checkboxesChecked.join("");
-      console.log(document.getElementById("textareaClaudication" + ind + "FirstVisit").value);
+      document.getElementById("textarea" + type + ind + "FirstVisit").value = checkboxesChecked.join("");
+      console.log(document.getElementById("textarea" + type + ind + "FirstVisit").value);
     }
 
-    function ClaudicationFirstVisitChecklistAllAbove(ind) {
-      var checkboxes = document.getElementsByName("Claudication" + ind + "FirstVisit");
-      var checked = document.getElementsByName("Claudication" + ind + "FirstVisitAll")[0].checked
+    function FirstVisitChecklistAllAbove(type, ind) {
+      var checkboxes = document.getElementsByName(type + ind + "FirstVisit");
+      var checked = document.getElementsByName(type + ind + "FirstVisitAll")[0].checked
       // loop over them all
       for (var i = 0; i < checkboxes.length; i++) {
         checkboxes[i].checked = checked
-        ClaudicationFirstVisitChecklist(ind)
+        FirstVisitChecklist(type, ind)
       }
     }    
 
-    function checkboxClaudicationPreChecklist(ind) {
-      var checkboxes = document.getElementsByName("Claudication" + ind + "PreChecklist");
+    function checkboxPreChecklist(type, ind) {
+      var checkboxes = document.getElementsByName(type + ind + "PreChecklist");
       var checkboxesChecked = [];
       // loop over them all
       for (var i = 0; i < checkboxes.length; i++) {
@@ -301,20 +301,20 @@
           console.log(checkboxes[i].value);
         }
       }
-      document.getElementById("textareaClaudication" + ind + "PreChecklist").value = checkboxesChecked.join("");
-      console.log(document.getElementById("textareaClaudication" + ind + "PreChecklist").value);
+      document.getElementById("textarea" + type + ind + "PreChecklist").value = checkboxesChecked.join("");
+      console.log(document.getElementById("textarea" + type + ind + "PreChecklist").value);
     }
 
-    function copyClaudicationFirstVisit(ind) {
-      var copyText = document.getElementById("textareaClaudication" + ind + "FirstVisit");
+    function copyFirstVisit(type, ind) {
+      var copyText = document.getElementById("textarea" + type + ind + "FirstVisit");
       copyText.select();
       copyText.setSelectionRange(0, 99999)
       document.execCommand("copy");
       alert("Copied the text: \n\n" + copyText.value + "\n\nto clipboard!");
     }
 
-    function copyClaudicationPreChecklist(ind) {
-      var copyText = document.getElementById("textareaClaudication" + ind + "PreChecklist");
+    function copyPreChecklist(type, ind) {
+      var copyText = document.getElementById("textarea" + type + ind + "PreChecklist");
       copyText.select();
       copyText.setSelectionRange(0, 99999)
       document.execCommand("copy");
