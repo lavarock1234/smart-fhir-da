@@ -123,9 +123,9 @@
           <ul id="submenu-2" class="panel-collapse collapse panel-switch" role="menu">
             <li><a data-toggle="collapse" href="#Claudication1" class="abc"><i class="fa fa-caret-right"></i>Humana</a></li>
             <li><a data-toggle="collapse" href="#Claudication2" class="abc"><i class="fa fa-caret-right"></i>Anthem</a></li>
-            <li><a data-toggle="collapse" href="#Claudication3" class="abc"><i class="fa fa-caret-right"></i>Aetna</a></li>
-            <li><a data-toggle="collapse" href="#Claudication4" class="abc"><i class="fa fa-caret-right"></i>Cigna</a></li>
-            <li><a data-toggle="collapse" href="#Claudication5" class="abc"><i class="fa fa-caret-right"></i>UHC</a></li>
+            <li><a data-toggle="collapse" href="#Claudication3" class="abc"><i class="fa fa-caret-right"></i>Aetna/Cigna</a></li>
+            <li><a data-toggle="collapse" href="#Claudication4" class="abc"><i class="fa fa-caret-right"></i>UHC</a></li>
+            <li><a data-toggle="collapse" href="#Claudication5" class="abc"><i class="fa fa-caret-right"></i>Delete</a></li>
           </ul>
         </li>
 
@@ -402,8 +402,8 @@
                   value=" They have been counseled on smoking cessation.">
                 <label for="vehicle3"> Counseled on smoking cessation</label><br>
                 <input type="checkbox" id="vehicle4" name="Claudication3FirstVisit" onClick="FirstVisitChecklist('Claudication', 3);"
-                  value=" They have been counseled on pharmacological therapy including antiplatelets.">
-                <label for="vehicle4"> Pharmacological therapy</label><br>
+                  value=" Their comorbidities are being managed by their PCP and they have been counseled on pharmacological therapy including antiplatelets.">
+                <label for="vehicle4"> Pharmacological therapy and Medical management</label><br>
                 <input type="checkbox" id="vehicle5" name="Claudication3FirstVisit" onClick="FirstVisitChecklist('Claudication', 3);"
                   value=" They have been counseled on a walking regimen (at least 30 minutes, 3 times a week).">
                 <label for="vehicle5"> Exercise therapy</label><br>
@@ -473,14 +473,11 @@
               value="Failure of 3 months of conservative therapy (medical therapy and structured walking regimen). ">
             <label for="vehicle1"> Failure of 3 months of conservative therapy (medical therapy and structured walking regimen)</label><br>
             <input type="checkbox" id="vehicle2" name="Claudication3PreChecklist" onClick="checkboxPreChecklist('Claudication', 3);"
-              value="Duplex with PSV > 400 in the femoropopliteal segment. ">
-            <label for="vehicle2"> Duplex with PSV > 400 in the femoropopliteal segment</label><br>
+              value="The patient has imaging showing a stenosis of greater than 50%. ">
+            <label for="vehicle2"> Imaging confirming >50% stenosis </label><br>
             <input type="checkbox" id="vehicle3" name="Claudication3PreChecklist" onClick="checkboxPreChecklist('Claudication', 3);"
-              value="CTA showing greater than 70% stenosis in the iliac artery. ">
-            <label for="vehicle3"> CTA showing greater than 70% stenosis in the iliac artery </label><br>
-            <input type="checkbox" id="vehicle4" name="Claudication3PreChecklist" onClick="checkboxPreChecklist('Claudication', 3);"
-              value="CTA showing greater than 70% stenosis in the femoropopliteal segment. ">
-            <label for="vehicle4"> CTA showing greater than 70% stenosis in the femoropopliteal segment </label><br>
+              value="We will schedule for a diagnostic arteriogram for lifestyle limiting claudication. ">
+            <label for="vehicle3"> Diagnostic Arteriogram </label><br>
             <br>
             <textarea id="textareaClaudication3PreChecklist" name="textareaClaudication3PreChecklist" rows="12"
               cols="50"></textarea>
