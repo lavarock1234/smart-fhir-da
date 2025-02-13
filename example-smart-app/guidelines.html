@@ -125,7 +125,6 @@
             <li><a data-toggle="collapse" href="#Claudication2" class="abc"><i class="fa fa-caret-right"></i>Anthem</a></li>
             <li><a data-toggle="collapse" href="#Claudication3" class="abc"><i class="fa fa-caret-right"></i>Aetna/Cigna</a></li>
             <li><a data-toggle="collapse" href="#Claudication4" class="abc"><i class="fa fa-caret-right"></i>UHC</a></li>
-            <li><a data-toggle="collapse" href="#Claudication5" class="abc"><i class="fa fa-caret-right"></i>Delete</a></li>
           </ul>
         </li>
 
@@ -599,122 +598,7 @@
           </div>
         </div>
 
-      </li>
-
-      <li id="Claudication5" class="collapse">
-        <div class="container">
-          <h2>UHC</h2>
-          <ul class="nav nav-tabs">
-            <li class="active"><a data-toggle="tab" href="#Claudication5initialvisit">Initial Visit</a></li>
-            <li><a data-toggle="tab" href="#Claudication5preprocedure">Pre-procedure Checklist</a></li>
-          </ul>
-
-          <div class="tab-content">
-            <div id="Claudication5initialvisit" class="tab-pane fade in active">
-
-              <p> 
-                <i>Aortoiliac and Superficial Femoral arteries ONLY</i> 
-                <br><br>
-
-                <input type="checkbox" id="vehicle1" name="Claudication5FirstVisit" onClick="FirstVisitChecklist('Claudication', 5);"
-                value="The patient has lifestyle limiting claudication with impairment of activities of daily living. ">
-                <label for="vehicle1"> Impairment of activities of daily living</label><br>
-                <input type="checkbox" id="vehicle2" name="Claudication5FirstVisit" onClick="FirstVisitChecklist('Claudication', 5);"
-                  value=" They are unable to work.">
-                <label for="vehicle2"> Unable to work</label><br>
-                <input type="checkbox" id="vehicle3" name="Claudication5FirstVisit" onClick="FirstVisitChecklist('Claudication', 5);"
-                  value=" They have been counseled on smoking cessation.">
-                <label for="vehicle3"> Counseled on smoking cessation</label><br>
-                <input type="checkbox" id="vehicle4" name="Claudication5FirstVisit" onClick="FirstVisitChecklist('Claudication', 5);"
-                  value=" They have been counseled on pharmacological therapy including antiplatelets.">
-                <label for="vehicle4"> Pharmacological therapy</label><br>
-                <input type="checkbox" id="vehicle5" name="Claudication5FirstVisit" onClick="FirstVisitChecklist('Claudication', 5);"
-                  value=" They have been counseled on a walking regimen (at least 30 minutes, 3 times a week).">
-                <label for="vehicle5"> Exercise therapy</label><br>
-                <input type="checkbox" id="vehicle6" name="Claudication5FirstVisit" onClick="FirstVisitChecklist('Claudication', 5);"
-                  value=" They will come back to the office with an exercise ABI and arterial duplex.">
-                <label for="vehicle6"> Exercise ABI and duplex</label>
-                <br>
-                <input type="checkbox" id="alloftheabove" name="Claudication5FirstVisitAll" onClick="FirstVisitChecklistAllAbove('Claudication', 5);">
-                <label for="alloftheabove"> All of the above</label>
-
-                <br>
-                <textarea id="textareaClaudication5FirstVisit" name="Claudication5FirstVisitTextarea" rows="12"
-                  cols="50"></textarea>
-                <br>
-                <button type="button" class="btn btn-primary" data-toggle="modal" onclick="copyFirstVisit('Claudication', 5);">Copy</button>                
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#notesClaudication5FirstVisit">Guidelines</button>
-                <br>
-              </p>
-
-              <!-- Modal -->
-              <div class="modal fade" id="notesClaudication5FirstVisit" tabindex="-1" role="dialog"
-                aria-labelledby="notesClaudication5FirstVisitLabel" aria-hidden="true">
-                <div class="modal-dialog" role="document" >
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h5 class="modal-title" id="notesClaudication5FirstVisitLabel">Claudication Humana NA
-                        FirstVisit Guidelines</h5>
-                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                      </button>
-                    </div>
-                    When all of the following requirements have been met:
-                    <ol>
-                      <li>Inadequate response to three months of optimal guideline-directed medical therapy (GDMT)
-                        within the past 12 months <b>AND</b> </li>
-                        <ul>
-                          <li>Optimal GDMT includes Class I recommendations for antiplatelet therapy, cilostazol,
-                            statins, glycemic and hypertension control, exercise program, smoking cessation
-                            including planning, counseling, or behavior modification and pharmacotherapy if
-                            needed</li>
-                        </ul>                  
-                      <li>Impairment of activities of daily living and work <b>AND</b> </li>
-                      <li>Individual has undergone a structured exercise program (eg, supervised or home based) <b>AND</b> </li>
-                      <li>Presence of anatomically suitable lesion for intervention with documentation of any of the
-                        following:</li>
-                        <ul>
-                          <li>Lesion greater than 70% stenosis on angiography (eg, CTA, invasive angiography,
-                            MRA) <b>OR</b> </li>
-                          <li>Lesion 50% to 70% stenosis on angiography (eg, CTA, invasive angiography, MRA);
-                            AND Resting or provoked intravascular translesional (pre- to post-stenosis) pressure
-                            gradient measurement greater than or equal to 10 mmHg; <b>OR</b> </li>
-                          <li>LE Duplex doppler with peak systolic velocity (PSV) greater than 300 cm/s or PSV ratio
-                            greater than 4.0</li>
-                        </ul>
-                    </ol>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-            <div id="Claudication5preprocedure" class="tab-pane fade">
-
-            <input type="checkbox" id="vehicle1" name="Claudication5PreChecklist" onClick="checkboxPreChecklist('Claudication', 5);"
-              value="Failure of 3 months of conservative therapy (medical therapy and structured walking regimen). ">
-            <label for="vehicle1"> Failure of 3 months of conservative therapy (medical therapy and structured walking regimen)</label><br>
-            <input type="checkbox" id="vehicle2" name="Claudication5PreChecklist" onClick="checkboxPreChecklist('Claudication', 5);"
-              value="Duplex with PSV > 400 in the femoropopliteal segment. ">
-            <label for="vehicle2"> Duplex with PSV > 400 in the femoropopliteal segment</label><br>
-            <input type="checkbox" id="vehicle3" name="Claudication5PreChecklist" onClick="checkboxPreChecklist('Claudication', 5);"
-              value="CTA showing greater than 70% stenosis in the iliac artery. ">
-            <label for="vehicle3"> CTA showing greater than 70% stenosis in the iliac artery </label><br>
-            <input type="checkbox" id="vehicle4" name="Claudication5PreChecklist" onClick="checkboxPreChecklist('Claudication', 5);"
-              value="CTA showing greater than 70% stenosis in the femoropopliteal segment. ">
-            <label for="vehicle4"> CTA showing greater than 70% stenosis in the femoropopliteal segment </label><br>
-            <br>
-            <textarea id="textareaClaudication5PreChecklist" name="textareaClaudication5PreChecklist" rows="12"
-              cols="50"></textarea>
-              <br>
-              <button type="button" class="btn btn-primary" data-toggle="modal" onclick="copyPreChecklist('Claudication', 5);">Copy</button>  
-            </div>
-          </div>
-        </div>
-
-      </li>      
+      </li>    
 
     </div>
 
