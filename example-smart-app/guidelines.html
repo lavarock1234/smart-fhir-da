@@ -116,6 +116,7 @@
       <ul id="sidemenu" class="sidebar-nav">
         <li> <a href="index.html" class="active"> <span class="sidebar-icon"><i class="fa fa-dashboard"></i></span>
             <span class="sidebar-title">Back</span> </a> </li>
+
         <li> <a class="accordion-toggle collapsed toggle-switch toggle-icon" data-toggle="collapse" href="#submenu-2">
             <span class="sidebar-icon"><i class="fa fa-users"></i></span> <span
               class="sidebar-title">Claudication</span> <i class="fa icon-toggle fa-angle-right" aria-hidden="true"></i>
@@ -128,14 +129,18 @@
           </ul>
         </li>
 
-        <li> <a class="accordion-toggle collapsed toggle-switch toggle-icon" data-toggle="collapse" href="#submenu-4">
-            <span class="sidebar-icon"><i class="fa fa-newspaper-o"></i></span> <span
-              class="sidebar-title">Venous</span> <i class="fa icon-toggle fa-angle-right" aria-hidden="true"></i> </a>
-          <ul id="submenu-4" class="panel-collapse collapse panel-switch" role="menu">
-            <li><a href="#"><i class="fa fa-caret-right"></i>Humana MA</a></li>
-            <li><a href="#"><i class="fa fa-caret-right"></i>Humana</a></li>
+        <li> <a class="accordion-toggle collapsed toggle-switch toggle-icon" data-toggle="collapse" href="#submenu-venous">
+            <span class="sidebar-icon"><i class="fa fa-users"></i></span> <span
+              class="sidebar-title">Venous</span> <i class="fa icon-toggle fa-angle-right" aria-hidden="true"></i>
+          </a>
+          <ul id="submenu-venous" class="panel-collapse collapse panel-switch" role="menu">
+            <li><a data-toggle="collapse" href="#Venous1" class="abc"><i class="fa fa-caret-right"></i>Humana</a></li>
+            <li><a data-toggle="collapse" href="#Venous2" class="abc"><i class="fa fa-caret-right"></i>Anthem</a></li>
+            <li><a data-toggle="collapse" href="#Venous3" class="abc"><i class="fa fa-caret-right"></i>Aetna/Cigna</a></li>
+            <li><a data-toggle="collapse" href="#Venous4" class="abc"><i class="fa fa-caret-right"></i>UHC</a></li>
           </ul>
         </li>
+
       </ul>
     </aside>
     <ul id="panels">
@@ -579,6 +584,451 @@ femoropopliteal arteries when all the following criteria are met:
               cols="50"></textarea>
               <br>
               <button type="button" class="btn btn-primary" data-toggle="modal" onclick="copyPreChecklist('Claudication', 4);">Copy</button>  
+            </div>
+          </div>
+        </div>
+
+      </li>    
+
+      <li id="Venous1" class="collapse">
+        <div class="container">
+          <h2>Humana</h2>
+          <ul class="nav nav-tabs">
+            <li class="active"><a data-toggle="tab" href="#Venous1initialvisit">Initial Visit</a></li>
+            <li><a data-toggle="tab" href="#Venous1preprocedure">Pre-procedure Checklist</a></li>
+          </ul>
+
+          <div class="tab-content">
+            <div id="Venous1initialvisit" class="tab-pane fade in active">
+
+              <p> 
+                <i>Aortoiliac and Superficial Femoral arteries ONLY</i> 
+                <br><br>
+
+                <input type="checkbox" id="vehicle1" name="Venous1FirstVisit" onClick="FirstVisitChecklist('Venous', 1);"
+                value="The patient has lifestyle limiting Venous with impairment of activities of daily living. ">
+                <label for="vehicle1"> Impairment of activities of daily living</label><br>
+                <input type="checkbox" id="vehicle2" name="Venous1FirstVisit" onClick="FirstVisitChecklist('Venous', 1);"
+                  value=" They are unable to work.">
+                <label for="vehicle2"> Unable to work</label><br>
+                <input type="checkbox" id="vehicle3" name="Venous1FirstVisit" onClick="FirstVisitChecklist('Venous', 1);"
+                  value=" They have been counseled on smoking cessation.">
+                <label for="vehicle3"> Counseled on smoking cessation</label><br>
+                <input type="checkbox" id="vehicle4" name="Venous1FirstVisit" onClick="FirstVisitChecklist('Venous', 1);"
+                  value=" They have been counseled on pharmacological therapy including antiplatelets.">
+                <label for="vehicle4"> Pharmacological therapy</label><br>
+                <input type="checkbox" id="vehicle5" name="Venous1FirstVisit" onClick="FirstVisitChecklist('Venous', 1);"
+                  value=" They have been counseled on a walking regimen (at least 30 minutes, 3 times a week).">
+                <label for="vehicle5"> Exercise therapy</label><br>
+                <input type="checkbox" id="vehicle6" name="Venous1FirstVisit" onClick="FirstVisitChecklist('Venous', 1);"
+                  value=" They will come back to the office with an exercise ABI and arterial duplex.">
+                <label for="vehicle6"> Exercise ABI and duplex</label>
+                <br>
+                <input type="checkbox" id="alloftheabove" name="Venous1FirstVisitAll" onClick="FirstVisitChecklistAllAbove('Venous', 1);">
+                <label for="alloftheabove"> All of the above</label>
+
+                <br>
+                <textarea id="textareaVenous1FirstVisit" name="Venous1FirstVisitTextarea" rows="12"
+                  cols="50"></textarea>
+                <br>
+                <button type="button" class="btn btn-primary" data-toggle="modal" onclick="copyFirstVisit('Venous', 1);">Copy</button>                
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#notesVenous1FirstVisit">Guidelines</button>
+                <br>
+              </p>
+
+              <!-- Modal -->
+              <div class="modal fade" id="notesVenous1FirstVisit" tabindex="-1" role="dialog"
+                aria-labelledby="notesVenous1FirstVisitLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document" >
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="notesVenous1FirstVisitLabel">Venous Humana NA
+                        FirstVisit Guidelines</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    When all of the following requirements have been met:
+                    <ol>
+                      <li>Inadequate response to three months of optimal guideline-directed medical therapy (GDMT)
+                        within the past 12 months <b>AND</b> </li>
+                        <ul>
+                          <li>Optimal GDMT includes Class I recommendations for antiplatelet therapy, cilostazol,
+                            statins, glycemic and hypertension control, exercise program, smoking cessation
+                            including planning, counseling, or behavior modification and pharmacotherapy if
+                            needed</li>
+                        </ul>                  
+                      <li>Impairment of activities of daily living and work <b>AND</b> </li>
+                      <li>Individual has undergone a structured exercise program (eg, supervised or home based) <b>AND</b> </li>
+                      <li>Presence of anatomically suitable lesion for intervention with documentation of any of the
+                        following:</li>
+                        <ul>
+                          <li>Lesion greater than 70% stenosis on angiography (eg, CTA, invasive angiography,
+                            MRA) <b>OR</b> </li>
+                          <li>Lesion 50% to 70% stenosis on angiography (eg, CTA, invasive angiography, MRA);
+                            AND Resting or provoked intravascular translesional (pre- to post-stenosis) pressure
+                            gradient measurement greater than or equal to 10 mmHg; <b>OR</b> </li>
+                          <li>LE Duplex doppler with peak systolic velocity (PSV) greater than 300 cm/s or PSV ratio
+                            greater than 4.0</li>
+                        </ul>
+                    </ol>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <div id="Venous1preprocedure" class="tab-pane fade">
+
+            <input type="checkbox" id="vehicle1" name="Venous1PreChecklist" onClick="checkboxPreChecklist('Venous', 1);"
+              value="The patient continues to have lifestyle limiting Venous with impairment of activities of daily living. Failure of 3 months of conservative therapy (medical therapy and structured walking regimen). ">
+            <label for="vehicle1"> Failure of 3 months of conservative therapy (medical therapy and structured walking regimen)</label><br>
+            <input type="checkbox" id="vehicle2" name="Venous1PreChecklist" onClick="checkboxPreChecklist('Venous', 1);"
+              value="Duplex with PSV > 400 in the femoropopliteal segment. ">
+            <label for="vehicle2"> Duplex with PSV > 400 in the femoropopliteal segment</label><br>
+            <input type="checkbox" id="vehicle3" name="Venous1PreChecklist" onClick="checkboxPreChecklist('Venous', 1);"
+              value="CTA showing greater than 70% stenosis in the iliac artery. ">
+            <label for="vehicle3"> CTA showing greater than 70% stenosis in the iliac artery </label><br>
+            <input type="checkbox" id="vehicle4" name="Venous1PreChecklist" onClick="checkboxPreChecklist('Venous', 1);"
+              value="CTA showing greater than 70% stenosis in the femoropopliteal segment. ">
+            <label for="vehicle4"> CTA showing greater than 70% stenosis in the femoropopliteal segment </label><br>
+            <br>
+            <textarea id="textareaVenous1PreChecklist" name="textareaVenous1PreChecklist" rows="12"
+              cols="50"></textarea>
+              <br>
+              <button type="button" class="btn btn-primary" data-toggle="modal" onclick="copyPreChecklist('Venous', 1);">Copy</button>  
+            </div>
+          </div>
+        </div>
+
+      </li>
+
+      <li id="Venous2" class="collapse">
+        <div class="container">
+          <h2>Anthem</h2>
+          <ul class="nav nav-tabs">
+            <li class="active"><a data-toggle="tab" href="#Venous2initialvisit">Initial Visit</a></li>
+            <li><a data-toggle="tab" href="#Venous2preprocedure">Pre-procedure Checklist</a></li>
+          </ul>
+
+          <div class="tab-content">
+            <div id="Venous2initialvisit" class="tab-pane fade in active">
+
+              <p> 
+                <i>Aortoiliac and Superficial Femoral arteries ONLY</i> 
+                <br><br>
+
+                <input type="checkbox" id="vehicle1" name="Venous2FirstVisit" onClick="FirstVisitChecklist('Venous', 2);"
+                value="The patient has lifestyle limiting Venous with impairment of activities of daily living. ">
+                <label for="vehicle1"> Impairment of activities of daily living</label><br>
+                <input type="checkbox" id="vehicle2" name="Venous2FirstVisit" onClick="FirstVisitChecklist('Venous', 2);"
+                  value=" They are unable to work.">
+                <label for="vehicle2"> Unable to work</label><br>
+                <input type="checkbox" id="vehicle3" name="Venous2FirstVisit" onClick="FirstVisitChecklist('Venous', 2);"
+                  value=" They have been counseled on smoking cessation.">
+                <label for="vehicle3"> Counseled on smoking cessation</label><br>
+                <input type="checkbox" id="vehicle4" name="Venous2FirstVisit" onClick="FirstVisitChecklist('Venous', 2);"
+                  value=" They have been counseled on pharmacological therapy including antiplatelets.">
+                <label for="vehicle4"> Pharmacological therapy</label><br>
+                <input type="checkbox" id="vehicle5" name="Venous2FirstVisit" onClick="FirstVisitChecklist('Venous', 2);"
+                  value=" They have been counseled on a walking regimen (at least 30 minutes, 3 times a week).">
+                <label for="vehicle5"> Exercise therapy</label><br>
+                <input type="checkbox" id="vehicle6" name="Venous2FirstVisit" onClick="FirstVisitChecklist('Venous', 2);"
+                  value=" They will come back to the office with an ABI and arterial duplex.">
+                <label for="vehicle6"> ABI and duplex</label><br>
+                <input type="checkbox" id="vehicle7" name="Venous2FirstVisit" onClick="FirstVisitChecklist('Venous', 2);"
+                  value=" They are no other conditions that would limit their activity if Venous was improved.">
+                <label for="vehicle7"> No other conditions limiting activity </label>
+                <br>
+                <input type="checkbox" id="alloftheabove" name="Venous2FirstVisitAll" onClick="FirstVisitChecklistAllAbove('Venous', 2);">
+                <label for="alloftheabove"> All of the above</label>
+
+                <br>
+                <textarea id="textareaVenous2FirstVisit" name="Venous2FirstVisitTextarea" rows="12"
+                  cols="50"></textarea>
+                <br>
+                <button type="button" class="btn btn-primary" data-toggle="modal" onclick="copyFirstVisit('Venous', 2);">Copy</button>                
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#notesVenous2FirstVisit">Guidelines</button>
+                <br>
+              </p>
+
+              <!-- Modal -->
+              <div class="modal fade" id="notesVenous2FirstVisit" tabindex="-1" role="dialog"
+                aria-labelledby="notesVenous2FirstVisitLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document" >
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="notesVenous2FirstVisitLabel">Venous Anthem
+                        FirstVisit Guidelines</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    For individuals with Venous due to lower extremity occlusive arterial disease, the use of either percutaneous or open exposure angioplasty is considered medically necessary for 
+                    individuals who meet <b>ALL</b> of the following criteria:
+                    <ol>
+                      <li>Presence of severe disability (inability to perform usual work or life-style activities) due to
+                        intermittent Venous; <b>and</b> </li>
+                      <li>There has been an inadequate response to at least 6 months of conservative treatment including
+                        lifestyle initiatives for known risks (for example, smoking cessation and dietary changes),
+                        including supervised exercise training, and pharmacological therapy (for example, anti-platelet,
+                        cilostazol) unless contraindicated; <b>and</b></li>
+                      <li>There is an absence of other conditions that would limit activity even if the Venous were
+                        improved (for example, angina or chronic pulmonary disease) with the endovascular intervention.</li>
+                      <li>Imaging
+                        <ol>
+                          <li>Common iliac artery, unilateral or bilateral lesions of any length.</li>
+                          <li>External Iliac, unilateral, or bilateral lesions of &gt; 3cm in length</li>
+                          <li>Fem-Pop Stenosis &gt; single stenosis less &lt; 10 cm in length or single occlusion = 5cm length</li>
+                          <li>Fem-Pop Stenosis 5-10cm length for Stent placement</li>
+                        </ol>
+                      </li>
+                    </ol>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <div id="Venous2preprocedure" class="tab-pane fade">
+
+            <input type="checkbox" id="vehicle1" name="Venous2PreChecklist" onClick="checkboxPreChecklist('Venous', 2);"
+              value="The patient continues to have lifestyle limiting Venous with impairment of activities of daily living. Failure of 6 months of conservative therapy (medical therapy and structured walking regimen). ">
+            <label for="vehicle1"> Failure of 6 months of conservative therapy (medical therapy and structured walking regimen)</label><br>
+            <input type="checkbox" id="vehicle2" name="Venous2PreChecklist" onClick="checkboxPreChecklist('Venous', 2);"
+              value="They have a significant common iliac artery lesion. ">
+            <label for="vehicle2"> Common iliac artery lesion </label><br>
+            <input type="checkbox" id="vehicle3" name="Venous2PreChecklist" onClick="checkboxPreChecklist('Venous', 2);"
+              value="They have a significant external iliac artery lesion > 3cm in length.">
+            <label for="vehicle3"> External iliac artery lesion > 3cm </label><br>
+            <input type="checkbox" id="vehicle4" name="Venous2PreChecklist" onClick="checkboxPreChecklist('Venous', 2);"
+              value="They have a femoropopliteal stenosis < 10cm length. ">
+            <label for="vehicle4"> Femoropopliteal stenosis < 10cm length  </label><br>
+            <input type="checkbox" id="vehicle4" name="Venous2PreChecklist" onClick="checkboxPreChecklist('Venous', 2);"
+              value="They have a femoropopliteal occlusion < 10cm length. ">
+            <label for="vehicle5"> Femoropopliteal occlusion < 10cm length  </label><br>
+            <br>
+            <textarea id="textareaVenous2PreChecklist" name="textareaVenous2PreChecklist" rows="12"
+              cols="50"></textarea>
+              <br>
+              <button type="button" class="btn btn-primary" data-toggle="modal" onclick="copyPreChecklist('Venous', 2);">Copy</button>  
+            </div>
+          </div>
+        </div>
+
+      </li>
+      
+      <li id="Venous3" class="collapse">
+        <div class="container">
+          <h2>Aetna</h2>
+          <ul class="nav nav-tabs">
+            <li class="active"><a data-toggle="tab" href="#Venous3initialvisit">Initial Visit</a></li>
+            <li><a data-toggle="tab" href="#Venous3preprocedure">Pre-procedure Checklist</a></li>
+          </ul>
+
+          <div class="tab-content">
+            <div id="Venous3initialvisit" class="tab-pane fade in active">
+
+              <p> 
+                <i>Aortoiliac and Superficial Femoral arteries ONLY</i> 
+                <br><br>
+
+                <input type="checkbox" id="vehicle1" name="Venous3FirstVisit" onClick="FirstVisitChecklist('Venous', 3);"
+                value="The patient has lifestyle limiting Venous with impairment of activities of daily living. ">
+                <label for="vehicle1"> Impairment of activities of daily living</label><br>
+                <input type="checkbox" id="vehicle2" name="Venous3FirstVisit" onClick="FirstVisitChecklist('Venous', 3);"
+                  value=" They are unable to work.">
+                <label for="vehicle2"> Unable to work</label><br>
+                <input type="checkbox" id="vehicle3" name="Venous3FirstVisit" onClick="FirstVisitChecklist('Venous', 3);"
+                  value=" They have been counseled on smoking cessation.">
+                <label for="vehicle3"> Counseled on smoking cessation</label><br>
+                <input type="checkbox" id="vehicle4" name="Venous3FirstVisit" onClick="FirstVisitChecklist('Venous', 3);"
+                  value=" Their comorbidities are being managed by their PCP and they have been counseled on pharmacological therapy including antiplatelets.">
+                <label for="vehicle4"> Pharmacological therapy and Medical management</label><br>
+                <input type="checkbox" id="vehicle5" name="Venous3FirstVisit" onClick="FirstVisitChecklist('Venous', 3);"
+                  value=" They have been counseled on a walking regimen (at least 30 minutes, 3 times a week).">
+                <label for="vehicle5"> Exercise therapy</label><br>
+                <input type="checkbox" id="vehicle6" name="Venous3FirstVisit" onClick="FirstVisitChecklist('Venous', 3);"
+                  value=" They will come back to the office with an exercise ABI and arterial duplex.">
+                <label for="vehicle6"> Exercise ABI and duplex</label>
+                <br>
+                <input type="checkbox" id="alloftheabove" name="Venous3FirstVisitAll" onClick="FirstVisitChecklistAllAbove('Venous', 3);">
+                <label for="alloftheabove"> All of the above</label>
+
+                <br>
+                <textarea id="textareaVenous3FirstVisit" name="Venous3FirstVisitTextarea" rows="12"
+                  cols="50"></textarea>
+                <br>
+                <button type="button" class="btn btn-primary" data-toggle="modal" onclick="copyFirstVisit('Venous', 3);">Copy</button>                
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#notesVenous3FirstVisit">Guidelines</button>
+                <br>
+              </p>
+
+              <!-- Modal -->
+              <div class="modal fade" id="notesVenous3FirstVisit" tabindex="-1" role="dialog"
+                aria-labelledby="notesVenous3FirstVisitLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document" >
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="notesVenous3FirstVisitLabel">Venous Aetna/Cigna
+                        FirstVisit Guidelines</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    Lifestyle limiting Venous when there is documentation of <b>all</b> of the following:                    
+                    <ol>
+                      <li>A failed trial of three months of provider directed conservative therapy which includes structured exercise walking program</li>
+                      <li>Functional limitations that significantly impact the quality of life and/or occupation of the patient</li>
+                      <li>Risk factor modification including smoking cessation, optimization of lipids, and
+                        glycemic control are part of the medical evaluation and management</li>
+                      <li>Symptoms correspond with the location of arterial insufficiency
+                        <ol>
+                          <li>aorto-iliac -lower back, hip, buttock, or thigh</li>
+                          <li>superficial femoral - Venous in the calf muscle area</li>
+                          <li>popliteal - calf or foot</li>
+                        </ol>
+                      </li>
+                      <li>Imaging performed prior to the planned procedure confirms location and degree of
+                        stenosis (≥50%) by objective criteria.</li>
+                      <li>Treatment of target lesion will allow inline flow to the foot, with at least one run-off vessel</li>
+                    </ol>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <div id="Venous3preprocedure" class="tab-pane fade">
+
+            <input type="checkbox" id="vehicle1" name="Venous3PreChecklist" onClick="checkboxPreChecklist('Venous', 3);"
+              value="Failure of 3 months of conservative therapy (medical therapy and structured walking regimen). ">
+            <label for="vehicle1"> Failure of 3 months of conservative therapy (medical therapy and structured walking regimen)</label><br>
+            <input type="checkbox" id="vehicle2" name="Venous3PreChecklist" onClick="checkboxPreChecklist('Venous', 3);"
+              value="The patient has imaging showing a stenosis of greater than 50% in the ******. ">
+            <label for="vehicle2"> Imaging confirms greater than 50% stenosis  </label><br>
+            <input type="checkbox" id="vehicle3" name="Venous3PreChecklist" onClick="checkboxPreChecklist('Venous', 3);"
+              value="We will schedule for a diagnostic arteriogram for lifestyle limiting Venous. ">
+            <label for="vehicle3"> Diagnostic Arteriogram </label><br>
+            <br>
+            <textarea id="textareaVenous3PreChecklist" name="textareaVenous3PreChecklist" rows="12"
+              cols="50"></textarea>
+              <br>
+              <button type="button" class="btn btn-primary" data-toggle="modal" onclick="copyPreChecklist('Venous', 3);">Copy</button>  
+            </div>
+          </div>
+        </div>
+
+      </li>
+
+      <li id="Venous4" class="collapse">
+        <div class="container">
+          <h2>UHC</h2>
+          <ul class="nav nav-tabs">
+            <li class="active"><a data-toggle="tab" href="#Venous4initialvisit">Initial Visit</a></li>
+            <li><a data-toggle="tab" href="#Venous4preprocedure">Pre-procedure Checklist</a></li>
+          </ul>
+
+          <div class="tab-content">
+            <div id="Venous4initialvisit" class="tab-pane fade in active">
+
+              <p> 
+                <i>Aortoiliac and Superficial Femoral arteries ONLY</i> 
+                <br><br>
+
+                <input type="checkbox" id="vehicle1" name="Venous4FirstVisit" onClick="FirstVisitChecklist('Venous', 4);"
+                value="The patient has lifestyle limiting Venous with impairment of activities of daily living. ">
+                <label for="vehicle1"> Impairment of activities of daily living</label><br>
+                <input type="checkbox" id="vehicle2" name="Venous4FirstVisit" onClick="FirstVisitChecklist('Venous', 4);"
+                  value=" They are unable to work.">
+                <label for="vehicle2"> Unable to work</label><br>
+                <input type="checkbox" id="vehicle3" name="Venous4FirstVisit" onClick="FirstVisitChecklist('Venous', 4);"
+                  value=" They have been counseled on smoking cessation.">
+                <label for="vehicle3"> Counseled on smoking cessation</label><br>
+                <input type="checkbox" id="vehicle4" name="Venous4FirstVisit" onClick="FirstVisitChecklist('Venous', 4);"
+                  value=" They have been counseled on pharmacological therapy including antiplatelets.">
+                <label for="vehicle4"> Pharmacological therapy</label><br>
+                <input type="checkbox" id="vehicle5" name="Venous4FirstVisit" onClick="FirstVisitChecklist('Venous', 4);"
+                  value=" They have been counseled on a walking regimen (at least 30 minutes, 3 times a week).">
+                <label for="vehicle5"> Exercise therapy</label><br>
+                <input type="checkbox" id="vehicle6" name="Venous4FirstVisit" onClick="FirstVisitChecklist('Venous', 4);"
+                  value=" They will come back to the office with an exercise ABI and arterial duplex.">
+                <label for="vehicle6"> Exercise ABI and duplex</label>
+                <br>
+                <input type="checkbox" id="alloftheabove" name="Venous4FirstVisitAll" onClick="FirstVisitChecklistAllAbove('Venous', 4);">
+                <label for="alloftheabove"> All of the above</label>
+
+                <br>
+                <textarea id="textareaVenous4FirstVisit" name="Venous4FirstVisitTextarea" rows="12"
+                  cols="50"></textarea>
+                <br>
+                <button type="button" class="btn btn-primary" data-toggle="modal" onclick="copyFirstVisit('Venous', 4);">Copy</button>                
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#notesVenous4FirstVisit">Guidelines</button>
+                <br>
+              </p>
+
+              <!-- Modal -->
+              <div class="modal fade" id="notesVenous4FirstVisit" tabindex="-1" role="dialog"
+                aria-labelledby="notesVenous4FirstVisitLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document" >
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="notesVenous4FirstVisitLabel">Venous UHC
+                        FirstVisit Guidelines</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    Endovascular revascularization procedures (e.g., stents, angioplasty, and/or atherectomy) are
+proven and medically necessary for treating non-limb-threatening lower extremity ischemia in
+individuals with Venous due to atherosclerotic disease of the aortoiliac and/or
+femoropopliteal arteries when all the following criteria are met:
+                    <ol>
+                      <li>Impaired ability to work and/or perform activities of daily living (ADL); and</li>
+                      <li><b>All</b> the following conservative therapies have been tried and failed:</li>
+                        <ul>
+                          <li>At least twelve (12) weeks of a Supervised or Structured Exercise Program; and</li>
+                          <li>Pharmacologic therapy; and</li>
+                          <li>Smoking cessation, if applicable</li>
+                        </ul>
+                      <li>Ischemic peripheral artery disease with Ankle-Brachial Index (ABI) ≤ 0.90; <b>AND</b> </li>
+                      <li>Individual has undergone a structured exercise program (eg, supervised or home based) <b>AND</b> </li>
+                      <li>Imaging results show anatomic location and severity of occlusion (stenosis ≥ 50%) (e.g.,
+                        duplex ultrasound, computed tomography angiography (CTA), magnetic resonance
+                        angiography (MRA) or invasive angiography). If duplex ultrasound does not demonstrate a
+                        stenosis ≥ 50%, another imaging modality will be necessary to demonstrate the extent of
+                        stenosis</li>
+                    </ol>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <div id="Venous4preprocedure" class="tab-pane fade">
+
+            <input type="checkbox" id="vehicle1" name="Venous4PreChecklist" onClick="checkboxPreChecklist('Venous', 4);"
+              value="Failure of 3 months of conservative therapy (medical therapy and structured walking regimen). ">
+            <label for="vehicle1"> Failure of 3 months of conservative therapy (medical therapy and structured walking regimen)</label><br>
+            <input type="checkbox" id="vehicle2" name="Venous4PreChecklist" onClick="checkboxPreChecklist('Venous', 4);"
+              value="Imaging confirms greater than 50% stenosis in the *******. ">
+            <label for="vehicle2"> Imaging confirming > 50% stenosis </label><br>
+            <input type="checkbox" id="vehicle3" name="Venous4PreChecklist" onClick="checkboxPreChecklist('Venous', 4);"
+              value="The ABI < 0.9. ">
+            <label for="vehicle3"> ABI < 0.9 </label><br>
+            <br>
+            <textarea id="textareaVenous4PreChecklist" name="textareaVenous4PreChecklist" rows="12"
+              cols="50"></textarea>
+              <br>
+              <button type="button" class="btn btn-primary" data-toggle="modal" onclick="copyPreChecklist('Venous', 4);">Copy</button>  
             </div>
           </div>
         </div>
