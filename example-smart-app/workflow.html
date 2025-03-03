@@ -11,9 +11,21 @@
   <link rel='stylesheet' type='text/css' href='./src/css/example-smart-app.css'>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://kit.fontawesome.com/7ff30e4728.js" crossorigin="anonymous"></script>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+    :root {
+      --foregroundColor: #ffffff;
+      --lemonGreen: #d8d83e;
+      --backgroundColor: #24272c;
+      --white: #ffffff;
+      --black: #312525;
+    }
+
     #sidebar-wrapper {
-      background: white;
+      /* background: var(--backgroundColor); */
+      background: var(--white);
       height: 100vh
     }
 
@@ -22,7 +34,7 @@
       margin: 0;
       padding: 0;
       margin-left: 300px;
-      background: white;
+      background: var(--white);
     }
 
     #sidebar-wrapper .sidebar-nav {
@@ -44,17 +56,56 @@
       display: block;
       text-decoration: none;
       outline: 0;
-      color: black;
+      color: var(--foregroundColor);
     }
 
     #sidebar-wrapper .sidebar-nav li a.active {
-      background-color: white;
-      color: black;
+      background-color: var(--backgroundColor);;
+      color: var(--foregroundColor);
     }
 
     #sidebar-wrapper .sidebar-nav li a:focus,
     #sidebar-wrapper .sidebar-nav li a:hover {
-      background-color: white;
+      background-color: var(--backgroundColor);;
+    }
+
+    .sidebar-nav {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 400;
+      position: fixed;
+      left: 0;
+      width: 30rem;
+      height: 100%;
+      background-color: var(--backgroundColor);
+    }
+    .sidebar-nav li {
+      font-size: 2rem;
+      font-weight: 600;
+      padding: 1.5rem 1.5rem;
+      text-align: left;
+      list-style: none;
+      border-bottom: 0.1rem solid rgb(250 250 250 / 10%);
+      background-color: var(--backgroundColor);
+    }
+
+    .sidebar-nav ul li {
+      border-bottom: none;
+      padding-left: 1rem;
+    }
+    .sidebar-nav ul li a {
+      font-size: 1.6rem;
+      padding-left: 0.2rem;
+      color: var(--foregroundColor);
+    }
+
+    .sidebar-nav li a {
+      position: relative;
+      display: block;
+      width: 100%;
+      color: var(--backgroundColor);
+      font-size: 1.8rem;
+      text-transform: capitalize;
+      padding-left: 1.5rem;
     }
   </style>
 </head>
@@ -65,29 +116,50 @@
       <ul id="sidemenu" class="sidebar-nav">
         <li> <a href="index.html" class="active"> <span class="sidebar-icon"><i class="fa fa-dashboard"></i></span>
             <span class="sidebar-title">Back</span> </a> </li>
-        <li> <a class="accordion-toggle collapsed toggle-switch toggle-icon" data-toggle="collapse" href="#tab1">
-            <span class="sidebar-icon"><i class="fa fa-newspaper-o"></i></span> <span
-              class="sidebar-title">Venous</span> <i class="fa icon-toggle fa-angle-right" aria-hidden="true"></i> </a>
+        <li> <a class="accordion-toggle collapsed toggle-switch toggle-icon" data-toggle="collapse" href="#Aneurysms">
+            <span class="sidebar-icon"><i class="fa fa-newspaper-o"></i></span> <span class="sidebar-title">Aneurysms</span> <i class="fa icon-toggle fa-angle-right" aria-hidden="true"></i> </a>
+            <ul id="Aneurysms" class="panel-collapse collapse panel-switch" role="menu">
+              <li><a class="accordion-toggle collapsed toggle-switch toggle-icon" data-toggle="collapse" href="#AAA" class="abc"><i class="fa fa-caret-right"></i>AAA</a>
+                <ul>
+                  <li><a data-toggle="collapse" href="#AneurysmsAAAScreening" class="abc"><i class="fa fa-caret-right"></i>Screening</a></li>
+                  <li><a data-toggle="collapse" href="#AneurysmsAAASurveillance" class="abc"><i class="fa fa-caret-right"></i>Surveillance</a></li>
+                  <li><a data-toggle="collapse" href="#AneurysmsAAATreatment" class="abc"><i class="fa fa-caret-right"></i>Treatment</a></li>
+                </ul>
+              </li>
+              <li><a data-toggle="collapse" href="#Visceral" class="abc"><i class="fa fa-caret-right"></i>Visceral</a></li>
+              <li><a data-toggle="collapse" href="#Popliteal" class="abc"><i class="fa fa-caret-right"></i>Popliteal</a></li>
+            </ul>
         </li>
-      </ul>
+
+        <li> <a class="accordion-toggle collapsed toggle-switch toggle-icon" data-toggle="collapse" href="#PostProcedureSurveillance">
+          <span class="sidebar-icon"><i class="fa fa-newspaper-o"></i></span> <span class="sidebar-title">Post Procedure Surveillance</span> <i class="fa icon-toggle fa-angle-right" aria-hidden="true"></i> </a>
+          <ul id="PostProcedureSurveillance" class="panel-collapse collapse panel-switch" role="menu">
+            <li><a data-toggle="collapse" href="#PostProcedureSurveillanceCarotid" class="abc"><i class="fa fa-caret-right"></i>Carotid</a></li>
+            <li><a data-toggle="collapse" href="#PostProcedureSurveillanceAneurysm" class="abc"><i class="fa fa-caret-right"></i>Aneurysm</a></li>
+            <li><a data-toggle="collapse" href="#PostProcedureSurveillanceMesenteric" class="abc"><i class="fa fa-caret-right"></i>Mesenteric</a></li>
+            <li><a data-toggle="collapse" href="#PostProcedureSurveillanceOpenLowerExtremity" class="abc"><i class="fa fa-caret-right"></i>Open Lower Extremity</a></li>
+            <li><a data-toggle="collapse" href="#PostProcedureSurveillanceEndoLowerExtremity" class="abc"><i class="fa fa-caret-right"></i>Endo Lower Extremity</a></li>
+          </ul>
+        </li>
+
+        <li> <a href="#Venous" class="active"> <span class="sidebar-icon"><i class="fa fa-dashboard"></i></span> <span class="sidebar-title">Venous</span> </a> </li>
+        <li> <a href="#TreatmentAlgorithms" class="active"> <span class="sidebar-icon"><i class="fa fa-dashboard"></i></span> <span class="sidebar-title">Treatment Algorithms</span> </a> </li>
+
+      </ul>      
+      
     </aside>
     <ul id="panels">
 
-      <li id="tab1" class="collapse">
+      <li id="AneurysmsAAAScreening" class="collapse">
         <div class="container">
-          <h2>Venous Workflow</h2>
+          <h2>AneurysmsAAAScreening Workflow</h2>
           <ul class="nav nav-tabs">
-            <li class="active"><a data-toggle="tab" href="#home">First Visit</a></li>
-            <li><a data-toggle="tab" href="#menu1">Second Visit</a></li>
+            <li class="active"><a data-toggle="tab" href="#AneurysmsAAAScreening">First Visit</a></li>
           </ul>
 
           <div class="tab-content">
-            <div id="home" class="tab-pane fade in active">
+            <div id="AneurysmsAAAScreening" class="tab-pane fade in active">
               <img src="workflow_images/venous_workflow.jpg" alt="venous_workflow" style="width:1000px;height:612px;">
-
-            </div>
-            <div id="menu1" class="tab-pane fade">
-              Venous second visit workflow goes here
             </div>
           </div>
         </div>
