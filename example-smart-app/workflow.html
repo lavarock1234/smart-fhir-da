@@ -126,8 +126,8 @@
                   <li><a data-toggle="collapse" href="#AneurysmsAAATreatment" class="abc">Treatment</a></li>
                 </ul>
               </li>
-              <li><a data-toggle="collapse" href="#Visceral" class="abc">Visceral</a></li>
-              <li><a data-toggle="collapse" href="#Popliteal" class="abc">Popliteal</a></li>
+              <li><a data-toggle="collapse" href="#AneurysmsVisceral" class="abc">Visceral</a></li>
+              <li><a data-toggle="collapse" href="#AneurysmsPopliteal" class="abc">Popliteal</a></li>
             </ul>
         </li>
 
@@ -142,12 +142,18 @@
           </ul>
         </li>
 
-        <li> <a href="#Venous" class="active"> <span class="sidebar-icon"><i class="fa fa-dashboard"></i></span> <span class="sidebar-title">Venous</span> </a> </li>
+        <li> <a class="accordion-toggle collapsed toggle-switch toggle-icon" data-toggle="collapse" href="#Venous">
+          <span class="sidebar-icon"><i class="fa fa-newspaper-o"></i></span> <span class="sidebar-title">Venous</span> <i class="fa icon-toggle fa-angle-right" aria-hidden="true"></i> </a>
+          <ul id="Venous" class="panel-collapse collapse panel-switch" role="menu">
+            <li><a data-toggle="collapse" href="#VenousCEAP" class="abc">CEAP</a></li>
+          </ul>
+        </li>
+
         <li> <a href="#TreatmentAlgorithms" class="active"> <span class="sidebar-icon"><i class="fa fa-dashboard"></i></span> <span class="sidebar-title">Treatment Algorithms</span> </a> </li>
 
-      </ul>      
-      
+      </ul>
     </aside>
+
     <ul id="panels">
 
       <li id="AneurysmsAAAScreening" class="collapse">
@@ -159,14 +165,176 @@
 
           <div class="tab-content">
             <div id="AneurysmsAAAScreening" class="tab-pane fade in active">
-              <img src="workflow_images/venous_workflow.jpg" alt="venous_workflow" style="width:1000px;height:612px;">
+              <img src="workflow_images/AAA_Screening.png" alt="AAA_Screening" style="width:1000px;height:612px;">
             </div>
           </div>
         </div>
-
       </li>
+
+      <li id="AneurysmsAAASurveillance" class="collapse">
+        <div class="container">
+          <h2>AneurysmsAAASurveillance Workflow</h2>
+          <ul class="nav nav-tabs">
+            <li class="active"><a data-toggle="tab" href="#AneurysmsAAASurveillance">First Visit</a></li>
+          </ul>
+
+          <div class="tab-content">
+            <div id="AneurysmsAAASurveillance" class="tab-pane fade in active">
+              <img src="workflow_images/AAA_surveillance.png" alt="AAA_surveillance" style="width:1000px;height:612px;">
+            </div>
+          </div>
+        </div>
+      </li>
+
+      <li id="AneurysmsAAATreatment" class="collapse">
+        <div class="container">
+          <h2>AneurysmsAAATreatment Workflow</h2>
+          <ul class="nav nav-tabs">
+            <li class="active"><a data-toggle="tab" href="#AneurysmsAAATreatment">First Visit</a></li>
+          </ul>
+
+          <div class="tab-content">
+            <div id="AneurysmsAAATreatment" class="tab-pane fade in active">
+              <img src="workflow_images/AAA_Treatment.png" alt="AAA_surveillance" style="width:1000px;height:612px;">
+            </div>
+          </div>
+        </div>
+      </li>
+
+      <li id="AneurysmsVisceral" class="collapse">
+        <div class="container">
+          <h2>AneurysmsVisceral Workflow</h2>
+          <ul class="nav nav-tabs">
+            <li class="active"><a data-toggle="tab" href="#AneurysmsVisceral">First Visit</a></li>
+          </ul>
+
+          <div class="tab-content">
+            <div id="AneurysmsVisceral" class="tab-pane fade in active">
+              <img src="workflow_images/Visceral_aneurysms.jpg" alt="Visceral_aneurysms" style="width:1000px;height:612px;">
+            </div>
+          </div>
+        </div>
+      </li>
+
+      <li id="AneurysmsPopliteal" class="collapse">
+        <div class="container">
+          <h2>AneurysmsPopliteal Workflow</h2>
+          <ul class="nav nav-tabs">
+            <li class="active"><a data-toggle="tab" href="#AneurysmsPopliteal">First Visit</a></li>
+          </ul>
+
+          <div class="tab-content">
+            <div id="AneurysmsPopliteal" class="tab-pane fade in active">
+              <img src="workflow_images/Popliteal Artery Aneurysm .jpg" alt="AneurysmsPopliteal" style="width:1000px;height:612px;">
+            </div>
+          </div>
+        </div>
+      </li>
+
+      <li id="PostProcedureSurveillanceCarotid" class="collapse">
+        <div class="container">
+          <h2>PostProcedureSurveillanceCarotid Workflow</h2>
+          <ul class="nav nav-tabs">
+            <li class="active"><a data-toggle="tab" href="#PostProcedureSurveillanceCarotid">First Visit</a></li>
+          </ul>
+
+          <div class="tab-content">
+            <div id="PostProcedureSurveillanceCarotid" class="tab-pane fade in active">
+              <img src="workflow_images/Carotid_post1.png" alt="Carotid_post1" style="width:1000px;height:612px;">
+            </div>
+          </div>
+        </div>
+      </li>
+
+      <li id="PostProcedureSurveillanceAneurysm" class="collapse">
+        <div class="container">
+          <h2>PostProcedureSurveillanceAneurysm Workflow</h2>
+          <ul class="nav nav-tabs">
+            <li class="active"><a data-toggle="tab" href="#PostProcedureSurveillanceAneurysm">First Visit</a></li>
+          </ul>
+
+          <div class="tab-content">
+            <div id="PostProcedureSurveillanceAneurysm" class="tab-pane fade in active">
+              <img src="workflow_images/Aneursym_post1.png" alt="Aneursym_post1" style="width:1000px;height:612px;">
+              <img src="workflow_images/Aneurysm_post2.png" alt="Aneursym_post2" style="width:1000px;height:612px;">
+            </div>
+          </div>
+        </div>
+      </li>
+      
+      <li id="PostProcedureSurveillanceMesenteric" class="collapse">
+        <div class="container">
+          <h2>PostProcedureSurveillanceMesenteric Workflow</h2>
+          <ul class="nav nav-tabs">
+            <li class="active"><a data-toggle="tab" href="#PostProcedureSurveillanceMesenteric">First Visit</a></li>
+          </ul>
+
+          <div class="tab-content">
+            <div id="PostProcedureSurveillanceMesenteric" class="tab-pane fade in active">
+              <img src="workflow_images/Mesenteric_post.png" alt="Mesenteric_post" style="width:1000px;height:612px;">
+            </div>
+          </div>
+        </div>
+      </li>
+
+      <li id="PostProcedureSurveillanceOpenLowerExtremity" class="collapse">
+        <div class="container">
+          <h2>PostProcedureSurveillanceOpenLowerExtremity Workflow</h2>
+          <ul class="nav nav-tabs">
+            <li class="active"><a data-toggle="tab" href="#PostProcedureSurveillanceOpenLowerExtremity">First Visit</a></li>
+          </ul>
+
+          <div class="tab-content">
+            <div id="PostProcedureSurveillanceOpenLowerExtremity" class="tab-pane fade in active">
+              <img src="workflow_images/Open_LE_post1.png" alt="Open_LE_post1" style="width:1000px;height:612px;">
+              <img src="workflow_images/Open_LE_post2.png" alt="Open_LE_post2" style="width:1000px;height:612px;">
+              <img src="workflow_images/Open_LE_post3.png" alt="Open_LE_post3" style="width:1000px;height:612px;">
+            </div>
+          </div>
+        </div>
+      </li>
+
+      <li id="PostProcedureSurveillanceEndoLowerExtremity" class="collapse">
+        <div class="container">
+          <h2>PostProcedureSurveillanceEndoLowerExtremity Workflow</h2>
+          <ul class="nav nav-tabs">
+            <li class="active"><a data-toggle="tab" href="#PostProcedureSurveillanceEndoLowerExtremity">First Visit</a></li>
+          </ul>
+
+          <div class="tab-content">
+            <div id="PostProcedureSurveillanceEndoLowerExtremity" class="tab-pane fade in active">
+              <img src="workflow_images/Endo_LE_post1.png" alt="Endo_LE_post1" style="width:1000px;height:612px;">
+              <img src="workflow_images/Endo_LE_post2.png" alt="Endo_LE_post2" style="width:1000px;height:612px;">
+            </div>
+          </div>
+        </div>
+      </li>
+
+      <li id="VenousCEAP" class="collapse">
+        <div class="container">
+          <h2>VenousCEAP Workflow</h2>
+          <ul class="nav nav-tabs">
+            <li class="active"><a data-toggle="tab" href="#VenousCEAP">First Visit</a></li>
+          </ul>
+
+          <div class="tab-content">
+            <div id="VenousCEAP" class="tab-pane fade in active">
+              <img src="workflow_images/Venous_CEAP.png" alt="Venous_CEAP" style="width:1000px;height:612px;">
+            </div>
+          </div>
+        </div>
+      </li>
+
     </ul>
   </div>
+
+  <script>
+    $(document).ready(function () {
+      $('#panels li').on('show.bs.collapse', function () {
+        $('#panels li.in').collapse('hide');
+      });
+    });
+  </script>
 </body>
 
 </html>
