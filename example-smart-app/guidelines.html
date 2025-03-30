@@ -601,48 +601,91 @@ femoropopliteal arteries when all the following criteria are met:
             <div id="Venous1initialvisit" class="tab-pane fade in active">
 
               <ul class="nav nav-tabs">
-                <li class="active"><a data-toggle="tab" href="#Venous1initialvisitA">Venous A</a></li>
-                <li><a data-toggle="tab" href="#Venous1initialvisitA2">Venous aB</a></li>
-                <li><a data-toggle="tab" href="#Venous1initialvisitB">Venous B</a></li>
+                <li class="active"><a data-toggle="tab" href="#Venous1InitialVisitConservative">Conservative Management (Non-Invasive Procedures)</a></li>
+                <li><a data-toggle="tab" href="#Venous1InitialVisitCLEAP1to3">CEAP 1-3</a></li>
+                <li><a data-toggle="tab" href="#Venous1InitialVisitCLEAP1gt3">CEAP >3</a></li>
               </ul>
 
             <div class="tab-content">
-              <div id="Venous1initialvisitA" class="tab-pane fade in active">
+              <div id="Venous1InitialVisitConservative" class="tab-pane fade in active">
                 <p> 
-                  <i>Aortoiliac and Superficial Femoral arteries ONLY</i> 
+                  <i>Components of conservative therapy should be discussed and individualized to meet the
+                    needs of each patient and must be documented in the medical record. The discussion
+                    should include, but is not limited to:</i> 
                   <br><br>
-  
-                  <input type="checkbox" id="vehicle1" name="Venous1FirstVisit" onClick="FirstVisitChecklist('Venous', 1);"
-                  value="The patient has lifestyle limiting Venous with impairment of activities of daily living. ">
-                  <label for="vehicle1"> Impairment of activities of daily living</label><br>
-                  <input type="checkbox" id="vehicle1" name="Venous1FirstVisit" onClick="FirstVisitChecklist('Venous', 1);"
-                  value="The patient has lifestyle limiting Venous with impairment of activities of daily living. ">
-                  <label for="vehicle1"> Impairment of activities of daily living</label><br>
+
+                  <ul>
+                    <li>Weight reduction</li>
+                    <li>Exercise plan and prescribed physical activity (walking, treadmill, cycling)</li>
+                    <li>Periodic leg elevation</li>
+                    <li>Compressive therapy with use of surgical grade compression stockings (minimum 20-
+                      30 mmHg)</li>
+                  </ul>
                   <br>
-                  <input type="checkbox" id="alloftheabove" name="Venous1FirstVisitAll" onClick="FirstVisitChecklistAllAbove('Venous', 1);">
-                  <label for="alloftheabove"> All of the above</label>
-  
+                  For patients who meet any 1 of the following criteria, conservative therapy may be waived.
                   <br>
-                  <textarea id="textareaVenous1FirstVisit" name="Venous1FirstVisitTextarea" rows="12"
-                    cols="50"></textarea>
-                  <br>
-                  <button type="button" class="btn btn-primary" data-toggle="modal" onclick="copyFirstVisit('Venous', 1);">Copy</button>                
-                  <br>
+                  <ul>
+                    <li>C4-C6 disease (skin changes assigned to venous disease, healed venous leg
+                      ulceration, and active venous leg ulceration)</li>
+                    <li>Hemorrhage</li>
+                    <li>Recurrent superficial thrombophlebitis</li>
+                  </ul>
                 </p>
               </div>
 
-              <div id="Venous1initialvisitA2" class="tab-pane fade">
+              <div id="Venous1InitialVisitCLEAP1to3" class="tab-pane fade">
                 <div class="tab-content">
-                  <p> 
-                    <i>hahahah Aortoiliac and Superficial Femoral arteries VENOUS B1 STUFF</i> 
-                  </p>  
+                  <input type="checkbox" id="vehicle2" name="Venous1InitialVisitCEAP1to31FirstVisit" onClick="FirstVisitChecklist('Venous1InitialVisitCEAP1to3', 1);"
+                    value=" The patient has reticular veins that cause pain and impairment of activities of daily living.">
+                  <label for="vehicle2"> CEAP 1 (Reticular veins)</label><br>
+                  <input type="checkbox" id="vehicle3" name="Venous1InitialVisitCEAP1to31FirstVisit" onClick="FirstVisitChecklist('Venous1InitialVisitCEAP1to3', 1);"
+                    value=" The patient has varicose veins that cause pain and impairment of activities of daily living.">
+                  <label for="vehicle3"> CEAP 2 (Varicose veins)</label><br>
+                  <input type="checkbox" id="vehicle4" name="Venous1InitialVisitCEAP1to31FirstVisit" onClick="FirstVisitChecklist('Venous1InitialVisitCEAP1to3', 1);"
+                    value=" The patient has edema that cause pain and impairment of activities of daily living.">
+                  <label for="vehicle4"> CEAP 3 (Edema)</label><br>
+                  <input type="checkbox" id="vehicle5" name="Venous1InitialVisitCEAP1to31FirstVisit" onClick="FirstVisitChecklist('Venous1InitialVisitCEAP1to3', 1);"
+                    value=" They have been provided information on conservative therapy including weight reduction, exercise plan, leg elevation, and compression therapy with stockings (20-30mm Hg). They will come back to the office with a venous reflux study.">
+                  <label for="vehicle5"> Provided information on conservative therapy</label><br>
+                  <br>
+                  <input type="checkbox" id="alloftheabove" name="Venous1InitialVisitCEAP1to31FirstVisitAll" onClick="FirstVisitChecklistAllAbove('Venous1InitialVisitCEAP1to3', 1);">
+                  <label for="alloftheabove"> All of the above</label>
+  
+                  <br>
+                  <textarea id="textareaVenous1InitialVisitCEAP1to31FirstVisit" name="Venous1InitialVisitCEAP1to31FirstVisitTextarea" rows="12"
+                    cols="50"></textarea>
+                  <br>
+                  <button type="button" class="btn btn-primary" data-toggle="modal" onclick="copyFirstVisit('Venous1InitialVisitCEAP1to3', 1);">Copy</button>
                 </div>
               </div>
-              <div id="Venous1initialvisitB" class="tab-pane fade">
+              <div id="Venous1InitialVisitCLEAP1gt3" class="tab-pane fade">
                 <div class="tab-content">
-                  <p> 
-                    <i>Aortoiliac and Superficial Femoral arteries VENOUS B2 STUFF</i> 
-                  </p>  
+                  <input type="checkbox" id="vehicle2" name="Venous1InitialVisitCEAP1gt31FirstVisit" onClick="FirstVisitChecklist('Venous1InitialVisitCEAP1gt3', 1);"
+                  value=" The patient has severe venous insufficiency characterized by skin changes (CEAP 4).">
+                <label for="vehicle2"> CEAP 4 (Skin changes)</label><br>
+                <input type="checkbox" id="vehicle3" name="Venous1InitialVisitCEAP1gt31FirstVisit" onClick="FirstVisitChecklist('Venous1InitialVisitCEAP1gt3', 1);"
+                  value=" The patient has severe venous insufficiency characterized by healed venous ulcer (CEAP 5).">
+                <label for="vehicle3"> CEAP 5 (Healed venous ulcer)</label><br>
+                <input type="checkbox" id="vehicle4" name="Venous1InitialVisitCEAP1gt31FirstVisit" onClick="FirstVisitChecklist('Venous1InitialVisitCEAP1gt3', 1);"
+                  value=" The patient has severe venous insufficiency characterized by active venous ulcer (CEAP 6).">
+                <label for="vehicle4"> CEAP 6 (Active venous ulcer)</label><br>
+                <input type="checkbox" id="vehicle5" name="Venous1InitialVisitCEAP1gt31FirstVisit" onClick="FirstVisitChecklist('Venous1InitialVisitCEAP1gt3', 1);"
+                  value=" The patient has severe venous insufficiency characterized by hemorrhage.">
+                <label for="vehicle5"> Hemorrhage</label><br>
+                <input type="checkbox" id="vehicle5" name="Venous1InitialVisitCEAP1gt31FirstVisit" onClick="FirstVisitChecklist('Venous1InitialVisitCEAP1gt3', 1);"
+                  value=" The patient has severe venous insufficiency characterized by recurrent superficial thrombophlebitis.">
+                <label for="vehicle5"> Recurrent superficial thrombophlebitis</label><br>
+                <input type="checkbox" id="vehicle5" name="Venous1InitialVisitCEAP1gt31FirstVisit" onClick="FirstVisitChecklist('Venous1InitialVisitCEAP1gt3', 1);"
+                  value=" They have been provided information on conservative therapy including weight reduction, exercise plan, leg elevation, and compression therapy with stockings (20-30mm Hg). They will come back to the office with a venous reflux study.">
+                <label for="vehicle5"> Provided information on conservative therapy</label><br>
+                <br>
+                <input type="checkbox" id="alloftheabove" name="Venous1InitialVisitCEAP1gt31FirstVisitAll" onClick="FirstVisitChecklistAllAbove('Venous1InitialVisitCEAP1gt3', 1);">
+                <label for="alloftheabove"> All of the above</label>
+                <br>
+                <textarea id="textareaVenous1InitialVisitCEAP1gt31FirstVisit" name="Venous1InitialVisitCEAP1gt31FirstVisitTextarea" rows="12"
+                  cols="50"></textarea>
+                <br>
+                <button type="button" class="btn btn-primary" data-toggle="modal" onclick="copyFirstVisit('Venous1InitialVisitCEAP1gt3', 1);">Copy</button>
                 </div>
               </div>
             </div> 
