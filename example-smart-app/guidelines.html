@@ -1085,104 +1085,348 @@ femoropopliteal arteries when all the following criteria are met:
       
       <li id="Venous3" class="collapse">
         <div class="container">
-          <h2>Aetna</h2>
+          <h2>Anthem</h2>
           <ul class="nav nav-tabs">
             <li class="active"><a data-toggle="tab" href="#Venous3initialvisit">Initial Visit</a></li>
-            <li><a data-toggle="tab" href="#Venous3preprocedure">Pre-procedure Checklist</a></li>
+            <li><a data-toggle="tab" href="#Venous3RFA">RFA</a></li>
+            <li><a data-toggle="tab" href="#Venous3Varithena">Varithena</a></li>
           </ul>
 
           <div class="tab-content">
             <div id="Venous3initialvisit" class="tab-pane fade in active">
+              <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#Venous3InitialVisitConservative">Insurance Guidelines</a></li>
+                <li><a data-toggle="tab" href="#Venous3InitialVisitCLEAP1to3">CEAP 1-4</a></li>
+                <li><a data-toggle="tab" href="#Venous3InitialVisitCLEAP1gt3">CEAP 5,6</a></li>
+              </ul>
+              <div class="tab-content">
+                <div id="Venous3InitialVisitConservative" class="tab-pane fade in active">
+                  <img src="workflow_images/Venous_CEAP.png" alt="Venous_CEAP" width="70%" height="70%">
+                  <br> <br>
+                  
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#notesVenous3InitialFirstVisit">Guidelines</button>
 
-              <p> 
-                <i>Aortoiliac and Superficial Femoral arteries ONLY</i> 
-                <br><br>
+                  <div class="modal fade" id="notesVenous3InitialFirstVisit" tabindex="-1" role="dialog"
+                  aria-labelledby="notesVenous3InitialFirstVisitLabel" aria-hidden="true">
+                  <div class="modal-dialog" role="document" >
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="notesVenous3InitialFirstVisitLabel">Conservative Management (Non-Invasive Procedures)</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      
+                      <ol>
+                        <li> Ablative Modalities:
+                          <ol>
+                            <li> Endoluminal radiofrequency; or </li>
+                            <li> Endoluminal laser; </li>
+                          </ol>
+                          <b>and</b> 
+                        </li>
+                        <li> The veins to be treated include one or more of the following:
+                          <ol>
+                            <li> Anterior accessory great saphenous vein (AAGSV); or</li>
+                            <li> Great saphenous vein (GSV); or </li>
+                            <li> Small saphenous veins (SSV) </li>
+                          </ol>
+                          <b>and</b> 
+                        </li>
+                        <li> The following criteria are met:
+                          <ol>
+                            <li> There is ultrasound documented truncal vein incompetence with retrograde flow
+                              of 0.5 seconds duration or greater in the GSV, AAGSV, or SSV; and </li>
+                            <li> The vein to be treated has not been treated with ablative modalities within the
+                              timeframes below (1 or 2):
+                              <ul>
+                                <li> Within the previous 6 weeks; or </li>
+                                <li> More than 3 times in the previous 12 months; </li>
+                              </ul>
+                              <b>and</b>
+                            </li>
+                            <li> One or more of the following criteria (1, 2, or 3) are met:
+                              <ol>
+                                <li> There is ulceration secondary to stasis dermatitis; or </li>
+                                <li> There is hemorrhage from a superficial varicosity; or </li>
+                                <li> Symptoms of venous insufficiency or recurrent thrombophlebitis
+                                  (including, but not limited to, aching, burning, itching, cramping, or
+                                  swelling during activity or after prolonged sitting) which meet all of the
+                                  following (a, b, and c): 
+                                  <ol>
+                                    <li> Are causing discomfort to the degree that employment or activities
+                                      of daily living are compromised; and</li>
+                                    <li> Persist despite appropriate conservative therapy, for no less than
+                                      6 weeks (for example, leg elevation, weight loss, and exercise);
+                                      and </li>
+                                    <li> Persist despite a trial of properly fitted gradient compression
+                                      stockings for at least 6 weeks;
+                                      and </li>
+                                  </ol>
+                                </li>
+                              </ol>
+                              <b>and</b>
+                            </li>
+                            <li>The individual does not have untreated incompetent perforator veins.</li>
+                          </ol>
+                        </li>
+                      </ol>
 
-                <input type="checkbox" id="vehicle1" name="Venous3FirstVisit" onClick="FirstVisitChecklist('Venous', 3);"
-                value="The patient has lifestyle limiting Venous with impairment of activities of daily living. ">
-                <label for="vehicle1"> Impairment of activities of daily living</label><br>
-                <input type="checkbox" id="vehicle2" name="Venous3FirstVisit" onClick="FirstVisitChecklist('Venous', 3);"
-                  value=" They are unable to work.">
-                <label for="vehicle2"> Unable to work</label><br>
-                <input type="checkbox" id="vehicle3" name="Venous3FirstVisit" onClick="FirstVisitChecklist('Venous', 3);"
-                  value=" They have been counseled on smoking cessation.">
-                <label for="vehicle3"> Counseled on smoking cessation</label><br>
-                <input type="checkbox" id="vehicle4" name="Venous3FirstVisit" onClick="FirstVisitChecklist('Venous', 3);"
-                  value=" Their comorbidities are being managed by their PCP and they have been counseled on pharmacological therapy including antiplatelets.">
-                <label for="vehicle4"> Pharmacological therapy and Medical management</label><br>
-                <input type="checkbox" id="vehicle5" name="Venous3FirstVisit" onClick="FirstVisitChecklist('Venous', 3);"
-                  value=" They have been counseled on a walking regimen (at least 30 minutes, 3 times a week).">
-                <label for="vehicle5"> Exercise therapy</label><br>
-                <input type="checkbox" id="vehicle6" name="Venous3FirstVisit" onClick="FirstVisitChecklist('Venous', 3);"
-                  value=" They will come back to the office with an exercise ABI and arterial duplex.">
-                <label for="vehicle6"> Exercise ABI and duplex</label>
-                <br>
-                <input type="checkbox" id="alloftheabove" name="Venous3FirstVisitAll" onClick="FirstVisitChecklistAllAbove('Venous', 3);">
-                <label for="alloftheabove"> All of the above</label>
+                      <i>Sclerotherapy or Echosclerotherapy (including ultrasound guided foam sclerotherapy [UGFS])</i> <br>
+                      The following modalities are considered medically necessary when the criteria below (I, II and III) have been met:
+                      <ol>
+                        <li> Sclerotherapy or Echosclerotherapy Modality:
+                          <ol>
+                            <li> Sclerotherapy; or</li>
+                            <li> Echosclerotherapy; or </li>
+                            <li> UGFS (for example, Varithena [polidocanol injectable foam]);</li>
+                          </ol>
+                          <b>and</b>
+                        </li>
+                        <li> The veins to be treated include one or more of the following:
+                          <ol>
+                            <li> Perforator veins; or</li>
+                            <li> Varicose tributary or extension (for example, anterolateral thigh vein, anterior
+                              accessory saphenous vein, or intersaphenous vein[s]); </li>
+                          </ol>
+                          <b>and</b>
+                        </li>
+                        <li> The following criteria are met: 
+                          <ol>
+                            <li> The vein being treated is greater than 3.0 mm in diameter; and </li>
+                            <li> Reflux is confirmed by Doppler or duplex ultrasound; and </li>
+                            <li> The service is provided during the same operative session as an endoluminal
+                              radiofrequency ablation procedure or endoluminal laser ablation procedure which
+                              meets the criteria above;</li>
+                            <b>or</b>
+                            <li> The service is performed when all of the following criteria are met:
+                              <ul>
+                                <li> Surgical ligation and stripping, endoluminal radiofrequency ablation, or
+                                  endoluminal laser ablation of the AAGSV, GSV or SSV was previously
+                                  performed; and </li>
+                                <li> It has been at least 6 weeks since any prior sclerotherapy,
+                                  echosclerotherapy, or UGFS in the same extremity; and </li>
+                                <li> One or more of the following criteria (a, b, or c) are met:
+                                  <ol>
+                                    <li> There is ulceration secondary to stasis dermatitis; or</li>
+                                    <li> There is hemorrhage from a superficial varicosity; or</li>
+                                    <li> Symptoms of venous insufficiency or recurrent thrombophlebitis
+                                      (including, but not limited to, aching, burning, itching, cramping, or
+                                      swelling during activity or after prolonged sitting) which meet all of the
+                                      following (i, ii, and iii): 
+                                      <ol>
+                                        <li> Are causing discomfort to the degree that employment or activities
+                                          of daily living are compromised; and</li>
+                                        <li> Persist despite appropriate conservative therapy, for no less than
+                                          6 weeks (for example, leg elevation, weight loss, and exercise);
+                                          and </li>
+                                        <li> Persist despite a trial of properly fitted gradient compression
+                                          stockings for at least 6 weeks;
+                                        </li>
+                                      </ol>
+                                    </li>
+                                  </ol>
+                                </li>
+                              </ul>
+                              <b>and</b>
+                            </li>
+                            <li> The service being performed is not the sole* treatment for any of the following:
+                              <ol>
+                                <li> Symptomatic varicose tributary or extension or perforator veins in
+                                  the presence of valvular incompetence of the great or small
+                                  saphenous veins (by Doppler or duplex ultrasound scanning); or</li>
+                                <li> Symptomatic varicose tributary or perforator veins in the absence
+                                  of saphenous vein reflux or major saphenous vein tributary reflux.</li>
+                              </ol>
+                            </li>
+                          </ol>
 
-                <br>
-                <textarea id="textareaVenous3FirstVisit" name="Venous3FirstVisitTextarea" rows="12"
-                  cols="50"></textarea>
-                <br>
-                <button type="button" class="btn btn-primary" data-toggle="modal" onclick="copyFirstVisit('Venous', 3);">Copy</button>                
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#notesVenous3FirstVisit">Guidelines</button>
-                <br>
-              </p>
+                        </li>
+                      </ol>
 
-              <!-- Modal -->
-              <div class="modal fade" id="notesVenous3FirstVisit" tabindex="-1" role="dialog"
-                aria-labelledby="notesVenous3FirstVisitLabel" aria-hidden="true">
-                <div class="modal-dialog" role="document" >
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h5 class="modal-title" id="notesVenous3FirstVisitLabel">Venous Aetna/Cigna
-                        FirstVisit Guidelines</h5>
-                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                      </button>
-                    </div>
-                    Lifestyle limiting Venous when there is documentation of <b>all</b> of the following:                    
-                    <ol>
-                      <li>A failed trial of three months of provider directed conservative therapy which includes structured exercise walking program</li>
-                      <li>Functional limitations that significantly impact the quality of life and/or occupation of the patient</li>
-                      <li>Risk factor modification including smoking cessation, optimization of lipids, and
-                        glycemic control are part of the medical evaluation and management</li>
-                      <li>Symptoms correspond with the location of arterial insufficiency
-                        <ol>
-                          <li>aorto-iliac -lower back, hip, buttock, or thigh</li>
-                          <li>superficial femoral - Venous in the calf muscle area</li>
-                          <li>popliteal - calf or foot</li>
-                        </ol>
-                      </li>
-                      <li>Imaging performed prior to the planned procedure confirms location and degree of
-                        stenosis (≥50%) by objective criteria.</li>
-                      <li>Treatment of target lesion will allow inline flow to the foot, with at least one run-off vessel</li>
-                    </ol>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      </div>
                     </div>
                   </div>
                 </div>
+
+                </div>
+                <div id="Venous3InitialVisitCLEAP1to3" class="tab-pane fade">
+                  <div class="tab-content">
+                    <input type="checkbox" id="vehicle2" name="Venous3InitialVisitCEAP1to31FirstVisit" onClick="FirstVisitChecklist('Venous3InitialVisitCEAP1to3', 1);"
+                      value=" The patient has venous insufficiency characterized by *******.">
+                    <label for="vehicle2"> Symptoms of venous insufficiency (burning, pain, venous stasis, etc)</label><br>
+                    <input type="checkbox" id="vehicle3" name="Venous3InitialVisitCEAP1to31FirstVisit" onClick="FirstVisitChecklist('Venous3InitialVisitCEAP1to3', 1);"
+                      value=" These symptoms cause discomfort that causes functional impairment.">
+                    <label for="vehicle3"> Discomfort that causes functional impairment</label><br>
+                    <input type="checkbox" id="vehicle4" name="Venous3InitialVisitCEAP1to31FirstVisit" onClick="FirstVisitChecklist('Venous3InitialVisitCEAP1to3', 1);"
+                      value=" These symptoms cause discomfort that causes functional impairment. They have been provided information on conservative therapy including weight reduction, exercise plan, leg elevation, and compression therapy with stockings (20-30mm Hg). They will come back to the office with a ****** venous reflux study.">
+                    <label for="vehicle4"> Provided information on conservative therapy</label><br>
+                    <br>
+                    <input type="checkbox" id="alloftheabove" name="Venous3InitialVisitCEAP1to31FirstVisitAll" onClick="FirstVisitChecklistAllAbove('Venous3InitialVisitCEAP1to3', 1);">
+                    <label for="alloftheabove"> All of the above</label>
+    
+                    <br>
+                    <textarea id="textareaVenous3InitialVisitCEAP1to31FirstVisit" name="Venous3InitialVisitCEAP1to31FirstVisitTextarea" rows="12"
+                      cols="50"></textarea>
+                    <br>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" onclick="copyFirstVisit('Venous3InitialVisitCEAP1to3', 1);">Copy</button>
+                  </div>
+                </div>
+                <div id="Venous3InitialVisitCLEAP1gt3" class="tab-pane fade">
+                  <div class="tab-content">
+                    <input type="checkbox" id="vehicle2" name="Venous3InitialVisitCEAP1gt31FirstVisit" onClick="FirstVisitChecklist('Venous3InitialVisitCEAP1gt3', 1);"
+                    value=" The patient has severe venous insufficiency characterized by healed venous ulcer (CEAP 5).">
+                  <label for="vehicle2"> CEAP 5 (Healed venous ulcer)</label><br>
+                  <input type="checkbox" id="vehicle3" name="Venous3InitialVisitCEAP1gt31FirstVisit" onClick="FirstVisitChecklist('Venous3InitialVisitCEAP1gt3', 1);"
+                    value=" The patient has severe venous insufficiency characterized by active venous ulcer (CEAP 6).">
+                  <label for="vehicle3"> CEAP 6 (Active venous ulcer)</label><br>
+                  <input type="checkbox" id="vehicle4" name="Venous3InitialVisitCEAP1gt31FirstVisit" onClick="FirstVisitChecklist('Venous3InitialVisitCEAP1gt3', 1);"
+                    value=" The patient has thrombophlebitis.">
+                  <label for="vehicle4"> Thrombophlebitis</label><br>
+                  <input type="checkbox" id="vehicle5" name="Venous3InitialVisitCEAP1gt31FirstVisit" onClick="FirstVisitChecklist('Venous3InitialVisitCEAP1gt3', 1);"
+                    value=" The patient has severe venous insufficiency characterized by hemorrhage.">
+                  <label for="vehicle5"> Hemorrhage</label><br>
+                  <input type="checkbox" id="vehicle5" name="Venous3InitialVisitCEAP1gt31FirstVisit" onClick="FirstVisitChecklist('Venous3InitialVisitCEAP1gt3', 1);"
+                    value=" They have been provided information on conservative therapy including weight reduction, exercise plan, leg elevation, and compression therapy with stockings (20-30mm Hg). They will come back to the office with a venous reflux study.">
+                  <label for="vehicle5"> Provided information on conservative therapy</label><br>
+                  <br>
+                  <input type="checkbox" id="alloftheabove" name="Venous3InitialVisitCEAP1gt31FirstVisitAll" onClick="FirstVisitChecklistAllAbove('Venous3InitialVisitCEAP1gt3', 1);">
+                  <label for="alloftheabove"> All of the above</label>
+                  <br>
+                  <textarea id="textareaVenous3InitialVisitCEAP1gt31FirstVisit" name="Venous3InitialVisitCEAP1gt31FirstVisitTextarea" rows="12"
+                    cols="50"></textarea>
+                  <br>
+                  <button type="button" class="btn btn-primary" data-toggle="modal" onclick="copyFirstVisit('Venous3InitialVisitCEAP1gt3', 1);">Copy</button>
+                  </div>
+                </div>
+              </div> 
+            </div>
+
+            <div id="Venous3RFA" class="tab-pane fade">
+              <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#Venous3RFACEAP1to3">CEAP 1-4</a></li>
+                <li><a data-toggle="tab" href="#Venous3RFACEAPgt3">CEAP 5, 6 (Venous ulceration), Hemorrhage</a></li>
+              </ul>
+              <div class="tab-content">
+                <div id="Venous3RFACEAP1to3" class="tab-pane fade in active">
+                  <div class="tab-content">
+                    <input type="checkbox" id="vehicle2" name="Venous3RFA1to31FirstVisit" onClick="FirstVisitChecklist('Venous3RFA1to3', 1);"
+                      value=" The patient has venous insufficiency that has been refractory to conservative management including lifestyle modification and compression stockings.">
+                    <label for="vehicle2"> Symptoms have been refractory to conservative management</label><br>
+                    <input type="checkbox" id="vehicle3" name="Venous3RFA1to31FirstVisit" onClick="FirstVisitChecklist('Venous3RFA1to3', 1);"
+                      value=" Venous reflux studies are significant for ***** reflux.">
+                    <label for="vehicle3"> Significant reflux > 500msec</label><br>
+                    <input type="checkbox" id="vehicle4" name="Venous3RFA1to31FirstVisit" onClick="FirstVisitChecklist('Venous3RFA1to3', 1);"
+                      value=" The vein diameter is greater than 3mm. ">
+                    <label for="vehicle4"> The vein diameter is greater than 3mm</label><br>
+                    <input type="checkbox" id="vehicle5" name="Venous3RFA1to31FirstVisit" onClick="FirstVisitChecklist('Venous3RFA1to3', 1);"
+                      value=" This vein has not been treated in the past 6 weeks or 3 times in the past 12 months. Will schedule for ***** RFA ablation.">
+                    <label for="vehicle5"> This vein has not been treated in the past 6 weeks or 3 times in the past 12 months. </label>
+                    <br>
+                    <br>
+                    <input type="checkbox" id="alloftheabove" name="Venous3RFA1to31FirstVisitAll" onClick="FirstVisitChecklistAllAbove('Venous3RFA1to3', 1);">
+                    <label for="alloftheabove"> All of the above</label>
+    
+                    <br>
+                    <textarea id="textareaVenous3RFA1to31FirstVisit" name="Venous3RFA1to31FirstVisitTextarea" rows="12"
+                      cols="50"></textarea>
+                    <br>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" onclick="copyFirstVisit('Venous3RFA1to3', 1);">Copy</button>
+                  </div>
+                </div>
+
+                <div id="Venous3RFACEAPgt3" class="tab-pane fade">
+                  <div class="tab-content">
+                    <input type="checkbox" id="vehicle2" name="Venous3RFAgt31FirstVisit" onClick="FirstVisitChecklist('Venous3RFAgt3', 1);"
+                      value=" The patient has venous insufficiency that has been refractory to conservative management including lifestyle modification and compression stockings.">
+                    <label for="vehicle2"> Symptoms have been refractory to conservative management</label><br>
+                    <input type="checkbox" id="vehicle3" name="Venous3RFAgt31FirstVisit" onClick="FirstVisitChecklist('Venous3RFAgt3', 1);"
+                      value=" Venous reflux studies are significant for ***** reflux.">
+                    <label for="vehicle3"> Significant reflux > 500msec</label><br>
+                    <input type="checkbox" id="vehicle4" name="Venous3RFAgt31FirstVisit" onClick="FirstVisitChecklist('Venous3RFAgt3', 1);"
+                      value=" The vein diameter is greater than 3mm. ">
+                    <label for="vehicle4"> The vein diameter is greater than 3mm</label><br>
+                    <input type="checkbox" id="vehicle5" name="Venous3RFAgt31FirstVisit" onClick="FirstVisitChecklist('Venous3RFAgt3', 1);"
+                      value=" This vein has not been treated in the past 6 weeks or 3 times in the past 12 months. Will schedule for ***** RFA ablation.">
+                    <label for="vehicle5"> This vein has not been treated in the past 6 weeks or 3 times in the past 12 months. </label>
+                    <br>
+                    <br>
+                    <input type="checkbox" id="alloftheabove" name="Venous3RFAgt31FirstVisitAll" onClick="FirstVisitChecklistAllAbove('Venous3RFAgt3', 1);">
+                    <label for="alloftheabove"> All of the above</label>
+    
+                    <br>
+                    <textarea id="textareaVenous3RFAgt31FirstVisit" name="Venous3RFAgt31FirstVisitTextarea" rows="12"
+                      cols="50"></textarea>
+                    <br>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" onclick="copyFirstVisit('Venous3RFAgt3', 1);">Copy</button>
+                  </div>
+                </div>
               </div>
-
             </div>
-            <div id="Venous3preprocedure" class="tab-pane fade">
 
-            <input type="checkbox" id="vehicle1" name="Venous3PreChecklist" onClick="checkboxPreChecklist('Venous', 3);"
-              value="Failure of 3 months of conservative therapy (medical therapy and structured walking regimen). ">
-            <label for="vehicle1"> Failure of 3 months of conservative therapy (medical therapy and structured walking regimen)</label><br>
-            <input type="checkbox" id="vehicle2" name="Venous3PreChecklist" onClick="checkboxPreChecklist('Venous', 3);"
-              value="The patient has imaging showing a stenosis of greater than 50% in the ******. ">
-            <label for="vehicle2"> Imaging confirms greater than 50% stenosis  </label><br>
-            <input type="checkbox" id="vehicle3" name="Venous3PreChecklist" onClick="checkboxPreChecklist('Venous', 3);"
-              value="We will schedule for a diagnostic arteriogram for lifestyle limiting Venous. ">
-            <label for="vehicle3"> Diagnostic Arteriogram </label><br>
-            <br>
-            <textarea id="textareaVenous3PreChecklist" name="textareaVenous3PreChecklist" rows="12"
-              cols="50"></textarea>
-              <br>
-              <button type="button" class="btn btn-primary" data-toggle="modal" onclick="copyPreChecklist('Venous', 3);">Copy</button>  
+            <div id="Venous3Varithena" class="tab-pane fade">
+              <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#Venous3VarithenaCEAP1to3">CEAP 1-4</a></li>
+                <li><a data-toggle="tab" href="#Venous3VarithenaCEAPgt3">CEAP 5, 6 (Venous ulceration), Hemorrhage</a></li>
+              </ul>
+              <div class="tab-content">
+                <div id="Venous3VarithenaCEAP1to3" class="tab-pane fade in active">
+                  <div class="tab-content">
+                    <input type="checkbox" id="vehicle2" name="Venous3Varithena1to31FirstVisit" onClick="FirstVisitChecklist('Venous3Varithena1to3', 1);"
+                      value=" The patient has venous insufficiency that has been refractory to conservative management including lifestyle modification and compression stockings.">
+                    <label for="vehicle2"> Symptoms have been refractory to conservative management</label><br>
+                    <input type="checkbox" id="vehicle3" name="Venous3Varithena1to31FirstVisit" onClick="FirstVisitChecklist('Venous3Varithena1to3', 1);"
+                      value=" Venous reflux studies are significant for ***** reflux.">
+                    <label for="vehicle3"> Significant reflux > 500msec</label><br>
+                    <input type="checkbox" id="vehicle4" name="Venous3Varithena1to31FirstVisit" onClick="FirstVisitChecklist('Venous3Varithena1to3', 1);"
+                      value=" The vein diameter is greater than 3mm. ">
+                    <label for="vehicle4"> The vein diameter is greater than 3mm</label><br>
+                    <input type="checkbox" id="vehicle5" name="Venous3Varithena1to31FirstVisit" onClick="FirstVisitChecklist('Venous3Varithena1to3', 1);"
+                      value=" This vein has not been treated in the past 6 weeks or 3 times in the past 12 months. Will schedule for ***** RFA ablation.">
+                    <label for="vehicle5"> This vein has not been treated in the past 6 weeks or 3 times in the past 12 months. </label>
+                    <br>
+                    <br>
+                    <input type="checkbox" id="alloftheabove" name="Venous3Varithena1to31FirstVisitAll" onClick="FirstVisitChecklistAllAbove('Venous3Varithena1to3', 1);">
+                    <label for="alloftheabove"> All of the above</label>
+    
+                    <br>
+                    <textarea id="textareaVenous3Varithena1to31FirstVisit" name="Venous3Varithena1to31FirstVisitTextarea" rows="12"
+                      cols="50"></textarea>
+                    <br>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" onclick="copyFirstVisit('Venous3Varithena1to3', 1);">Copy</button>
+                  </div>
+                </div>
+                <div id="Venous3VarithenaCEAPgt3" class="tab-pane fade">
+                  <div class="tab-content">
+                    <input type="checkbox" id="vehicle2" name="Venous3Varithenagt31FirstVisit" onClick="FirstVisitChecklist('Venous3Varithenagt3', 1);"
+                      value=" The patient has venous insufficiency that has been refractory to conservative management including lifestyle modification and compression stockings.">
+                    <label for="vehicle2"> Symptoms have been refractory to conservative management</label><br>
+                    <input type="checkbox" id="vehicle3" name="Venous3Varithenagt31FirstVisit" onClick="FirstVisitChecklist('Venous3Varithenagt3', 1);"
+                      value=" Venous reflux studies are significant for ***** reflux.">
+                    <label for="vehicle3"> Significant reflux > 500msec</label><br>
+                    <input type="checkbox" id="vehicle4" name="Venous3Varithenagt31FirstVisit" onClick="FirstVisitChecklist('Venous3Varithenagt3', 1);"
+                      value=" The vein diameter is greater than 3mm. ">
+                    <label for="vehicle4"> The vein diameter is greater than 3mm</label><br>
+                    <input type="checkbox" id="vehicle5" name="Venous3Varithenagt31FirstVisit" onClick="FirstVisitChecklist('Venous3Varithenagt3', 1);"
+                      value=" This vein has not been treated in the past 6 weeks or 3 times in the past 12 months. Will schedule for ***** RFA ablation.">
+                    <label for="vehicle5"> This vein has not been treated in the past 6 weeks or 3 times in the past 12 months. </label>
+                    <br>
+                    <br>
+                    <input type="checkbox" id="alloftheabove" name="Venous3Varithenagt31FirstVisitAll" onClick="FirstVisitChecklistAllAbove('Venous3Varithenagt3', 1);">
+                    <label for="alloftheabove"> All of the above</label>
+    
+                    <br>
+                    <textarea id="textareaVenous3Varithenagt31FirstVisit" name="Venous3Varithenagt31FirstVisitTextarea" rows="12"
+                      cols="50"></textarea>
+                    <br>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" onclick="copyFirstVisit('Venous3Varithenagt3', 1);">Copy</button>
+                  </div>
+                </div>
+              </div>
             </div>
+
           </div>
         </div>
 
