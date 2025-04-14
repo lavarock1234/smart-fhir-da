@@ -713,43 +713,98 @@ femoropopliteal arteries when all the following criteria are met:
 
             <div id="Venous1RFA" class="tab-pane fade">
               <ul class="nav nav-tabs">
-                <li class="active"><a data-toggle="tab" href="#Venous1RFACEAP1to3">CEAP 1-3 Tab</a></li>
-                <li><a data-toggle="tab" href="#Venous1RFACEAPgt3">CEAP >3, Hemorrhage, Recurrent thrombophlebitis</a></li>
+                <li class="active"><a data-toggle="tab" href="#Venous1RFACEAP1to3">CEAP 1-3</a></li>
+                <li><a data-toggle="tab" href="#Venous1RFACEAPgt3">CEAP 4, 5, 6 (Venous ulceration), Hemorrhage</a></li>
               </ul>
               <div class="tab-content">
                 <div id="Venous1RFACEAP1to3" class="tab-pane fade in active">
-                  <p> 
-                    The patient has venous insufficiency that has been refractory to conservative management. Venous reflux studies are significant for ***** reflux. Will schedule for ***** RFA ablation.
-                  </p>
+                  <div class="tab-content">
+                    <input type="checkbox" id="vehicle2" name="Venous1RFA1to31FirstVisit" onClick="FirstVisitChecklist('Venous1RFA1to3', 1);"
+                      value=" The patient has venous insufficiency that has been refractory to conservative management including lifestyle modification and compression stockings.">
+                    <label for="vehicle2"> Symptoms have been refractory to conservative management</label><br>
+                    <input type="checkbox" id="vehicle3" name="Venous1RFA1to31FirstVisit" onClick="FirstVisitChecklist('Venous1RFA1to3', 1);"
+                      value=" Venous reflux studies are significant for ***** reflux. Will schedule for ***** RFA ablation.">
+                    <label for="vehicle3"> Significant reflux > 500msec</label><br>
+                    <br>
+                    <br>
+                    <input type="checkbox" id="alloftheabove" name="Venous1RFA1to31FirstVisitAll" onClick="FirstVisitChecklistAllAbove('Venous1RFA1to3', 1);">
+                    <label for="alloftheabove"> All of the above</label>
+    
+                    <br>
+                    <textarea id="textareaVenous1RFA1to31FirstVisit" name="Venous1RFA1to31FirstVisitTextarea" rows="12"
+                      cols="50"></textarea>
+                    <br>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" onclick="copyFirstVisit('Venous1RFA1to3', 1);">Copy</button>
+                  </div>
                 </div>
+
                 <div id="Venous1RFACEAPgt3" class="tab-pane fade">
-                  <p> 
-                    The patient has been severe venous insufficiency that has been refractory to conservative management and warrants intervention. Venous reflux studies are significant for ***** reflux.  
-                    Will schedule for ***** RFA ablation.
-                  </p>
+                  <div class="tab-content">
+                    *Does not need trial of conservative management <br>
+                    <input type="checkbox" id="vehicle3" name="Venous1RFAgt31FirstVisit" onClick="FirstVisitChecklist('Venous1RFAgt3', 1);"
+                      value=" The patient has been severe venous insufficiency that warrants intervention. Venous reflux studies are significant for ***** reflux. Will schedule for ***** RFA ablation.">
+                    <label for="vehicle3"> Significant reflux > 500msec</label><br>
+                    <br>
+                    <br>
+                    <input type="checkbox" id="alloftheabove" name="Venous1RFAgt31FirstVisitAll" onClick="FirstVisitChecklistAllAbove('Venous1RFAgt3', 1);">
+                    <label for="alloftheabove"> All of the above</label>
+    
+                    <br>
+                    <textarea id="textareaVenous1RFAgt31FirstVisit" name="Venous1RFAgt31FirstVisitTextarea" rows="12"
+                      cols="50"></textarea>
+                    <br>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" onclick="copyFirstVisit('Venous1RFAgt3', 1);">Copy</button>
+                  </div>
                 </div>
               </div>
             </div>
 
             <div id="Venous1Varithena" class="tab-pane fade">
               <ul class="nav nav-tabs">
-                <li class="active"><a data-toggle="tab" href="#Venous1VarithenaCEAP1to3">CEAP 1-3 Tab</a></li>
-                <li><a data-toggle="tab" href="#Venous1VarithenaCEAPgt3">CEAP >3, Hemorrhage, Recurrent thrombophlebitis</a></li>
+                <li class="active"><a data-toggle="tab" href="#Venous1VarithenaCEAP1to3">CEAP 1-4</a></li>
+                <li><a data-toggle="tab" href="#Venous1VarithenaCEAPgt3">CEAP 5, 6 (Venous ulceration), Hemorrhage</a></li>
               </ul>
               <div class="tab-content">
                 <div id="Venous1VarithenaCEAP1to3" class="tab-pane fade in active">
-                  <p> 
-                    The patient has venous insufficiency that has been refractory to conservative management. Venous reflux studies are significant for ***** reflux. Will schedule for ***** varithena ablation.
-                  </p>
+                  <div class="tab-content">
+                    <input type="checkbox" id="vehicle2" name="Venous1Varithena1to31FirstVisit" onClick="FirstVisitChecklist('Venous1Varithena1to3', 1);"
+                      value=" The patient has venous insufficiency that has been refractory to conservative management including lifestyle modification and compression stockings.">
+                    <label for="vehicle2"> Symptoms have been refractory to conservative management (no time period)</label><br>
+                    <input type="checkbox" id="vehicle3" name="Venous1Varithena1to31FirstVisit" onClick="FirstVisitChecklist('Venous1Varithena1to3', 1);"
+                      value=" Venous reflux studies are significant for ***** reflux. Will schedule for ***** varithena ablation.">
+                    <label for="vehicle3"> Significant reflux > 500msec</label><br>
+                    <br>
+                    <br>
+                    <input type="checkbox" id="alloftheabove" name="Venous1Varithena1to31FirstVisitAll" onClick="FirstVisitChecklistAllAbove('Venous1Varithena1to3', 1);">
+                    <label for="alloftheabove"> All of the above</label>
+    
+                    <br>
+                    <textarea id="textareaVenous1Varithena1to31FirstVisit" name="Venous1Varithena1to31FirstVisitTextarea" rows="12"
+                      cols="50"></textarea>
+                    <br>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" onclick="copyFirstVisit('Venous1Varithena1to3', 1);">Copy</button>
+                  </div>
                 </div>
                 <div id="Venous1VarithenaCEAPgt3" class="tab-pane fade">
-                  <p> 
-                    The patient has been severe venous insufficiency that has been refractory to conservative management and warrants intervention. Venous reflux studies are significant for ***** reflux. 
-                    Will schedule for ***** varithena ablation.
-                  </p>
+                  <div class="tab-content">
+                    <b>*Does not need trial of conservative management</b> <br>
+                    <input type="checkbox" id="vehicle2" name="Venous1Varithenagt31FirstVisit" onClick="FirstVisitChecklist('Venous1Varithenagt3', 1);"
+                      value=" Venous reflux studies are significant for ***** reflux. Will schedule for ***** varithena ablation.">
+                    <label for="vehicle2"> Significant reflux > 500msec</label><br>
+                    <br>
+                    <br>
+                    <input type="checkbox" id="alloftheabove" name="Venous1Varithenagt31FirstVisitAll" onClick="FirstVisitChecklistAllAbove('Venous1Varithenagt3', 1);">
+                    <label for="alloftheabove"> All of the above</label>
+    
+                    <br>
+                    <textarea id="textareaVenous1Varithenagt31FirstVisit" name="Venous1Varithenagt31FirstVisitTextarea" rows="12"
+                      cols="50"></textarea>
+                    <br>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" onclick="copyFirstVisit('Venous1Varithenagt3', 1);">Copy</button>
+                  </div>
                 </div>
               </div>
-            </div>            
+            </div>      
 
             <div id="Venous1Perforator" class="tab-pane fade">
               <div class="tab-content">
