@@ -69,7 +69,121 @@ ul#panels {
 <div class="container">
   <p> Thank you for trying our app.  Please send any feedback to <a href= "mailto:Vishnu.ambur@gmail.com">Vishnu.ambur@gmail.com</a> </p> 
 </div>
-  
+
+<div class="container" style="margin-top:30px; max-width:600px;">
+  <h3>Find the Right Insurance Documentation</h3>
+  <div id="insurance-guide">
+    <div id="step1" class="guide-step">
+      <label><strong>Step 1:</strong> What do you want to access?</label>
+      <select id="select-access" class="form-control" style="margin-bottom:15px;">
+        <option value="" disabled selected>Select an option</option>
+        <option value="documentation">Documentation</option>
+        <option value="guidelines">Guidelines</option>
+      </select>
+    </div>
+    <div id="step2" class="guide-step" style="display:none;">
+      <label><strong>Step 2:</strong> What is the clinical condition?</label>
+      <select id="select-condition" class="form-control" style="margin-bottom:15px;">
+        <option value="" disabled selected>Select a condition</option>
+        <option value="claudication">Claudication</option>
+        <option value="venous">Venous</option>
+      </select>
+    </div>
+    <div id="step3" class="guide-step" style="display:none;">
+      <label><strong>Step 3:</strong> Select your insurance:</label>
+      <select id="select-insurance" class="form-control" style="margin-bottom:15px;">
+        <option value="" disabled selected>Select insurance</option>
+        <option value="humana">Humana</option>
+        <option value="anthem">Anthem</option>
+        <option value="medicare">Medicare</option>
+        <option value="aetna">Aetna</option>
+        <option value="cigna">Cigna</option>
+        <option value="uhc">United Healthcare</option>
+      </select>
+    </div>
+    <div id="result-link" style="display:none; margin-top:20px;">
+      <a id="final-link" class="btn btn-success" href="#">Go to Documentation</a>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Step 1: Access selection
+  document.getElementById('select-access').addEventListener('change', function() {
+    var access = document.getElementById('select-access').value;
+    
+    // If Guidelines is selected, redirect immediately to workflow.html
+    if (access === 'guidelines') {
+      window.location.href = 'workflow.html';
+      return;
+    }
+    
+    // Otherwise, continue with the documentation flow
+    document.getElementById('step2').style.display = 'block';
+    document.getElementById('step3').style.display = 'none';
+    document.getElementById('result-link').style.display = 'none';
+    document.getElementById('select-condition').selectedIndex = 0;
+    document.getElementById('select-insurance').selectedIndex = 0;
+  });
+
+  // Step 2: Condition selection
+  document.getElementById('select-condition').addEventListener('change', function() {
+    var condition = document.getElementById('select-condition').value;
+    var insuranceSelect = document.getElementById('select-insurance');
+    
+    // Clear current options
+    insuranceSelect.innerHTML = '<option value="" disabled selected>Select insurance</option>';
+    
+    // Add relevant insurance options based on condition
+    if (condition === 'claudication') {
+      insuranceSelect.innerHTML += '<option value="humana">Humana</option>';
+      insuranceSelect.innerHTML += '<option value="anthem">Anthem</option>';
+      insuranceSelect.innerHTML += '<option value="aetna">Aetna</option>';
+      insuranceSelect.innerHTML += '<option value="cigna">Cigna</option>';
+      insuranceSelect.innerHTML += '<option value="uhc">United Healthcare</option>';
+    } else if (condition === 'venous') {
+      insuranceSelect.innerHTML += '<option value="medicare">Medicare</option>';
+      insuranceSelect.innerHTML += '<option value="uhc">United Healthcare</option>';
+      insuranceSelect.innerHTML += '<option value="anthem">Anthem</option>';
+      insuranceSelect.innerHTML += '<option value="cigna">Cigna</option>';
+      insuranceSelect.innerHTML += '<option value="humana">Humana</option>';
+    }
+    
+    document.getElementById('step3').style.display = 'block';
+    document.getElementById('result-link').style.display = 'none';
+  });
+
+  // Step 3: Insurance selection
+  document.getElementById('select-insurance').addEventListener('change', function() {
+    var access = document.getElementById('select-access').value;
+    var condition = document.getElementById('select-condition').value;
+    var insurance = document.getElementById('select-insurance').value;
+    var link = "#";
+    var linkText = "Go to Documentation";
+
+    // For demo, only Documentation (guidelines.html) is implemented
+    if (access === "documentation") {
+      // Build anchor with query params for future use
+      link = "guidelines.html?condition=" + encodeURIComponent(condition) + "&insurance=" + encodeURIComponent(insurance);
+      linkText = "Go to Documentation for " + capitalizeFirst(condition) + " (" + capitalizeFirst(insurance) + ")";
+    } else if (access === "guidelines") {
+      link = "workflow.html";
+      linkText = "Go to Guidelines";
+    }
+
+    var finalLink = document.getElementById('final-link');
+    finalLink.href = link;
+    finalLink.textContent = linkText;
+    document.getElementById('result-link').style.display = 'block';
+  });
+
+  function capitalizeFirst(str) {
+    if (!str) return "";
+    return str.charAt(0).toUpperCase() + str.slice(1);
+  }
+</script>
+
+
 </div>
 
   

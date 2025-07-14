@@ -2187,6 +2187,82 @@ following general requirements are met:
       $('#panels li').on('show.bs.collapse', function () {
         $('#panels li.in').collapse('hide');
       });
+      
+      // Parse URL parameters and navigate to correct section
+      function getUrlParameter(name) {
+        name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+        var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+        var results = regex.exec(location.search);
+        return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+      }
+      
+      function navigateToSection() {
+        var condition = getUrlParameter('condition');
+        var insurance = getUrlParameter('insurance');
+        
+        if (condition && insurance) {
+          var sectionId = '';
+          
+          // Map condition and insurance to section IDs
+          if (condition === 'claudication') {
+            switch (insurance) {
+              case 'humana':
+                sectionId = 'Claudication1';
+                break;
+              case 'anthem':
+                sectionId = 'Claudication2';
+                break;
+              case 'aetna':
+              case 'cigna':
+                sectionId = 'Claudication3';
+                break;
+              case 'uhc':
+                sectionId = 'Claudication4';
+                break;
+            }
+          } else if (condition === 'venous') {
+            switch (insurance) {
+              case 'medicare':
+                sectionId = 'Venous1';
+                break;
+              case 'uhc':
+                sectionId = 'Venous2';
+                break;
+              case 'anthem':
+                sectionId = 'Venous3';
+                break;
+              case 'cigna':
+                sectionId = 'Venous4';
+                break;
+              case 'humana':
+                sectionId = 'Venous5';
+                break;
+            }
+          }
+          
+          if (sectionId) {
+            // Open the correct submenu first
+            if (condition === 'claudication') {
+              $('#submenu-2').collapse('show');
+              // Wait for submenu to open, then show the section
+              $('#submenu-2').on('shown.bs.collapse', function() {
+                $('#' + sectionId).collapse('show');
+                $(this).off('shown.bs.collapse'); // Remove the event listener
+              });
+            } else if (condition === 'venous') {
+              $('#submenu-venous').collapse('show');
+              // Wait for submenu to open, then show the section
+              $('#submenu-venous').on('shown.bs.collapse', function() {
+                $('#' + sectionId).collapse('show');
+                $(this).off('shown.bs.collapse'); // Remove the event listener
+              });
+            }
+          }
+        }
+      }
+      
+      // Navigate to section on page load
+      navigateToSection();
     });
 
     function FirstVisitChecklist(type, ind) {
